@@ -1,0 +1,22 @@
+{
+  "name": "symbook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=development webpack --progress --hide-modules",
+    "watch": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules",
+    "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot",
+    "production": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+  },
+  "author": "frank.reding@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^3.2.4",
+    "laravel-mix": "^0.9.2",
+    "vue": "^2.2.6",
+    "vue-select": "^2.2.0",
+    "webpack": "^2.3.2"
+  }
+}
