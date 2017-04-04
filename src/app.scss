@@ -1,5 +1,17 @@
-$red: #900;
+$yellow: #f3ffe3;
 
-.error {
-	color: $red;
+body {
+	background-image: url(images/pattern.png);
+	font-family: 'Merriweather', serif;
+	font-weight: 300;
+	color: $yellow;
+}
+
+h1, h2, h3, h4 {
+	font-weight: 700;
+	font-style: italic;
+}
+
+input[type=search] {
+	background-color: rgba(0, 0, 0, 0.5);
 }

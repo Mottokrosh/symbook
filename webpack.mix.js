@@ -11,7 +11,8 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('src/app.js', 'dist/')
+mix.setPublicPath('dist/')
+   .js('src/app.js', 'dist/')
    .sass('src/app.scss', 'dist/')
    .copy('src/data.json', 'dist/')
    .copy('src/index.html', 'dist/');
