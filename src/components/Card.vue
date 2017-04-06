@@ -10,6 +10,9 @@
                 <p v-if="ability.Requirement">
                     <strong>Requirement:</strong> {{ ability.Requirement }}
                 </p>
+                <p v-if="ability.Tradition">
+                    <strong>Tradition:</strong> {{ ability.Tradition }}
+                </p>
                 <p v-if="ability.Effect">
                     <strong>Effect:</strong> {{ ability.Effect }}
                 </p>
@@ -50,14 +53,38 @@ export default {
     created() {
         axios.get('data.json')
             .then(response => {
-                this.options = Object.keys(response.data.Abilities).map(key => {
-                    let obj = response.data.Abilities[key];
+                let traits = Object.keys(response.data.Traits).map(key => {
+                    let obj = response.data.Traits[key];
+                    obj.Type = 'Trait';
 
                     return {
-                        label: obj.Trait + ' (' + obj.Book + ')',
+                        label: 'Trait: ' + obj.Trait + ' (' + obj.Book + ')',
                         value: obj,
                     };
                 });
+
+                let abilities = Object.keys(response.data.Abilities).map(key => {
+                    let obj = response.data.Abilities[key];
+                    obj.Type = 'Ability';
+
+                    return {
+                        label: 'Ability: ' + obj.Trait + ' (' + obj.Book + ')',
+                        value: obj,
+                    };
+                });
+
+                let powers = Object.keys(response.data['Mystical Powers']).map(key => {
+                    let obj = response.data['Mystical Powers'][key];
+                    obj.Type = 'Mystical Power';
+                    obj.Trait = obj['Mystical Powers'].trim();
+
+                    return {
+                        label: 'Mystical Power: ' + obj.Trait + ' (' + obj.Book + ')',
+                        value: obj,
+                    };
+                });
+
+                this.options = traits.concat(abilities, powers);
             })
         ;
     }

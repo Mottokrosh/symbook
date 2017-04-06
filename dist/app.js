@@ -1895,6 +1895,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 
 
@@ -1920,14 +1923,38 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         var _this = this;
 
         __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('data.json').then(function (response) {
-            _this.options = Object.keys(response.data.Abilities).map(function (key) {
-                var obj = response.data.Abilities[key];
+            var traits = Object.keys(response.data.Traits).map(function (key) {
+                var obj = response.data.Traits[key];
+                obj.Type = 'Trait';
 
                 return {
-                    label: obj.Trait + ' (' + obj.Book + ')',
+                    label: 'Trait: ' + obj.Trait + ' (' + obj.Book + ')',
                     value: obj
                 };
             });
+
+            var abilities = Object.keys(response.data.Abilities).map(function (key) {
+                var obj = response.data.Abilities[key];
+                obj.Type = 'Ability';
+
+                return {
+                    label: 'Ability: ' + obj.Trait + ' (' + obj.Book + ')',
+                    value: obj
+                };
+            });
+
+            var powers = Object.keys(response.data['Mystical Powers']).map(function (key) {
+                var obj = response.data['Mystical Powers'][key];
+                obj.Type = 'Mystical Power';
+                obj.Trait = obj['Mystical Powers'].trim();
+
+                return {
+                    label: 'Mystical Power: ' + obj.Trait + ' (' + obj.Book + ')',
+                    value: obj
+                };
+            });
+
+            _this.options = traits.concat(abilities, powers);
         });
     }
 });
@@ -2056,7 +2083,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       },
       expression: "selected"
     }
-  }), _vm._v(" "), (_vm.selected) ? _c('fieldset', [_c('legend', [_c('h2', [_vm._v(_vm._s(_vm.ability.Trait) + " "), _c('small', [_vm._v(_vm._s(_vm.ability.Book))])])]), _vm._v(" "), _c('div', [(_vm.ability.Requirement) ? _c('p', [_c('strong', [_vm._v("Requirement:")]), _vm._v(" " + _vm._s(_vm.ability.Requirement) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.ability.Effect) ? _c('p', [_c('strong', [_vm._v("Effect:")]), _vm._v(" " + _vm._s(_vm.ability.Effect) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.ability.Novice) ? _c('p', [_c('strong', [_vm._v("Novice:")]), _vm._v(" " + _vm._s(_vm.ability.Novice) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.ability.Adept) ? _c('p', [_c('strong', [_vm._v("Adept:")]), _vm._v(" " + _vm._s(_vm.ability.Adept) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.ability.Master) ? _c('p', [_c('strong', [_vm._v("Master:")]), _vm._v(" " + _vm._s(_vm.ability.Master) + "\n            ")]) : _vm._e()])]) : _vm._e()], 1)
+  }), _vm._v(" "), (_vm.selected) ? _c('fieldset', [_c('legend', [_c('h2', [_vm._v(_vm._s(_vm.ability.Trait) + " "), _c('small', [_vm._v(_vm._s(_vm.ability.Book))])])]), _vm._v(" "), _c('div', [(_vm.ability.Requirement) ? _c('p', [_c('strong', [_vm._v("Requirement:")]), _vm._v(" " + _vm._s(_vm.ability.Requirement) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.ability.Tradition) ? _c('p', [_c('strong', [_vm._v("Tradition:")]), _vm._v(" " + _vm._s(_vm.ability.Tradition) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.ability.Effect) ? _c('p', [_c('strong', [_vm._v("Effect:")]), _vm._v(" " + _vm._s(_vm.ability.Effect) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.ability.Novice) ? _c('p', [_c('strong', [_vm._v("Novice:")]), _vm._v(" " + _vm._s(_vm.ability.Novice) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.ability.Adept) ? _c('p', [_c('strong', [_vm._v("Adept:")]), _vm._v(" " + _vm._s(_vm.ability.Adept) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.ability.Master) ? _c('p', [_c('strong', [_vm._v("Master:")]), _vm._v(" " + _vm._s(_vm.ability.Master) + "\n            ")]) : _vm._e()])]) : _vm._e()], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
