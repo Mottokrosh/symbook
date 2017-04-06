@@ -7,5 +7,9 @@ new Vue({
 
 	components: {
 		SbHeader, Card
+	},
+
+	data: {
+		numberOfCards: 1
 	}
 });

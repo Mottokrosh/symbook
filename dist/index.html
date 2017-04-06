@@ -11,7 +11,10 @@
     <body>
         <div id="app">
             <sb-header></sb-header>
-            <card></card>
+            <div class="cards">
+                <card v-for="card in numberOfCards"></card>
+                <button @click="numberOfCards++" class="add-card">+</button>
+            </div>
         </div>
         <script src="app.js"></script>
     </body>
