@@ -1,10 +1,22 @@
-$yellow: #f3ffe3;
+$yellow: #e5d7b9;
+$red: #7f3a2b;
+$green: #7f3a2b;
+$cardWidth: 640px;
+
+* {
+	box-sizing: border-box;
+
+	*:before, *:after {
+		box-sizing: inherit;
+	}
+}
 
 body {
-	background-image: url(images/pattern.png);
 	font-family: 'Merriweather', serif;
 	font-weight: 300;
-	color: $yellow;
+	background-image: url(images/pattern.png);
+	margin: 0;
+	padding: 0;
 }
 
 h1, h2, h3, h4 {
@@ -12,6 +24,37 @@ h1, h2, h3, h4 {
 	font-style: italic;
 }
 
-input[type=search] {
-	background-color: rgba(0, 0, 0, 0.5);
+header {
+	padding: 1rem;
+
+	img {
+		display: block;
+		max-width: 300px;
+		margin: auto;
+	}
+}
+
+#app {
+	display: flex;
+	flex-direction: column;
+}
+
+.card {
+	max-width: $cardWidth;
+	margin: 3rem auto;
+	/* border: 2px solid $green; */
+	padding: 1rem;
+	background-color: $yellow;
+	box-shadow:  inset 0 0 0 2px $red, 0 0 0 20px $yellow;
+
+	h2 {
+		margin: 0 0 1rem 0;
+		color: $red;
+	}
+}
+
+.v-select {
+	max-width: $cardWidth;
+	margin: 1rem auto;
+	background-color: $yellow;
 }

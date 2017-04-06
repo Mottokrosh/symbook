@@ -1,8 +1,19 @@
 <template>
-	<div class="card">
-		<h1>Hello, world!</h1>
+	<div>
 		<v-select v-model="selected" :options="options"></v-select>
-		<pre>{{ selected && selected.value }}</pre>
+
+		<div class="card">
+			<h2>{{ ability.Trait }}</h2>
+			<div>
+				<p>Book: {{ ability.Book }}</p>
+				<p>Requirement: {{ ability.Requirement }}</p>
+				<p>Effect: {{ ability.Effect }}</p>
+				<p>Novice: {{ ability.Novice }}</p>
+				<p>Adept: {{ ability.Adept }}</p>
+				<p>Master: {{ ability.Master }}</p>
+			</div>
+			<!-- <pre>{{ selected && selected.value }}</pre> -->
+		</div>
 	</div>
 </template>
 
@@ -17,6 +28,12 @@ export default {
 		return {
 			selected: null,
 			options: [],
+		}
+	},
+
+	computed: {
+		ability() {
+			return this.selected ? this.selected.value : {};
 		}
 	},
 

@@ -15,7 +15,8 @@ mix.setPublicPath('dist/')
    .js('src/app.js', 'dist/')
    .sass('src/app.scss', 'dist/')
    .copy('src/data.json', 'dist/')
-   .copy('src/index.html', 'dist/');
+   .copy('src/index.html', 'dist/')
+   .copy('src/images/*.png', 'dist/images/');
 
 // Full API
 // mix.js(src, output);
