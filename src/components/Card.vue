@@ -1,6 +1,10 @@
 <template>
     <div class="card">
-        <v-select v-model="selected" :options="options"></v-select>
+        <div class="card-header">
+            <v-select v-model="selected" :options="options"></v-select>
+
+            <button class="remove-card" @click="$emit('dismiss', id)">&times;</button>
+        </div>
 
         <fieldset v-if="selected">
             <legend>
@@ -37,9 +41,11 @@ import vSelect from 'vue-select';
 export default {
     components: { vSelect },
 
+    props: ['id', 'preSelected'],
+
     data() {
         return {
-            selected: null,
+            selected: this.preSelected,
             options: [],
         }
     },

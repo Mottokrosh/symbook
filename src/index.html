@@ -11,9 +11,9 @@
     <body>
         <div id="app">
             <sb-header></sb-header>
+            <button @click="newCard" class="add-card">+</button>
             <div class="cards">
-                <card v-for="card in numberOfCards"></card>
-                <button @click="numberOfCards++" class="add-card">+</button>
+                <card v-for="card in cards" :id="card.id" :pre-selected="card.selected" :key="card.id" @dismiss="remove"></card>
             </div>
         </div>
         <script src="app.js"></script>
