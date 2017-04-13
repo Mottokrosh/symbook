@@ -1,6 +1,6 @@
 <template>
 	<header>
-		<img src="/images/symbaroum_logo_600px.png">
+		<img src="images/symbaroum_logo_600px.png">
 	</header>
 </template>
 

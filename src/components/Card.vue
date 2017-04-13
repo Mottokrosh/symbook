@@ -57,7 +57,7 @@ export default {
     },
 
     created() {
-        axios.get('data.json')
+        axios.get('data/symbaroum.json')
             .then(response => {
                 let traits = Object.keys(response.data.Traits).map(key => {
                     let obj = response.data.Traits[key];

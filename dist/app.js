@@ -1947,7 +1947,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     created: function created() {
         var _this = this;
 
-        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('data.json').then(function (response) {
+        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('data/symbaroum.json').then(function (response) {
             var traits = Object.keys(response.data.Traits).map(function (key) {
                 var obj = response.data.Traits[key];
                 obj.Type = 'Trait';
@@ -2078,7 +2078,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('header', [_c('img', {
     attrs: {
-      "src": "/images/symbaroum_logo_600px.png"
+      "src": "images/symbaroum_logo_600px.png"
     }
   })])
 }]}
