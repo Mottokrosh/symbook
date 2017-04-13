@@ -64,6 +64,7 @@ button {
 
 button.add-card {
   margin: auto;
+  width: 2.5rem;
 }
 
 button.remove-card {
