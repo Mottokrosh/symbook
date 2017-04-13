@@ -130,6 +130,19 @@ button {
             font-size: 1rem;
         }
     }
+
+    .line {
+        display: flex;
+        margin-top: 1rem;
+
+        & > :first-child {
+            width: 4rem;
+        }
+
+        & > :nth-child(2) {
+            flex: 1;
+        }
+    }
 }
 
 .v-select {

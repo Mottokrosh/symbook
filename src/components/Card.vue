@@ -18,17 +18,22 @@
                     <strong>Tradition:</strong> {{ ability.Tradition }}
                 </p>
                 <p v-if="ability.Effect">
-                    <strong>Effect:</strong> {{ ability.Effect }}
+                    {{ ability.Effect }}
                 </p>
-                <p v-if="ability.Novice">
-                    <strong>Novice:</strong> {{ ability.Novice }}
-                </p>
-                <p v-if="ability.Adept">
-                    <strong>Adept:</strong> {{ ability.Adept }}
-                </p>
-                <p v-if="ability.Master">
-                    <strong>Master:</strong> {{ ability.Master }}
-                </p>
+                <div v-if="ability.Novice">
+                    <div class="line" v-if="ability.Novice">
+                        <strong>Novice:</strong>
+                        <p v-html="emphasizeFirstWord(ability.Novice)"></p>
+                    </div>
+                    <div class="line" v-if="ability.Adept">
+                        <strong>Adept:</strong>
+                        <p v-html="emphasizeFirstWord(ability.Adept)"></p>
+                    </div>
+                    <div class="line" v-if="ability.Master">
+                        <strong>Master:</strong>
+                        <p v-html="emphasizeFirstWord(ability.Master)"></p>
+                    </div>
+                </div>
             </div>
         </fieldset>
     </div>
@@ -93,6 +98,14 @@ export default {
                 this.options = traits.concat(abilities, powers);
             })
         ;
+    },
+
+    methods: {
+        emphasizeFirstWord(text) {
+            let chunks = text.split('.');
+            chunks[0] = '<em>' + chunks[0] + '</em>';
+            return chunks.join('.');
+        }
     }
 };
 </script>
