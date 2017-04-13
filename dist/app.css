@@ -148,3 +148,8 @@ button.remove-card {
 .v-select {
   width: 100%;
 }
+
+.v-select .dropdown-toggle {
+  background: url(../images/bg_pattern.jpg) !important;
+  background-size: 600px !important;
+}
