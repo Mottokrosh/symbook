@@ -95,7 +95,37 @@ export default {
                     };
                 });
 
-                this.options = traits.concat(abilities, powers);
+                let boons = Object.keys(response.data.Boons).map(key => {
+                    let obj = response.data.Boons[key];
+                    obj.Type = 'Boon';
+
+                    return {
+                        label: 'Boon: ' + obj.Trait + ' (' + obj.Book + ')',
+                        value: obj,
+                    };
+                });
+
+                let burdens = Object.keys(response.data.Burdens).map(key => {
+                    let obj = response.data.Burdens[key];
+                    obj.Type = 'Burden';
+
+                    return {
+                        label: 'Burden: ' + obj.Trait + ' (' + obj.Book + ')',
+                        value: obj,
+                    };
+                });
+
+                let rituals = Object.keys(response.data.Rituals).map(key => {
+                    let obj = response.data.Rituals[key];
+                    obj.Type = 'Ritual';
+
+                    return {
+                        label: 'Ritual: ' + obj.Ritual + ' (' + obj.Book + ')',
+                        value: obj,
+                    };
+                });
+
+                this.options = abilities.concat(boons, burdens, powers, rituals, traits);
             })
         ;
     },
