@@ -1,11 +1,19 @@
 <template>
-	<header>
-		<img src="images/symbaroum_logo_600px.png">
-	</header>
+    <header>
+        <div>
+            <img src="images/symbook.png">
+            <small>Symbaroum Cyclopedia</small>
+        </div>
+        <nav>
+            <ul>
+                <li><button @click="$emit('add')" class="add-card">+</button></li>
+            </ul>
+        </nav>
+    </header>
 </template>
 
 <script>
 export default {
-	name: 'SbHeader'
+    name: 'SbHeader'
 };
 </script>

@@ -35,8 +35,41 @@ header {
 
 header img {
   display: block;
-  max-width: 300px;
-  margin: auto;
+  max-width: 220px;
+}
+
+header small {
+  color: #6f795d;
+  font-size: 1rem;
+  font-variant: small-caps;
+  letter-spacing: 0.22rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 17, 0, 0.8);
+}
+
+header nav {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li:not(:first-child) {
+  margin-left: 1rem;
+}
+
+footer {
+  color: #6f795d;
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.6rem;
 }
 
 #app {
@@ -50,28 +83,34 @@ header img {
 }
 
 button {
-  background-color: rgba(86, 143, 92, 0.25);
-  border: 2px solid #568f5c;
-  border-radius: 0.5rem;
-  padding: 0.15rem 0.5rem 0.32rem 0.5rem;
-  color: #568f5c;
-  line-height: 1;
-  font-size: 1.5rem;
+  background-image: url(../images/button.png);
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #e5d7b9;
+  border-radius: 50%;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   cursor: pointer;
+  color: #e5d7b9;
+  font-size: 1.5rem;
+  line-height: 1;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  box-shadow: 0.15rem 0.15rem 0.3rem rgba(0, 17, 0, 0.3);
 }
 
-button.add-card {
-  margin: auto;
-  width: 2.5rem;
-}
-
-button.remove-card {
-  background-color: rgba(127, 58, 43, 0.25);
-  border-color: #7f3a2b;
-  color: #7f3a2b;
+.panel {
+  background-color: #010;
+  color: #e5d7b9;
+  padding: 1.4rem 1.7rem;
+  margin: 0 1rem 1rem 1rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  box-shadow: 0.15rem 0.15rem 0.3rem rgba(0, 17, 0, 0.3), inset 0px 0px 0px 0.7rem #010, inset 0px 0px 0px 0.8rem rgba(218, 165, 32, 0.8);
 }
 
 .cards {
@@ -95,10 +134,10 @@ button.remove-card {
 
 .card {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 300px;
-          flex: 1 1 300px;
+      -ms-flex: 1 1 280px;
+          flex: 1 1 280px;
   margin: 1rem 0.5rem;
-  padding: 1rem 1.5rem 2rem 1.5rem;
+  padding: 0.5rem 1rem 1.5rem 1rem;
   background-color: #e5d7b9;
   background: -webkit-linear-gradient(315deg, transparent 10px, #e5d7b9 0) top left, -webkit-linear-gradient(225deg, transparent 10px, #e5d7b9 0) top right, -webkit-linear-gradient(135deg, transparent 10px, #e5d7b9 0) bottom right, -webkit-linear-gradient(45deg, transparent 10px, #e5d7b9 0) bottom left;
   background: linear-gradient(135deg, transparent 10px, #e5d7b9 0) top left, linear-gradient(225deg, transparent 10px, #e5d7b9 0) top right, linear-gradient(315deg, transparent 10px, #e5d7b9 0) bottom right, linear-gradient(45deg, transparent 10px, #e5d7b9 0) bottom left;
@@ -141,10 +180,11 @@ button.remove-card {
 .card h2 {
   margin: 0;
   color: #7f3a2b;
+  font-size: 1.1rem;
 }
 
 .card h2 small {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .card .line {
@@ -171,4 +211,14 @@ button.remove-card {
 .v-select .dropdown-toggle {
   background: url(../images/bg_pattern.jpg) !important;
   background-size: 600px !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.v-select .selected-tag {
+  -webkit-box-flex: 1 !important;
+      -ms-flex: 1 0 auto !important;
+          flex: 1 0 auto !important;
+  float: none !important;
 }

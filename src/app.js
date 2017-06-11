@@ -1,37 +1,10 @@
 import Vue from 'vue';
-import SbHeader from './components/SbHeader.vue';
-import Card from './components/Card.vue';
+import Symbook from './components/symbook.vue';
 
 new Vue({
     el: '#app',
 
     components: {
-        SbHeader, Card
+        Symbook,
     },
-
-    data: {
-        lastId: 1,
-        cards: [
-            {
-                id: 1,
-                selected: null
-            }
-        ]
-    },
-
-    methods: {
-        newCard() {
-            this.lastId++;
-            this.cards.push({
-                id: this.lastId,
-                selected: null
-            });
-        },
-
-        remove(id) {
-            this.cards = this.cards.filter(card => {
-                return card.id !== id;
-            });
-        }
-    }
 });

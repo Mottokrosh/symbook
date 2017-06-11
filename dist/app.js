@@ -989,11 +989,8 @@ module.exports = function normalizeComponent (
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_SbHeader_vue__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_SbHeader_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_SbHeader_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Card_vue__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Card_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_Card_vue__);
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_symbook_vue__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_symbook_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_symbook_vue__);
 
 
 
@@ -1001,30 +998,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     el: '#app',
 
     components: {
-        SbHeader: __WEBPACK_IMPORTED_MODULE_1__components_SbHeader_vue___default.a, Card: __WEBPACK_IMPORTED_MODULE_2__components_Card_vue___default.a
-    },
-
-    data: {
-        lastId: 1,
-        cards: [{
-            id: 1,
-            selected: null
-        }]
-    },
-
-    methods: {
-        newCard: function newCard() {
-            this.lastId++;
-            this.cards.push({
-                id: this.lastId,
-                selected: null
-            });
-        },
-        remove: function remove(id) {
-            this.cards = this.cards.filter(function (card) {
-                return card.id !== id;
-            });
-        }
+        Symbook: __WEBPACK_IMPORTED_MODULE_1__components_symbook_vue___default.a
     }
 });
 
@@ -2040,9 +2014,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-	name: 'SbHeader'
+    name: 'SbHeader'
 });
 
 /***/ }),
@@ -2118,13 +2100,20 @@ module.exports = Component.exports
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('header', [_c('img', {
-    attrs: {
-      "src": "images/symbaroum_logo_600px.png"
+  return _c('header', [_vm._m(0), _vm._v(" "), _c('nav', [_c('ul', [_c('li', [_c('button', {
+    staticClass: "add-card",
+    on: {
+      "click": function($event) {
+        _vm.$emit('add')
+      }
     }
-  })])
+  }, [_vm._v("+")])])])])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('img', {
+    attrs: {
+      "src": "images/symbook.png"
+    }
+  }), _vm._v(" "), _c('small', [_vm._v("Symbaroum Cyclopedia")])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -11559,6 +11548,144 @@ module.exports = g;
 __webpack_require__(9);
 module.exports = __webpack_require__(10);
 
+
+/***/ }),
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__SbHeader_vue__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__SbHeader_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__SbHeader_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Card_vue__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Card_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Card_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    components: {
+        SbHeader: __WEBPACK_IMPORTED_MODULE_0__SbHeader_vue___default.a, Card: __WEBPACK_IMPORTED_MODULE_1__Card_vue___default.a
+    },
+
+    data: function data() {
+        return {
+            cardModel: {
+                id: 1,
+                selected: null
+            },
+            lastId: 1,
+            cards: []
+        };
+    },
+
+
+    methods: {
+        newCard: function newCard() {
+            this.lastId++;
+            var card = Object.assign({}, this.cardModel);
+            card.id = this.lastId++;
+            this.cards.push(card);
+        },
+        remove: function remove(id) {
+            this.cards = this.cards.filter(function (card) {
+                return card.id !== id;
+            });
+        }
+    }
+});
+
+/***/ }),
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(8)(
+  /* script */
+  __webpack_require__(42),
+  /* template */
+  __webpack_require__(44),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/mottokrosh/Documents/Projects/symbook/src/components/symbook.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] symbook.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-5a94d18f", Component.options)
+  } else {
+    hotAPI.reload("data-v-5a94d18f", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('sb-header', {
+    on: {
+      "add": _vm.newCard
+    }
+  }), _vm._v(" "), _c('div', {
+    staticClass: "cards"
+  }, _vm._l((_vm.cards), function(card) {
+    return _c('card', {
+      key: card.id,
+      attrs: {
+        "id": card.id,
+        "pre-selected": card.selected
+      },
+      on: {
+        "dismiss": _vm.remove
+      }
+    })
+  })), _vm._v(" "), _vm._m(0), _vm._v(" "), _vm._m(1)], 1)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "panel"
+  }, [_c('p', [_vm._v("Welcome to Symbook, the quick reference cyclopedia for Symbaroum traits, abilities, and more.")]), _vm._v(" "), _c('p', [_vm._v("All content is the property of Nya Järnringen AB and used with their permission.")]), _vm._v(" "), _c('p', [_vm._v("Press the "), _c('strong', [_vm._v("plus")]), _vm._v(" button in the top right to add your first—and subsequent—cards.")])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('footer', [_c('p', [_vm._v("Credits: Symbook was created by Frank Reding. Art design inspired by the fantastic work of Johan Nohr for the Symbaroum books. Special thanks to Järnringen for creating such a great game.")])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-5a94d18f", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);
