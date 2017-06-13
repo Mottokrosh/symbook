@@ -10,18 +10,19 @@
             <p>Press the <strong>plus</strong> button in the top right to add your first&mdash;and subsequent&mdash;cards.</p>
         </div>
         <footer>
-            <p>Credits: Symbook was created by Frank Reding. Art design inspired by the fantastic work of Johan Nohr for the Symbaroum books. Special thanks to Järnringen for creating such a great game.</p>
+            <p><strong>Credits:</strong> Symbook was created by <a href="mailto:frank@symbook.io">Frank Reding</a> <icon name="google" size="0.7rem" url="https://plus.google.com/+FrankReding"></icon> <icon name="twitter" size="0.7rem" url="https://twitter.com/Mottokrosh"></icon>.<br>Art design inspired by the fantastic work of Johan Nohr for the Symbaroum books.<br>Special thanks to <a href="https://plus.google.com/+SymbaroumTeam" target="_blank">Järnringen</a> for creating such a great game.</p>
         </footer>
     </div>
 </template>
 
 <script>
-    import SbHeader from './SbHeader.vue';
-    import Card from './Card.vue';
+    import SbHeader from './sb-header.vue';
+    import Card from './card.vue';
+    import Icon from './icon.vue';
 
     export default {
         components: {
-            SbHeader, Card
+            SbHeader, Card, Icon,
         },
 
         data() {

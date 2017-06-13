@@ -1850,203 +1850,19 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 29 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_select__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_select___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_select__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    components: { vSelect: __WEBPACK_IMPORTED_MODULE_1_vue_select___default.a },
-
-    props: ['id', 'preSelected'],
-
-    data: function data() {
-        return {
-            selected: this.preSelected,
-            options: []
-        };
-    },
-
-
-    computed: {
-        ability: function ability() {
-            return this.selected ? this.selected.value : {};
-        }
-    },
-
-    created: function created() {
-        var _this = this;
-
-        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('data/symbaroum.json').then(function (response) {
-            var traits = Object.keys(response.data.Traits).map(function (key) {
-                var obj = response.data.Traits[key];
-                obj.Type = 'Trait';
-
-                return {
-                    label: 'Trait: ' + obj.Trait + ' (' + obj.Book + ')',
-                    value: obj
-                };
-            });
-
-            var abilities = Object.keys(response.data.Abilities).map(function (key) {
-                var obj = response.data.Abilities[key];
-                obj.Type = 'Ability';
-
-                return {
-                    label: 'Ability: ' + obj.Trait + ' (' + obj.Book + ')',
-                    value: obj
-                };
-            });
-
-            var powers = Object.keys(response.data['Mystical Powers']).map(function (key) {
-                var obj = response.data['Mystical Powers'][key];
-                obj.Type = 'Mystical Power';
-                obj.Trait = obj['Mystical Powers'].trim();
-
-                return {
-                    label: 'Mystical Power: ' + obj.Trait + ' (' + obj.Book + ')',
-                    value: obj
-                };
-            });
-
-            var boons = Object.keys(response.data.Boons).map(function (key) {
-                var obj = response.data.Boons[key];
-                obj.Type = 'Boon';
-
-                return {
-                    label: 'Boon: ' + obj.Trait + ' (' + obj.Book + ')',
-                    value: obj
-                };
-            });
-
-            var burdens = Object.keys(response.data.Burdens).map(function (key) {
-                var obj = response.data.Burdens[key];
-                obj.Type = 'Burden';
-
-                return {
-                    label: 'Burden: ' + obj.Trait + ' (' + obj.Book + ')',
-                    value: obj
-                };
-            });
-
-            var rituals = Object.keys(response.data.Rituals).map(function (key) {
-                var obj = response.data.Rituals[key];
-                obj.Type = 'Ritual';
-
-                return {
-                    label: 'Ritual: ' + obj.Ritual + ' (' + obj.Book + ')',
-                    value: obj
-                };
-            });
-
-            var monstrousTraits = Object.keys(response.data['Monstrous Traits']).map(function (key) {
-                var obj = response.data['Monstrous Traits'][key];
-                obj.Type = 'Monstrous Trait';
-
-                return {
-                    label: 'Monstrous Trait: ' + obj.Name + ' (' + obj.Book + ')',
-                    value: obj
-                };
-            });
-
-            _this.options = abilities.concat(boons, burdens, monstrousTraits, powers, rituals, traits);
-        });
-    },
-
-
-    methods: {
-        emphasizeFirstWord: function emphasizeFirstWord(text) {
-            var chunks = text.split('.');
-            chunks[0] = '<em>' + chunks[0] + '</em>';
-            return chunks.join('.');
-        }
-    }
-});
-
-/***/ }),
-/* 30 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    name: 'SbHeader'
-});
-
-/***/ }),
+/* 29 */,
+/* 30 */,
 /* 31 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__SbHeader_vue__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__SbHeader_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__SbHeader_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Card_vue__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Card_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Card_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__sb_header_vue__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__sb_header_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__sb_header_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__card_vue__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__card_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__card_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__icon_vue__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__icon_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__icon_vue__);
 //
 //
 //
@@ -2064,13 +1880,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+
 
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     components: {
-        SbHeader: __WEBPACK_IMPORTED_MODULE_0__SbHeader_vue___default.a, Card: __WEBPACK_IMPORTED_MODULE_1__Card_vue___default.a
+        SbHeader: __WEBPACK_IMPORTED_MODULE_0__sb_header_vue___default.a, Card: __WEBPACK_IMPORTED_MODULE_1__card_vue___default.a, Icon: __WEBPACK_IMPORTED_MODULE_2__icon_vue___default.a
     },
 
     data: function data() {
@@ -2101,74 +1918,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 32 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(3)(
-  /* script */
-  __webpack_require__(29),
-  /* template */
-  __webpack_require__(36),
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "/Users/mottokrosh/Documents/Projects/symbook/src/components/Card.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Card.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-53a51e61", Component.options)
-  } else {
-    hotAPI.reload("data-v-53a51e61", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 33 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(3)(
-  /* script */
-  __webpack_require__(30),
-  /* template */
-  __webpack_require__(35),
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "/Users/mottokrosh/Documents/Projects/symbook/src/components/SbHeader.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] SbHeader.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-14a00e8d", Component.options)
-  } else {
-    hotAPI.reload("data-v-14a00e8d", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
+/* 32 */,
+/* 33 */,
 /* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2203,89 +1954,8 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 35 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('header', [_vm._m(0), _vm._v(" "), _c('nav', [_c('ul', [_c('li', [_c('button', {
-    staticClass: "add-card",
-    on: {
-      "click": function($event) {
-        _vm.$emit('add')
-      }
-    }
-  }, [_vm._v("+")])])])])])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('img', {
-    attrs: {
-      "src": "images/symbook.png"
-    }
-  }), _vm._v(" "), _c('small', [_vm._v("Symbaroum Cyclopedia")])])
-}]}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-14a00e8d", module.exports)
-  }
-}
-
-/***/ }),
-/* 36 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('v-select', {
-    attrs: {
-      "options": _vm.options
-    },
-    model: {
-      value: (_vm.selected),
-      callback: function($$v) {
-        _vm.selected = $$v
-      },
-      expression: "selected"
-    }
-  }), _vm._v(" "), _c('button', {
-    staticClass: "remove-card",
-    on: {
-      "click": function($event) {
-        _vm.$emit('dismiss', _vm.id)
-      }
-    }
-  }, [_vm._v("×")])], 1), _vm._v(" "), (_vm.selected) ? _c('fieldset', [_c('legend', [_c('h2', [_vm._v(_vm._s(_vm.ability.Trait || _vm.ability.Name) + " "), _c('small', [_vm._v(_vm._s(_vm.ability.Book))])])]), _vm._v(" "), _c('div', [(_vm.ability.Requirement) ? _c('p', [_c('strong', [_vm._v("Requirement:")]), _vm._v(" " + _vm._s(_vm.ability.Requirement) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.ability.Tradition) ? _c('p', [_c('strong', [_vm._v("Tradition:")]), _vm._v(" " + _vm._s(_vm.ability.Tradition) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.ability.Effect) ? _c('p', [_vm._v("\n                " + _vm._s(_vm.ability.Effect) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.ability.Novice) ? _c('div', [(_vm.ability.Novice) ? _c('div', {
-    staticClass: "line"
-  }, [_c('strong', [_vm._v("Novice:")]), _vm._v(" "), _c('p', {
-    domProps: {
-      "innerHTML": _vm._s(_vm.emphasizeFirstWord(_vm.ability.Novice))
-    }
-  })]) : _vm._e(), _vm._v(" "), (_vm.ability.Adept) ? _c('div', {
-    staticClass: "line"
-  }, [_c('strong', [_vm._v("Adept:")]), _vm._v(" "), _c('p', {
-    domProps: {
-      "innerHTML": _vm._s(_vm.emphasizeFirstWord(_vm.ability.Adept))
-    }
-  })]) : _vm._e(), _vm._v(" "), (_vm.ability.Master) ? _c('div', {
-    staticClass: "line"
-  }, [_c('strong', [_vm._v("Master:")]), _vm._v(" "), _c('p', {
-    domProps: {
-      "innerHTML": _vm._s(_vm.emphasizeFirstWord(_vm.ability.Master))
-    }
-  })]) : _vm._e()]) : _vm._e()])]) : _vm._e()])
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-53a51e61", module.exports)
-  }
-}
-
-/***/ }),
+/* 35 */,
+/* 36 */,
 /* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2307,13 +1977,32 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "dismiss": _vm.remove
       }
     })
-  })), _vm._v(" "), _vm._m(0), _vm._v(" "), _vm._m(1)], 1)
+  })), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('footer', [_c('p', [_c('strong', [_vm._v("Credits:")]), _vm._v(" Symbook was created by "), _c('a', {
+    attrs: {
+      "href": "mailto:frank@symbook.io"
+    }
+  }, [_vm._v("Frank Reding")]), _vm._v(" "), _c('icon', {
+    attrs: {
+      "name": "google",
+      "size": "0.7rem",
+      "url": "https://plus.google.com/+FrankReding"
+    }
+  }), _vm._v(" "), _c('icon', {
+    attrs: {
+      "name": "twitter",
+      "size": "0.7rem",
+      "url": "https://twitter.com/Mottokrosh"
+    }
+  }), _vm._v("."), _c('br'), _vm._v("Art design inspired by the fantastic work of Johan Nohr for the Symbaroum books."), _c('br'), _vm._v("Special thanks to "), _c('a', {
+    attrs: {
+      "href": "https://plus.google.com/+SymbaroumTeam",
+      "target": "_blank"
+    }
+  }, [_vm._v("Järnringen")]), _vm._v(" for creating such a great game.")], 1)])], 1)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "panel"
   }, [_c('p', [_vm._v("Welcome to Symbook, the quick reference cyclopedia for Symbaroum traits, abilities, and more.")]), _vm._v(" "), _c('p', [_vm._v("All content is the property of Nya Järnringen AB and used with their permission.")]), _vm._v(" "), _c('p', [_vm._v("Press the "), _c('strong', [_vm._v("plus")]), _vm._v(" button in the top right to add your first—and subsequent—cards.")])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('footer', [_c('p', [_vm._v("Credits: Symbook was created by Frank Reding. Art design inspired by the fantastic work of Johan Nohr for the Symbaroum books. Special thanks to Järnringen for creating such a great game.")])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -11693,6 +11382,451 @@ module.exports = g;
 __webpack_require__(9);
 module.exports = __webpack_require__(10);
 
+
+/***/ }),
+/* 42 */,
+/* 43 */,
+/* 44 */,
+/* 45 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_select__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_select___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_select__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    components: { vSelect: __WEBPACK_IMPORTED_MODULE_1_vue_select___default.a },
+
+    props: ['id', 'preSelected'],
+
+    data: function data() {
+        return {
+            selected: this.preSelected,
+            options: []
+        };
+    },
+
+
+    computed: {
+        ability: function ability() {
+            return this.selected ? this.selected.value : {};
+        }
+    },
+
+    created: function created() {
+        var _this = this;
+
+        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('data/symbaroum.json').then(function (response) {
+            var traits = Object.keys(response.data.Traits).map(function (key) {
+                var obj = response.data.Traits[key];
+                obj.Type = 'Trait';
+
+                return {
+                    label: 'Trait: ' + obj.Trait + ' (' + obj.Book + ')',
+                    value: obj
+                };
+            });
+
+            var abilities = Object.keys(response.data.Abilities).map(function (key) {
+                var obj = response.data.Abilities[key];
+                obj.Type = 'Ability';
+
+                return {
+                    label: 'Ability: ' + obj.Trait + ' (' + obj.Book + ')',
+                    value: obj
+                };
+            });
+
+            var powers = Object.keys(response.data['Mystical Powers']).map(function (key) {
+                var obj = response.data['Mystical Powers'][key];
+                obj.Type = 'Mystical Power';
+                obj.Trait = obj['Mystical Powers'].trim();
+
+                return {
+                    label: 'Mystical Power: ' + obj.Trait + ' (' + obj.Book + ')',
+                    value: obj
+                };
+            });
+
+            var boons = Object.keys(response.data.Boons).map(function (key) {
+                var obj = response.data.Boons[key];
+                obj.Type = 'Boon';
+
+                return {
+                    label: 'Boon: ' + obj.Trait + ' (' + obj.Book + ')',
+                    value: obj
+                };
+            });
+
+            var burdens = Object.keys(response.data.Burdens).map(function (key) {
+                var obj = response.data.Burdens[key];
+                obj.Type = 'Burden';
+
+                return {
+                    label: 'Burden: ' + obj.Trait + ' (' + obj.Book + ')',
+                    value: obj
+                };
+            });
+
+            var rituals = Object.keys(response.data.Rituals).map(function (key) {
+                var obj = response.data.Rituals[key];
+                obj.Type = 'Ritual';
+
+                return {
+                    label: 'Ritual: ' + obj.Ritual + ' (' + obj.Book + ')',
+                    value: obj
+                };
+            });
+
+            var monstrousTraits = Object.keys(response.data['Monstrous Traits']).map(function (key) {
+                var obj = response.data['Monstrous Traits'][key];
+                obj.Type = 'Monstrous Trait';
+
+                return {
+                    label: 'Monstrous Trait: ' + obj.Name + ' (' + obj.Book + ')',
+                    value: obj
+                };
+            });
+
+            _this.options = abilities.concat(boons, burdens, monstrousTraits, powers, rituals, traits);
+        });
+    },
+
+
+    methods: {
+        emphasizeFirstWord: function emphasizeFirstWord(text) {
+            var chunks = text.split('.');
+            chunks[0] = '<em>' + chunks[0] + '</em>';
+            return chunks.join('.');
+        }
+    }
+});
+
+/***/ }),
+/* 46 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['name', 'size', 'url'],
+
+    computed: {
+        style: function style() {
+            return {
+                width: this.size
+            };
+        }
+    }
+});
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(3)(
+  /* script */
+  __webpack_require__(45),
+  /* template */
+  __webpack_require__(50),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/mottokrosh/Documents/Projects/symbook/src/components/card.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] card.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-4fcaba41", Component.options)
+  } else {
+    hotAPI.reload("data-v-4fcaba41", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 48 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(3)(
+  /* script */
+  __webpack_require__(46),
+  /* template */
+  __webpack_require__(49),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/mottokrosh/Documents/Projects/symbook/src/components/icon.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] icon.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-244c9f2a", Component.options)
+  } else {
+    hotAPI.reload("data-v-244c9f2a", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 49 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('a', {
+    staticClass: "icon",
+    attrs: {
+      "href": _vm.url,
+      "role": "button",
+      "target": "_blank"
+    }
+  }, [_c('svg', {
+    style: (_vm.style),
+    attrs: {
+      "viewBox": "0 0 16 16",
+      "xmlns": "http://www.w3.org/2000/svg",
+      "fill-rule": "evenodd",
+      "clip-rule": "evenodd",
+      "stroke-linejoin": "round",
+      "stroke-miterlimit": "1.414"
+    }
+  }, [(_vm.name === 'google') ? _c('path', {
+    attrs: {
+      "d": "M5.09 7.273v1.745h2.89c-.116.75-.873 2.197-2.887 2.197-1.737 0-3.155-1.44-3.155-3.215S3.353 4.785 5.09 4.785c.99 0 1.652.422 2.03.786l1.382-1.33c-.887-.83-2.037-1.33-3.41-1.33C2.275 2.91 0 5.19 0 8s2.276 5.09 5.09 5.09c2.94 0 4.888-2.065 4.888-4.974 0-.334-.036-.59-.08-.843H5.09zm10.91 0h-1.455V5.818H13.09v1.455h-1.454v1.454h1.455v1.455h1.46V8.727H16"
+    }
+  }) : _vm._e(), _vm._v(" "), (_vm.name === 'twitter') ? _c('path', {
+    attrs: {
+      "d": "M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.37-1.337.64-2.085.79-.598-.64-1.45-1.04-2.396-1.04-1.812 0-3.282 1.47-3.282 3.28 0 .26.03.51.085.75-2.728-.13-5.147-1.44-6.766-3.42C.83 2.58.67 3.14.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.41-.02-.61-.058.42 1.304 1.63 2.253 3.07 2.28-1.12.88-2.54 1.404-4.07 1.404-.26 0-.52-.015-.78-.045 1.46.93 3.18 1.474 5.04 1.474 6.04 0 9.34-5 9.34-9.33 0-.14 0-.28-.01-.42.64-.46 1.2-1.04 1.64-1.7z",
+      "fill-rule": "nonzero"
+    }
+  }) : _vm._e()])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-244c9f2a", module.exports)
+  }
+}
+
+/***/ }),
+/* 50 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "card"
+  }, [_c('div', {
+    staticClass: "card-header"
+  }, [_c('v-select', {
+    attrs: {
+      "options": _vm.options
+    },
+    model: {
+      value: (_vm.selected),
+      callback: function($$v) {
+        _vm.selected = $$v
+      },
+      expression: "selected"
+    }
+  }), _vm._v(" "), _c('button', {
+    staticClass: "remove-card",
+    on: {
+      "click": function($event) {
+        _vm.$emit('dismiss', _vm.id)
+      }
+    }
+  }, [_vm._v("×")])], 1), _vm._v(" "), (_vm.selected) ? _c('fieldset', [_c('legend', [_c('h2', [_vm._v(_vm._s(_vm.ability.Trait || _vm.ability.Name) + " "), _c('small', [_vm._v(_vm._s(_vm.ability.Book))])])]), _vm._v(" "), _c('div', [(_vm.ability.Requirement) ? _c('p', [_c('strong', [_vm._v("Requirement:")]), _vm._v(" " + _vm._s(_vm.ability.Requirement) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.ability.Tradition) ? _c('p', [_c('strong', [_vm._v("Tradition:")]), _vm._v(" " + _vm._s(_vm.ability.Tradition) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.ability.Effect) ? _c('p', [_vm._v("\n                " + _vm._s(_vm.ability.Effect) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.ability.Novice) ? _c('div', [(_vm.ability.Novice) ? _c('div', {
+    staticClass: "line"
+  }, [_c('strong', [_vm._v("Novice:")]), _vm._v(" "), _c('p', {
+    domProps: {
+      "innerHTML": _vm._s(_vm.emphasizeFirstWord(_vm.ability.Novice))
+    }
+  })]) : _vm._e(), _vm._v(" "), (_vm.ability.Adept) ? _c('div', {
+    staticClass: "line"
+  }, [_c('strong', [_vm._v("Adept:")]), _vm._v(" "), _c('p', {
+    domProps: {
+      "innerHTML": _vm._s(_vm.emphasizeFirstWord(_vm.ability.Adept))
+    }
+  })]) : _vm._e(), _vm._v(" "), (_vm.ability.Master) ? _c('div', {
+    staticClass: "line"
+  }, [_c('strong', [_vm._v("Master:")]), _vm._v(" "), _c('p', {
+    domProps: {
+      "innerHTML": _vm._s(_vm.emphasizeFirstWord(_vm.ability.Master))
+    }
+  })]) : _vm._e()]) : _vm._e()])]) : _vm._e()])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-4fcaba41", module.exports)
+  }
+}
+
+/***/ }),
+/* 51 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: 'SbHeader'
+});
+
+/***/ }),
+/* 52 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(3)(
+  /* script */
+  __webpack_require__(51),
+  /* template */
+  __webpack_require__(53),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/mottokrosh/Documents/Projects/symbook/src/components/sb-header.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] sb-header.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-4a768fea", Component.options)
+  } else {
+    hotAPI.reload("data-v-4a768fea", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 53 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('header', [_vm._m(0), _vm._v(" "), _c('nav', [_c('ul', [_c('li', [_c('button', {
+    staticClass: "add-card",
+    on: {
+      "click": function($event) {
+        _vm.$emit('add')
+      }
+    }
+  }, [_vm._v("+")])])])])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('img', {
+    attrs: {
+      "src": "images/symbook.png"
+    }
+  }), _vm._v(" "), _c('small', [_vm._v("Symbaroum Cyclopedia")])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-4a768fea", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

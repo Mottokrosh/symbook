@@ -5,10 +5,6 @@ $cardWidth: 640px;
 $black: #010;
 $gold: #daa520;
 
-@mixin shadow() {
-    box-shadow:  0.15rem 0.15rem 0.3rem transparentize($black, 0.7);
-}
-
 * {
     box-sizing: border-box;
 
@@ -78,7 +74,12 @@ footer {
     color: $green;
     padding: 2rem;
     text-align: center;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem transparentize($black, 0.2);
+
+    a {
+        color: $green;
+    }
 }
 
 #app {
@@ -102,13 +103,21 @@ button {
     margin: 0;
     padding: 0;
     font-family: inherit;
-    @include shadow();
+    box-shadow:  0.15rem 0.15rem 0.3rem transparentize($black, 0.7);
 
     &.add-card {
     }
 
     &.remove-card {
     }
+}
+
+.icon {
+    background-color: $green;
+    background-image: linear-gradient(to bottom, $green, darken($green, 10%));
+    border-radius: 0.25rem;
+    padding: 0.125rem 0.2rem 0rem 0.2rem;
+    fill: $black;
 }
 
 .panel {

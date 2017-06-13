@@ -5,7 +5,6 @@
 
             <button class="remove-card" @click="$emit('dismiss', id)">&times;</button>
         </div>
-
         <fieldset v-if="selected">
             <legend>
                 <h2>{{ ability.Trait || ability.Name }} <small>{{ ability.Book }}</small></h2>
