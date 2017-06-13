@@ -1972,15 +1972,6 @@
     }
   },
   "Monstrous Traits": {
-    "Trait Name Here": {
-      "Name": "Trait Name Here",
-      "Book": "CRB",
-      "Requirement": "",
-      "Effect": "Main/intro text here",
-      "Novice": "I",
-      "Adept": "II",
-      "Master": "III"
-    },
     "Acidic Attack": {
       "Name": "Acidic Attack",
       "Book": "CRB",

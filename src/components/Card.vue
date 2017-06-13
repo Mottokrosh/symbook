@@ -8,7 +8,7 @@
 
         <fieldset v-if="selected">
             <legend>
-                <h2>{{ ability.Trait }} <small>{{ ability.Book }}</small></h2>
+                <h2>{{ ability.Trait || ability.Name }} <small>{{ ability.Book }}</small></h2>
             </legend>
             <div>
                 <p v-if="ability.Requirement">
@@ -52,7 +52,7 @@ export default {
         return {
             selected: this.preSelected,
             options: [],
-        }
+        };
     },
 
     computed: {
@@ -125,7 +125,17 @@ export default {
                     };
                 });
 
-                this.options = abilities.concat(boons, burdens, powers, rituals, traits);
+                let monstrousTraits = Object.keys(response.data['Monstrous Traits']).map(key => {
+                    let obj = response.data['Monstrous Traits'][key];
+                    obj.Type = 'Monstrous Trait';
+
+                    return {
+                        label: 'Monstrous Trait: ' + obj.Name + ' (' + obj.Book + ')',
+                        value: obj,
+                    };
+                });
+
+                this.options = abilities.concat(boons, burdens, monstrousTraits, powers, rituals, traits);
             })
         ;
     },

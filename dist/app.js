@@ -1988,7 +1988,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 };
             });
 
-            _this.options = abilities.concat(boons, burdens, powers, rituals, traits);
+            var monstrousTraits = Object.keys(response.data['Monstrous Traits']).map(function (key) {
+                var obj = response.data['Monstrous Traits'][key];
+                obj.Type = 'Monstrous Trait';
+
+                return {
+                    label: 'Monstrous Trait: ' + obj.Name + ' (' + obj.Book + ')',
+                    value: obj
+                };
+            });
+
+            _this.options = abilities.concat(boons, burdens, monstrousTraits, powers, rituals, traits);
         });
     },
 
@@ -2247,7 +2257,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.$emit('dismiss', _vm.id)
       }
     }
-  }, [_vm._v("×")])], 1), _vm._v(" "), (_vm.selected) ? _c('fieldset', [_c('legend', [_c('h2', [_vm._v(_vm._s(_vm.ability.Trait) + " "), _c('small', [_vm._v(_vm._s(_vm.ability.Book))])])]), _vm._v(" "), _c('div', [(_vm.ability.Requirement) ? _c('p', [_c('strong', [_vm._v("Requirement:")]), _vm._v(" " + _vm._s(_vm.ability.Requirement) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.ability.Tradition) ? _c('p', [_c('strong', [_vm._v("Tradition:")]), _vm._v(" " + _vm._s(_vm.ability.Tradition) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.ability.Effect) ? _c('p', [_vm._v("\n                " + _vm._s(_vm.ability.Effect) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.ability.Novice) ? _c('div', [(_vm.ability.Novice) ? _c('div', {
+  }, [_vm._v("×")])], 1), _vm._v(" "), (_vm.selected) ? _c('fieldset', [_c('legend', [_c('h2', [_vm._v(_vm._s(_vm.ability.Trait || _vm.ability.Name) + " "), _c('small', [_vm._v(_vm._s(_vm.ability.Book))])])]), _vm._v(" "), _c('div', [(_vm.ability.Requirement) ? _c('p', [_c('strong', [_vm._v("Requirement:")]), _vm._v(" " + _vm._s(_vm.ability.Requirement) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.ability.Tradition) ? _c('p', [_c('strong', [_vm._v("Tradition:")]), _vm._v(" " + _vm._s(_vm.ability.Tradition) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.ability.Effect) ? _c('p', [_vm._v("\n                " + _vm._s(_vm.ability.Effect) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.ability.Novice) ? _c('div', [(_vm.ability.Novice) ? _c('div', {
     staticClass: "line"
   }, [_c('strong', [_vm._v("Novice:")]), _vm._v(" "), _c('p', {
     domProps: {
