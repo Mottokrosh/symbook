@@ -170,6 +170,49 @@ button {
         }
     }
 
+    .search {
+        position: relative;
+
+        input {
+            appearance: none;
+            width: 100%;
+            border: none;
+            border-bottom: 0.125rem solid transparentize($red, 0.7);
+            background-color: transparentize($red, 0.9);
+            border-radius: 0.25rem;
+            font-family: inherit;
+            font-size: 1rem;
+            padding: 0.25rem;
+            color: $red;
+        }
+
+        .results {
+            position: absolute;
+            top: 2rem;
+            left: 0;
+            width: 100%;
+            overflow-y: auto;
+            max-height: 300px;
+            background-color: darken($yellow, 10%);
+
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            li {
+                padding: 0.25rem 0.5rem;
+                border-bottom: 1px solid transparentize($red, 0.5);
+
+                &:hover {
+                    background-color: transparentize($red, 0.8);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
     fieldset {
         border-style: solid;
         border-width: 2px;
@@ -207,17 +250,3 @@ button {
     }
 }
 
-.v-select {
-    width: 100%;
-
-    .dropdown-toggle {
-        background: url(../images/bg_pattern.jpg) !important;
-        background-size: 600px !important;
-        display: flex !important;
-    }
-
-    .selected-tag {
-        flex: 1 0 auto !important;
-        float: none !important;
-    }
-}
