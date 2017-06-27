@@ -3,6 +3,7 @@
     "displayName": "Symbook",
     "version": "1.0.0",
     "description": "Cyclopedia for the Symbaroum Roleplaying Game",
+    "repository": "https://github.com/mottokrosh/symbook",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
