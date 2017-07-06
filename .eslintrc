@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "vue",
+    "airbnb"
+  ],
+  "plugins": [
+    "vue",
+    "html"
+  ],
+  "rules": {}
+}
