@@ -148,7 +148,9 @@ button {
     border-radius: 5px;
     overflow: hidden;
     cursor: pointer;
-    background: url(http://subtlepatterns.com/patterns/wood_pattern.png);
+    background-image: url(http://subtlepatterns.com/patterns/wood_pattern.png);
+    background-blend-mode: multiply;
+    background-color: #d9cba2;
 
     &:active {
         box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.2),
@@ -164,7 +166,7 @@ button {
     span {
         display: block;
         font-size: 1.2rem;
-        padding: 4px 8px 7px 8px;
+        padding: 4px 7px 7px 7px;
         color: rgba(0,0,0,0.7);
         text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
     }
