@@ -39,7 +39,7 @@
                     id: 1,
                     selected: null
                 },
-                lastId: 1,
+                lastId: 0,
                 cards: [],
                 options: [],
             };
@@ -49,7 +49,7 @@
             newCard() {
                 this.lastId++;
                 let card = Object.assign({}, this.cardModel);
-                card.id = this.lastId++;
+                card.id = this.lastId;
                 this.cards.push(card);
             },
 

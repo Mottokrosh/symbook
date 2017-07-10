@@ -1,5 +1,5 @@
 <template>
-    <div class="card">
+    <div class="card" :id="id">
         <div class="card-header">
             <div class="search">
                 <input type="search" name="search" v-model="search" @focus="showResults">
@@ -60,6 +60,10 @@
 </template>
 
 <script>
+    import MoveTo from 'moveto';
+
+    const moveTo = new MoveTo();
+
     export default {
         props: [
             'id',
@@ -101,6 +105,7 @@
 
             showResults() {
                 this.active = true;
+                moveTo.move(document.getElementById(this.id));
             },
 
             hideResults() {
