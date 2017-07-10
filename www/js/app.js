@@ -10647,12 +10647,14 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__sb_header_vue__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__sb_header_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__sb_header_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__card_vue__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__card_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__card_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__icon_vue__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__icon_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__icon_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sb_header_vue__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sb_header_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__sb_header_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__card_vue__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__card_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__card_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__icon_vue__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__icon_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__icon_vue__);
 //
 //
 //
@@ -10670,6 +10672,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+
 
 
 
@@ -10677,7 +10687,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     components: {
-        SbHeader: __WEBPACK_IMPORTED_MODULE_0__sb_header_vue___default.a, Card: __WEBPACK_IMPORTED_MODULE_1__card_vue___default.a, Icon: __WEBPACK_IMPORTED_MODULE_2__icon_vue___default.a
+        SbHeader: __WEBPACK_IMPORTED_MODULE_1__sb_header_vue___default.a, Card: __WEBPACK_IMPORTED_MODULE_2__card_vue___default.a, Icon: __WEBPACK_IMPORTED_MODULE_3__icon_vue___default.a
     },
 
     data: function data() {
@@ -10687,7 +10697,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 selected: null
             },
             lastId: 1,
-            cards: []
+            cards: [],
+            options: []
         };
     },
 
@@ -10704,6 +10715,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 return card.id !== id;
             });
         }
+    },
+
+    created: function created() {
+        var _this = this;
+
+        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('data/symbaroum.json').then(function (response) {
+            _this.options = response.data;
+        });
     }
 });
 
@@ -10846,8 +10865,6 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 //
 //
 //
@@ -10897,18 +10914,27 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['id'],
+    props: ['id', 'options'],
 
     data: function data() {
         return {
             search: null,
             selected: null,
-            active: false,
-            options: []
+            active: false
         };
     },
 
@@ -10928,7 +10954,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             return this.options.filter(function (item) {
                 var regex = new RegExp(_this.search, 'i');
 
-                return item.Name.match(regex);
+                return item.name.match(regex);
             });
         }
     },
@@ -10954,69 +10980,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.search = null;
             this.hideResults();
         }
-    },
-
-    created: function created() {
-        var _this3 = this;
-
-        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('data/symbaroum.json').then(function (response) {
-            var traits = Object.keys(response.data.Traits).map(function (key) {
-                var obj = response.data.Traits[key];
-                obj.Type = 'Trait';
-                obj.Name = obj.Trait;
-
-                return obj;
-            });
-
-            var abilities = Object.keys(response.data.Abilities).map(function (key) {
-                var obj = response.data.Abilities[key];
-                obj.Type = 'Ability';
-                obj.Name = obj.Trait;
-
-                return obj;
-            });
-
-            var powers = Object.keys(response.data['Mystical Powers']).map(function (key) {
-                var obj = response.data['Mystical Powers'][key];
-                obj.Type = 'Mystical Power';
-                obj.Name = obj.Trait = obj['Mystical Powers'].trim();
-
-                return obj;
-            });
-
-            var boons = Object.keys(response.data.Boons).map(function (key) {
-                var obj = response.data.Boons[key];
-                obj.Type = 'Boon';
-                obj.Name = obj.Trait;
-
-                return obj;
-            });
-
-            var burdens = Object.keys(response.data.Burdens).map(function (key) {
-                var obj = response.data.Burdens[key];
-                obj.Type = 'Burden';
-                obj.Name = obj.Trait;
-
-                return obj;
-            });
-
-            var rituals = Object.keys(response.data.Rituals).map(function (key) {
-                var obj = response.data.Rituals[key];
-                obj.Type = 'Ritual';
-                obj.Name = obj.Ritual;
-
-                return obj;
-            });
-
-            var monstrousTraits = Object.keys(response.data['Monstrous Traits']).map(function (key) {
-                var obj = response.data['Monstrous Traits'][key];
-                obj.Type = 'Monstrous Trait';
-
-                return obj;
-            });
-
-            _this3.options = abilities.concat(boons, burdens, monstrousTraits, powers, rituals, traits);
-        });
     }
 });
 
@@ -12101,7 +12064,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
           _vm.select(item)
         }
       }
-    }, [_vm._v("\n                        " + _vm._s(item.Type) + ": " + _vm._s(item.Name) + " (" + _vm._s(item.Book) + ")\n                    ")])
+    }, [_vm._v("\n                        " + _vm._s(item.type) + ": " + _vm._s(item.name) + " (" + _vm._s(item.book) + ")\n                    ")])
   }))])]), _vm._v(" "), _c('button', {
     staticClass: "remove-card",
     on: {
@@ -12109,23 +12072,23 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.$emit('dismiss', _vm.id)
       }
     }
-  }, [_vm._v("×")])]), _vm._v(" "), (_vm.selected) ? _c('fieldset', [_c('legend', [_c('h2', [_vm._v(_vm._s(_vm.selected.Name) + " "), _c('small', [_vm._v(_vm._s(_vm.selected.Book))])])]), _vm._v(" "), _c('div', [(_vm.selected.Requirement) ? _c('p', [_c('strong', [_vm._v("Requirement:")]), _vm._v(" " + _vm._s(_vm.selected.Requirement) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.selected.Tradition) ? _c('p', [_c('strong', [_vm._v("Tradition:")]), _vm._v(" " + _vm._s(_vm.selected.Tradition) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.selected.Effect) ? _c('p', [_vm._v("\n                " + _vm._s(_vm.selected.Effect) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.selected.Novice) ? _c('div', [(_vm.selected.Novice) ? _c('div', {
+  }, [_vm._v("×")])]), _vm._v(" "), (_vm.selected) ? _c('fieldset', [_c('legend', [_c('h2', [_vm._v(_vm._s(_vm.selected.name) + " "), _c('small', [_vm._v(_vm._s(_vm.selected.book))])])]), _vm._v(" "), _c('div', [(_vm.selected.requirement) ? _c('p', [_c('strong', [_vm._v("Requirement:")]), _vm._v(" " + _vm._s(_vm.selected.requirement) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.selected.tradition) ? _c('p', [_c('strong', [_vm._v("Tradition:")]), _vm._v(" " + _vm._s(_vm.selected.tradition) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.selected.effect) ? _c('p', [_vm._v("\n                " + _vm._s(_vm.selected.effect) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.selected.boons) ? _c('p', [_c('strong', [_vm._v("Boons:")]), _vm._v(" " + _vm._s(_vm.selected.boons) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.selected.burdens) ? _c('p', [_c('strong', [_vm._v("Burdens:")]), _vm._v(" " + _vm._s(_vm.selected.burdens) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.selected.options) ? _c('p', [_c('strong', [_vm._v("Options:")]), _vm._v(" " + _vm._s(_vm.selected.options) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.selected.traits) ? _c('p', [_c('strong', [_vm._v("Traits:")]), _vm._v(" " + _vm._s(_vm.selected.traits) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.selected.novice) ? _c('div', [(_vm.selected.novice) ? _c('div', {
     staticClass: "line"
   }, [_c('strong', [_vm._v("Novice:")]), _vm._v(" "), _c('p', {
     domProps: {
-      "innerHTML": _vm._s(_vm.emphasizeFirstWord(_vm.selected.Novice))
+      "innerHTML": _vm._s(_vm.emphasizeFirstWord(_vm.selected.novice))
     }
-  })]) : _vm._e(), _vm._v(" "), (_vm.selected.Adept) ? _c('div', {
+  })]) : _vm._e(), _vm._v(" "), (_vm.selected.adept) ? _c('div', {
     staticClass: "line"
   }, [_c('strong', [_vm._v("Adept:")]), _vm._v(" "), _c('p', {
     domProps: {
-      "innerHTML": _vm._s(_vm.emphasizeFirstWord(_vm.selected.Adept))
+      "innerHTML": _vm._s(_vm.emphasizeFirstWord(_vm.selected.adept))
     }
-  })]) : _vm._e(), _vm._v(" "), (_vm.selected.Master) ? _c('div', {
+  })]) : _vm._e(), _vm._v(" "), (_vm.selected.master) ? _c('div', {
     staticClass: "line"
   }, [_c('strong', [_vm._v("Master:")]), _vm._v(" "), _c('p', {
     domProps: {
-      "innerHTML": _vm._s(_vm.emphasizeFirstWord(_vm.selected.Master))
+      "innerHTML": _vm._s(_vm.emphasizeFirstWord(_vm.selected.master))
     }
   })]) : _vm._e()]) : _vm._e()])]) : _vm._e()])
 },staticRenderFns: []}
@@ -12263,6 +12226,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       key: card.id,
       attrs: {
         "id": card.id,
+        "options": _vm.options,
         "pre-selected": card.selected
       },
       on: {

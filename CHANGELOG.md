@@ -10,8 +10,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - ...
 
 ### Changed
-- ...
-- ...
+- New, more flexible data structure
+- Drastically reduced number of requests to load data
+
+### Fixed
+- Races did not display correctly
+
 
 ## [1.0.0] - 2017-07-03
 ### Added

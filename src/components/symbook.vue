@@ -2,7 +2,14 @@
     <div>
         <sb-header @add="newCard"></sb-header>
         <div class="cards">
-            <card v-for="card in cards" :id="card.id" :pre-selected="card.selected" :key="card.id" @dismiss="remove"></card>
+            <card
+                v-for="card in cards"
+                :id="card.id"
+                :options="options"
+                :pre-selected="card.selected"
+                :key="card.id"
+                @dismiss="remove"
+            ></card>
         </div>
         <div class="panel">
             <p>Welcome to Symbook, the quick reference cyclopedia for Symbaroum traits, abilities, and more.</p>
@@ -16,6 +23,7 @@
 </template>
 
 <script>
+    import axios from 'axios';
     import SbHeader from './sb-header.vue';
     import Card from './card.vue';
     import Icon from './icon.vue';
@@ -33,6 +41,7 @@
                 },
                 lastId: 1,
                 cards: [],
+                options: [],
             };
         },
 
@@ -49,6 +58,14 @@
                     return card.id !== id;
                 });
             }
+        },
+
+        created() {
+            axios.get('data/symbaroum.json')
+                .then(response => {
+                    this.options = response.data;
+                })
+            ;
         }
     };
 </script>
