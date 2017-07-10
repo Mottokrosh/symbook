@@ -2,7 +2,7 @@
     <div class="card" :id="id">
         <div class="card-header">
             <div class="search">
-                <input type="search" name="search" v-model="search" @focus="showResults">
+                <input type="search" name="search" v-model="search" @focus="showResults" @blur="hideResults">
                 <div class="results" v-show="active">
                     <ul>
                         <li v-for="item in filteredOptions" @click="select(item)" tabindex="0">
@@ -111,9 +111,9 @@
             },
 
             hideResults() {
-                this.$nextTick(() => {
+                setTimeout(() => {
                     this.active = false;
-                });
+                }, 100); // Argh. There must be a better way.
             },
 
             select(item) {

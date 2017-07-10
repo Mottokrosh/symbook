@@ -10716,7 +10716,9 @@ var moveTo = new __WEBPACK_IMPORTED_MODULE_1_moveto___default.a();
             this.cards.push(card);
 
             this.$nextTick(function () {
-                moveTo.move(document.getElementById(card.id));
+                var cardEl = document.getElementById(card.id);
+                moveTo.move(cardEl);
+                cardEl.querySelector('input[name="search"]').focus();
             });
         },
         remove: function remove(id) {
@@ -10991,9 +10993,9 @@ var moveTo = new __WEBPACK_IMPORTED_MODULE_0_moveto___default.a();
         hideResults: function hideResults() {
             var _this3 = this;
 
-            this.$nextTick(function () {
+            setTimeout(function () {
                 _this3.active = false;
-            });
+            }, 100); // Argh. There must be a better way.
         },
         select: function select(item) {
             this.selected = item;
@@ -12064,6 +12066,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     },
     on: {
       "focus": _vm.showResults,
+      "blur": _vm.hideResults,
       "input": function($event) {
         if ($event.target.composing) { return; }
         _vm.search = $event.target.value

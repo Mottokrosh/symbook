@@ -56,7 +56,9 @@
                 this.cards.push(card);
 
                 this.$nextTick(() => {
-                    moveTo.move(document.getElementById(card.id));
+                    const cardEl = document.getElementById(card.id);
+                    moveTo.move(cardEl);
+                    cardEl.querySelector('input[name="search"]').focus();
                 });
             },
 
