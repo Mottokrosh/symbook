@@ -4,8 +4,7 @@
     "airbnb"
   ],
   "plugins": [
-    "vue",
-    "html"
+    "vue"
   ],
   "rules": {}
 }

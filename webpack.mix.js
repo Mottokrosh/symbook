@@ -12,8 +12,10 @@ let mix = require('laravel-mix');
  */
 
 mix.js('src/app.js', 'www/js/')
-	.options({ processCssUrls: false })
-    .sass('src/app.scss', 'www/css/')
+    .options({
+        processCssUrls: false,
+    })
+    .fastSass('src/app.scss', 'www/css/')
 ;
 
 // Full API
@@ -21,6 +23,8 @@ mix.js('src/app.js', 'www/js/')
 // mix.react(src, output); <-- Identical to mix.js(), but registers React Babel compilation.
 // mix.extract(vendorLibs);
 // mix.sass(src, output);
+// mix.standaloneSass('src', output); <-- Faster, but isolated from Webpack.
+// mix.fastSass('src', output); <-- Alias for mix.standaloneSass().
 // mix.less(src, output);
 // mix.stylus(src, output);
 // mix.browserSync('my-site.dev');

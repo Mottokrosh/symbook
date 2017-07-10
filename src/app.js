@@ -14,7 +14,7 @@ var app = {
     	}
     },
 
-    onDeviceReady: function() {
+    onDeviceReady() {
     	new Vue({
     	    el: '#app',
 
