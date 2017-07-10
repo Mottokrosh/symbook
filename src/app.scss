@@ -120,7 +120,7 @@ footer {
 }
 
 button {
-    background-image: url(../images/button.png);
+   /*  background-image: url(../images/button.png);
     background-size: cover;
     background-position: center;
     border: 2px solid $yellow;
@@ -135,7 +135,39 @@ button {
     margin: 0;
     padding: 0;
     font-family: inherit;
-    box-shadow:  0.15rem 0.15rem 0.3rem transparentize($black, 0.7);
+    box-shadow:  0.15rem 0.15rem 0.3rem transparentize($black, 0.7); */
+
+    position: relative;
+    appearance: none;
+    border: none;
+    display: inline-block;
+    font-family: inherit;
+    box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.2),
+                inset 0px -5px 0px 0px rgba(0,0,0,0.3),
+                inset 0px 2px 0px 0px rgba(255,255,255,0.5);
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    background: url(http://subtlepatterns.com/patterns/wood_pattern.png);
+
+    &:active {
+        box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.2),
+                    inset 0px -2px 0px 0px rgba(0,0,0,0.3),
+                    inset 0px 2px 0px 0px rgba(255,255,255,0.5);
+        top: 3px;
+
+        span {
+            padding-bottom: 4px;
+        }
+    }
+
+    span {
+        display: block;
+        font-size: 1.2rem;
+        padding: 4px 8px 7px 8px;
+        color: rgba(0,0,0,0.7);
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
+    }
 
     &.add-card {
     }

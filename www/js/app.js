@@ -10814,7 +10814,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.$emit('add')
       }
     }
-  }, [_vm._v("+")])])])])])
+  }, [_c('span', [_vm._v("+")])])])])])])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', [_c('img', {
     attrs: {
@@ -12098,7 +12098,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.$emit('dismiss', _vm.id)
       }
     }
-  }, [_vm._v("×")])]), _vm._v(" "), (_vm.selected) ? _c('fieldset', [_c('legend', [_c('h2', [_vm._v(_vm._s(_vm.selected.name) + " "), _c('small', [_vm._v(_vm._s(_vm.selected.book))])])]), _vm._v(" "), _c('div', [(_vm.selected.requirement) ? _c('p', [_c('strong', [_vm._v("Requirement:")]), _vm._v(" " + _vm._s(_vm.selected.requirement) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.selected.tradition) ? _c('p', [_c('strong', [_vm._v("Tradition:")]), _vm._v(" " + _vm._s(_vm.selected.tradition) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.selected.effect) ? _c('p', [_vm._v("\n                " + _vm._s(_vm.selected.effect) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.selected.boons) ? _c('p', [_c('strong', [_vm._v("Boons:")]), _vm._v(" " + _vm._s(_vm.selected.boons) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.selected.burdens) ? _c('p', [_c('strong', [_vm._v("Burdens:")]), _vm._v(" " + _vm._s(_vm.selected.burdens) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.selected.options) ? _c('p', [_c('strong', [_vm._v("Options:")]), _vm._v(" " + _vm._s(_vm.selected.options) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.selected.traits) ? _c('p', [_c('strong', [_vm._v("Traits:")]), _vm._v(" " + _vm._s(_vm.selected.traits) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.selected.novice) ? _c('div', [(_vm.selected.novice) ? _c('div', {
+  }, [_c('span', [_vm._v("×")])])]), _vm._v(" "), (_vm.selected) ? _c('fieldset', [_c('legend', [_c('h2', [_vm._v(_vm._s(_vm.selected.name) + " "), _c('small', [_vm._v(_vm._s(_vm.selected.book))])])]), _vm._v(" "), _c('div', [(_vm.selected.requirement) ? _c('p', [_c('strong', [_vm._v("Requirement:")]), _vm._v(" " + _vm._s(_vm.selected.requirement) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.selected.tradition) ? _c('p', [_c('strong', [_vm._v("Tradition:")]), _vm._v(" " + _vm._s(_vm.selected.tradition) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.selected.effect) ? _c('p', [_vm._v("\n                " + _vm._s(_vm.selected.effect) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.selected.boons) ? _c('p', [_c('strong', [_vm._v("Boons:")]), _vm._v(" " + _vm._s(_vm.selected.boons) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.selected.burdens) ? _c('p', [_c('strong', [_vm._v("Burdens:")]), _vm._v(" " + _vm._s(_vm.selected.burdens) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.selected.options) ? _c('p', [_c('strong', [_vm._v("Options:")]), _vm._v(" " + _vm._s(_vm.selected.options) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.selected.traits) ? _c('p', [_c('strong', [_vm._v("Traits:")]), _vm._v(" " + _vm._s(_vm.selected.traits) + "\n            ")]) : _vm._e(), _vm._v(" "), (_vm.selected.novice) ? _c('div', [(_vm.selected.novice) ? _c('div', {
     staticClass: "line"
   }, [_c('strong', [_vm._v("Novice:")]), _vm._v(" "), _c('p', {
     domProps: {

@@ -11,7 +11,7 @@
                     </ul>
                 </div>
             </div>
-            <button class="remove-card" @click="$emit('dismiss', id)">&times;</button>
+            <button class="remove-card" @click="$emit('dismiss', id)"><span>&times;</span></button>
         </div>
 
         <fieldset v-if="selected">

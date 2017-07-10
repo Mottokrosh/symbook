@@ -6,7 +6,7 @@
         </div>
         <nav>
             <ul>
-                <li><button @click="$emit('add')" class="add-card">+</button></li>
+                <li><button @click="$emit('add')" class="add-card"><span>+</span></button></li>
             </ul>
         </nav>
     </header>

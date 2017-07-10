@@ -109,22 +109,49 @@ footer a {
 }
 
 button {
-  background-image: url(../images/button.png);
-  background-size: cover;
-  background-position: center;
-  border: 2px solid #e5d7b9;
-  border-radius: 50%;
+  /*  background-image: url(../images/button.png);
+    background-size: cover;
+    background-position: center;
+    border: 2px solid $yellow;
+    border-radius: 50%;
+    appearance: none;
+    cursor: pointer;
+    color: $yellow;
+    font-size: 1.5rem;
+    line-height: 1;
+    width: 44px;
+    height: 44px;
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    box-shadow:  0.15rem 0.15rem 0.3rem transparentize($black, 0.7); */
+  position: relative;
   appearance: none;
-  cursor: pointer;
-  color: #e5d7b9;
-  font-size: 1.5rem;
-  line-height: 1;
-  width: 44px;
-  height: 44px;
-  margin: 0;
-  padding: 0;
+  border: none;
+  display: inline-block;
   font-family: inherit;
-  box-shadow: 0.15rem 0.15rem 0.3rem rgba(0, 17, 0, 0.3);
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2), inset 0px -5px 0px 0px rgba(0, 0, 0, 0.3), inset 0px 2px 0px 0px rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  background: url(http://subtlepatterns.com/patterns/wood_pattern.png);
+}
+
+button:active {
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.3), inset 0px 2px 0px 0px rgba(255, 255, 255, 0.5);
+  top: 3px;
+}
+
+button:active span {
+  padding-bottom: 4px;
+}
+
+button span {
+  display: block;
+  font-size: 1.2rem;
+  padding: 4px 8px 7px 8px;
+  color: rgba(0, 0, 0, 0.7);
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.4);
 }
 
 .icon {
