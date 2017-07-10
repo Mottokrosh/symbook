@@ -105,7 +105,9 @@
 
             showResults() {
                 this.active = true;
-                moveTo.move(document.getElementById(this.id));
+                this.$nextTick(() => {
+                    moveTo.move(document.getElementById(this.id));
+                });
             },
 
             hideResults() {

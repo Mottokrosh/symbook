@@ -10649,12 +10649,14 @@ module.exports = Component.exports
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sb_header_vue__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sb_header_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__sb_header_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__card_vue__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__card_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__card_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__icon_vue__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__icon_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__icon_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_moveto__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_moveto___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_moveto__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sb_header_vue__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sb_header_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__sb_header_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__card_vue__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__card_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__card_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__icon_vue__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__icon_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__icon_vue__);
 //
 //
 //
@@ -10684,10 +10686,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+
+
+var moveTo = new __WEBPACK_IMPORTED_MODULE_1_moveto___default.a();
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     components: {
-        SbHeader: __WEBPACK_IMPORTED_MODULE_1__sb_header_vue___default.a, Card: __WEBPACK_IMPORTED_MODULE_2__card_vue___default.a, Icon: __WEBPACK_IMPORTED_MODULE_3__icon_vue___default.a
+        SbHeader: __WEBPACK_IMPORTED_MODULE_2__sb_header_vue___default.a, Card: __WEBPACK_IMPORTED_MODULE_3__card_vue___default.a, Icon: __WEBPACK_IMPORTED_MODULE_4__icon_vue___default.a
     },
 
     data: function data() {
@@ -10709,6 +10714,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var card = Object.assign({}, this.cardModel);
             card.id = this.lastId;
             this.cards.push(card);
+
+            this.$nextTick(function () {
+                moveTo.move(document.getElementById(card.id));
+            });
         },
         remove: function remove(id) {
             this.cards = this.cards.filter(function (card) {
@@ -10972,14 +10981,18 @@ var moveTo = new __WEBPACK_IMPORTED_MODULE_0_moveto___default.a();
             return chunks.join('.');
         },
         showResults: function showResults() {
-            this.active = true;
-            moveTo.move(document.getElementById(this.id));
-        },
-        hideResults: function hideResults() {
             var _this2 = this;
 
+            this.active = true;
             this.$nextTick(function () {
-                _this2.active = false;
+                moveTo.move(document.getElementById(_this2.id));
+            });
+        },
+        hideResults: function hideResults() {
+            var _this3 = this;
+
+            this.$nextTick(function () {
+                _this3.active = false;
             });
         },
         select: function select(item) {

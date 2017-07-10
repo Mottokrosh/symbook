@@ -24,9 +24,12 @@
 
 <script>
     import axios from 'axios';
+    import MoveTo from 'moveto';
     import SbHeader from './sb-header.vue';
     import Card from './card.vue';
     import Icon from './icon.vue';
+
+    const moveTo = new MoveTo();
 
     export default {
         components: {
@@ -51,6 +54,10 @@
                 let card = Object.assign({}, this.cardModel);
                 card.id = this.lastId;
                 this.cards.push(card);
+
+                this.$nextTick(() => {
+                    moveTo.move(document.getElementById(card.id));
+                });
             },
 
             remove(id) {
