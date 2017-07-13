@@ -45,6 +45,10 @@ $gold: #daa520;
     font-style: italic;
 }
 
+:focus {
+    outline-color: $gold;
+}
+
 body {
     font-family: 'Merriweather', serif;
     font-weight: 300;
@@ -69,7 +73,7 @@ h1, h2, h3, h4 {
 }
 
 header {
-    padding: 1rem;
+    padding: calc(60px + 1rem) 1rem 1rem 1rem;
 
     img {
         display: block;
@@ -86,11 +90,19 @@ header {
 
     nav {
         position: fixed;
-        top: 1rem;
-        right: 1rem;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        z-index: 3;
+        background-image: url(../images/navbar.jpg);
+        background-size: 1077px;
+        padding: 6px 1rem 10px 1rem;
+        box-shadow: 0 0.1rem 0.5rem transparentize($black, 0.5);
 
         ul {
             display: flex;
+            justify-content: flex-end;
             list-style: none;
             margin: 0;
             padding: 0;
@@ -120,42 +132,24 @@ footer {
 }
 
 button {
-   /*  background-image: url(../images/button.png);
-    background-size: cover;
-    background-position: center;
-    border: 2px solid $yellow;
-    border-radius: 50%;
-    appearance: none;
-    cursor: pointer;
-    color: $yellow;
-    font-size: 1.5rem;
-    line-height: 1;
-    width: 44px;
-    height: 44px;
-    margin: 0;
-    padding: 0;
-    font-family: inherit;
-    box-shadow:  0.15rem 0.15rem 0.3rem transparentize($black, 0.7); */
-
     position: relative;
     appearance: none;
     border: none;
     display: inline-block;
     font-family: inherit;
-    box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.2),
+    box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.5),
                 inset 0px -5px 0px 0px rgba(0,0,0,0.3),
-                inset 0px 2px 0px 0px rgba(255,255,255,0.5);
+                inset 0px 2px 0px 0px transparentize($yellow, 0.7);
     border-radius: 5px;
     overflow: hidden;
     cursor: pointer;
-    background-image: url(http://subtlepatterns.com/patterns/wood_pattern.png);
-    background-blend-mode: multiply;
-    background-color: #d9cba2;
+    background-image: url(../images/wood_tile_400.jpg);
+    background-size: 200px;
 
     &:active {
-        box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.2),
+        box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.5),
                     inset 0px -2px 0px 0px rgba(0,0,0,0.3),
-                    inset 0px 2px 0px 0px rgba(255,255,255,0.5);
+                    inset 0px 2px 0px 0px transparentize($yellow, 0.7);
         top: 3px;
 
         span {
@@ -167,8 +161,8 @@ button {
         display: block;
         font-size: 1.2rem;
         padding: 4px 7px 7px 7px;
-        color: rgba(0,0,0,0.7);
-        text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
+        color: $yellow;
+        text-shadow: 1px 1px 0px rgba(0,0,0,0.4);
     }
 
     &.add-card {

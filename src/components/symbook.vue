@@ -24,12 +24,10 @@
 
 <script>
     import axios from 'axios';
-    import MoveTo from 'moveto';
     import SbHeader from './sb-header.vue';
     import Card from './card.vue';
     import Icon from './icon.vue';
-
-    const moveTo = new MoveTo();
+    import { scrollToTop } from '../helpers';
 
     export default {
         components: {
@@ -57,8 +55,8 @@
 
                 this.$nextTick(() => {
                     const cardEl = document.getElementById(card.id);
-                    moveTo.move(cardEl);
-                    cardEl.querySelector('input[name="search"]').focus();
+                    scrollToTop(cardEl);
+                    // cardEl.querySelector('input[name="search"]').focus();
                 });
             },
 
@@ -75,6 +73,6 @@
                     this.options = response.data;
                 })
             ;
-        }
+        },
     };
 </script>

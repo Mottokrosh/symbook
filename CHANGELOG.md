@@ -6,15 +6,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
-- ...
-- ...
+- Fixed navigation bar (in anticipation of upcoming group/set functionality)
+- Scroll new or focused cards to the top of the view to give more space to the selectable options
 
 ### Changed
 - New, more flexible data structure
 - Drastically reduced number of requests to load data
+- New button styles
 
 ### Fixed
 - Races did not display correctly
+- Removed character ligatures in body text that did not dispay correctly
 
 
 ## [1.0.0] - 2017-07-03

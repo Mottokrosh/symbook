@@ -60,9 +60,7 @@
 </template>
 
 <script>
-    import MoveTo from 'moveto';
-
-    const moveTo = new MoveTo();
+    import { scrollToTop } from '../helpers';
 
     export default {
         props: [
@@ -105,15 +103,11 @@
 
             showResults() {
                 this.active = true;
-                this.$nextTick(() => {
-                    moveTo.move(document.getElementById(this.id));
-                });
+                scrollToTop(document.getElementById(this.id));
             },
 
             hideResults() {
-                setTimeout(() => {
-                    this.active = false;
-                }, 100); // Argh. There must be a better way.
+                this.active = false;
             },
 
             select(item) {
