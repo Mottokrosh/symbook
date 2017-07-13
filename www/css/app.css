@@ -62,7 +62,7 @@ h1, h2, h3, h4 {
 }
 
 header {
-  padding: calc(60px + 1rem) 1rem 1rem 1rem;
+  padding: 84px 1rem 1rem 1rem;
 }
 
 header img {
@@ -200,56 +200,13 @@ button span {
   margin-right: 1rem;
 }
 
-.card .search {
-  position: relative;
-}
-
-.card .search input {
-  appearance: none;
-  width: 100%;
-  border: none;
-  border-bottom: 0.125rem solid rgba(127, 58, 43, 0.3);
-  background-color: rgba(127, 58, 43, 0.1);
-  border-radius: 0.25rem;
-  font-family: inherit;
-  font-size: 1rem;
-  padding: 0.25rem;
-  color: #7f3a2b;
-}
-
-.card .search .results {
-  position: absolute;
-  top: 2rem;
-  left: 0;
-  width: 100%;
-  overflow-y: auto;
-  max-height: 300px;
-  background-color: #d7c294;
-  z-index: 2;
-}
-
-.card .search .results ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.card .search .results li {
-  padding: 0.25rem 0.5rem;
-  border-bottom: 1px solid rgba(127, 58, 43, 0.5);
-}
-
-.card .search .results li:hover {
-  background-color: rgba(127, 58, 43, 0.2);
-  cursor: pointer;
-}
-
 .card fieldset {
   border-style: solid;
   border-width: 2px;
   border-color: #7f3a2b;
   border-radius: 0.25rem;
   padding: 1rem;
+  margin: 0;
 }
 
 .card legend {
@@ -278,4 +235,33 @@ button span {
 
 .card .line > :nth-child(2) {
   flex: 1;
+}
+
+.v-select {
+  font-family: inherit !important;
+}
+
+.v-select .dropdown-toggle {
+  display: flex !important;
+  border: 2px solid #7f3a2b !important;
+}
+
+.v-select .dropdown-toggle > * {
+  flex: 0 0 auto;
+}
+
+.v-select .open-indicator:before {
+  border-color: #7f3a2b !important;
+}
+
+.v-select input[type=search], .v-select input[type=search]:focus {
+  float: none !important;
+  height: 37px !important;
+}
+
+.v-select .selected-tag {
+  color: inherit !important;
+  border: none !important;
+  background: none !important;
+  margin-top: 6px !important;
 }

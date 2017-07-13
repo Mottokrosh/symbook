@@ -56,7 +56,6 @@
                 this.$nextTick(() => {
                     const cardEl = document.getElementById(card.id);
                     scrollToTop(cardEl);
-                    // cardEl.querySelector('input[name="search"]').focus();
                 });
             },
 
@@ -70,7 +69,14 @@
         created() {
             axios.get('data/symbaroum.json')
                 .then(response => {
-                    this.options = response.data;
+                    let options = [];
+
+                    response.data.map((item) => {
+                        item.label = item.type + ': ' + item.name + ' (' + item.book + ')';
+                        options.push(item);
+                    });
+
+                    this.options = options;
                 })
             ;
         },

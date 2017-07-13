@@ -73,7 +73,7 @@ h1, h2, h3, h4 {
 }
 
 header {
-    padding: calc(60px + 1rem) 1rem 1rem 1rem;
+    padding: 84px 1rem 1rem 1rem;
 
     img {
         display: block;
@@ -230,56 +230,13 @@ button {
         }
     }
 
-    .search {
-        position: relative;
-
-        input {
-            appearance: none;
-            width: 100%;
-            border: none;
-            border-bottom: 0.125rem solid transparentize($red, 0.7);
-            background-color: transparentize($red, 0.9);
-            border-radius: 0.25rem;
-            font-family: inherit;
-            font-size: 1rem;
-            padding: 0.25rem;
-            color: $red;
-        }
-
-        .results {
-            position: absolute;
-            top: 2rem;
-            left: 0;
-            width: 100%;
-            overflow-y: auto;
-            max-height: 300px;
-            background-color: darken($yellow, 10%);
-            z-index: 2;
-
-            ul {
-                list-style: none;
-                margin: 0;
-                padding: 0;
-            }
-
-            li {
-                padding: 0.25rem 0.5rem;
-                border-bottom: 1px solid transparentize($red, 0.5);
-
-                &:hover {
-                    background-color: transparentize($red, 0.8);
-                    cursor: pointer;
-                }
-            }
-        }
-    }
-
     fieldset {
         border-style: solid;
         border-width: 2px;
         border-color: $red;
         border-radius: 0.25rem;
         padding: 1rem;
+        margin: 0;
     }
 
     legend {
@@ -308,6 +265,35 @@ button {
         & > :nth-child(2) {
             flex: 1;
         }
+    }
+}
+
+.v-select {
+    font-family: inherit !important;
+
+    .dropdown-toggle {
+        display: flex !important;
+        border: 2px solid $red !important;
+
+        & > * {
+            flex: 0 0 auto;
+        }
+    }
+
+    .open-indicator:before {
+        border-color: $red !important;
+    }
+
+    input[type=search], input[type=search]:focus {
+        float: none !important;
+        height: 37px !important;
+    }
+
+    .selected-tag {
+        color: inherit !important;
+        border: none !important;
+        background: none !important;
+        margin-top: 6px !important;
     }
 }
 

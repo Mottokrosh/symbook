@@ -2,14 +2,7 @@
     <div class="card" :id="id">
         <div class="card-header">
             <div class="search">
-                <input type="search" name="search" v-model="search" @focus="showResults" @blur="hideResults">
-                <div class="results" v-show="active">
-                    <ul>
-                        <li v-for="item in filteredOptions" @click="select(item)" tabindex="0">
-                            {{ item.type }}: {{ item.name }} ({{ item.book }})
-                        </li>
-                    </ul>
-                </div>
+                <v-select :options="options" v-model="selected" placeholder="Start typing..."></v-select>
             </div>
             <button class="remove-card" @click="$emit('dismiss', id)"><span>&times;</span></button>
         </div>
@@ -61,6 +54,7 @@
 
 <script>
     import { scrollToTop } from '../helpers';
+    import vSelect from 'vue-select';
 
     export default {
         props: [
@@ -70,28 +64,12 @@
 
         data() {
             return {
-                search: null,
                 selected: null,
-                active: false,
             };
         },
 
-        computed: {
-            filteredOptions() {
-                if (!this.options.length) {
-                    return;
-                }
-
-                if (!this.search) {
-                    return this.options;
-                }
-
-                return this.options.filter(item => {
-                    const regex = new RegExp(this.search, 'i');
-
-                    return item.name.match(regex);
-                });
-            }
+        components: {
+            vSelect,
         },
 
         methods: {
@@ -99,21 +77,6 @@
                 let chunks = text.split('.');
                 chunks[0] = '<em>' + chunks[0] + '</em>';
                 return chunks.join('.');
-            },
-
-            showResults() {
-                this.active = true;
-                scrollToTop(document.getElementById(this.id));
-            },
-
-            hideResults() {
-                this.active = false;
-            },
-
-            select(item) {
-                this.selected = item;
-                this.search = null;
-                this.hideResults();
             },
         },
     };

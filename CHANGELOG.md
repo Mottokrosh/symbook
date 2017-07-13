@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - New, more flexible data structure
 - Drastically reduced number of requests to load data
 - New button styles
+- Use vue-select component for better accessibility
 
 ### Fixed
 - Races did not display correctly
