@@ -11007,7 +11007,7 @@ var Component = __webpack_require__(1)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/mottokrosh/Projects/symbook/src/components/symbook.vue"
+Component.options.__file = "/Users/mottokrosh/Documents/Projects/symbook/src/components/symbook.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] symbook.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -12177,7 +12177,7 @@ var Component = __webpack_require__(1)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/mottokrosh/Projects/symbook/src/components/sb-header.vue"
+Component.options.__file = "/Users/mottokrosh/Documents/Projects/symbook/src/components/sb-header.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] sb-header.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -12270,7 +12270,7 @@ var Component = __webpack_require__(1)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/mottokrosh/Projects/symbook/src/components/card.vue"
+Component.options.__file = "/Users/mottokrosh/Documents/Projects/symbook/src/components/card.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] card.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -12461,7 +12461,7 @@ var Component = __webpack_require__(1)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/mottokrosh/Projects/symbook/src/components/icon.vue"
+Component.options.__file = "/Users/mottokrosh/Documents/Projects/symbook/src/components/icon.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] icon.vue: functional components are not supported with templates, they should use render functions.")}
 
