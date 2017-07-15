@@ -6,14 +6,20 @@
         </div>
         <nav>
             <ul>
-                <li><button @click="$emit('add')" class="add-card"><span>+</span></button></li>
+                <li><button @click="$emit('add')" class="add-card"><icon id="iron-cross" :button="true"></icon></button></li>
             </ul>
         </nav>
     </header>
 </template>
 
 <script>
-export default {
-    name: 'SbHeader'
-};
+    import Icon from './icon.vue';
+
+    export default {
+        name: 'SbHeader',
+
+        components: {
+            Icon,
+        },
+    };
 </script>

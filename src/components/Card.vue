@@ -4,7 +4,7 @@
             <div class="search">
                 <v-select :options="options" v-model="selected" placeholder="Start typing..."></v-select>
             </div>
-            <button class="remove-card" @click="$emit('dismiss', id)"><span>&times;</span></button>
+            <button class="remove-card" @click="$emit('dismiss', id)"><icon id="cross-mark" :button="true"></icon></button>
         </div>
 
         <fieldset v-if="selected">
@@ -55,6 +55,7 @@
 <script>
     import { scrollToTop } from '../helpers';
     import vSelect from 'vue-select';
+    import Icon from './icon.vue';
 
     export default {
         props: [
@@ -70,6 +71,7 @@
 
         components: {
             vSelect,
+            Icon,
         },
 
         methods: {

@@ -151,7 +151,7 @@ button span {
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
 }
 
-.icon {
+.social-icon {
   background-color: #6f795d;
   background-image: linear-gradient(to bottom, #6f795d, #555c47);
   border-radius: 0.25rem;
@@ -264,4 +264,18 @@ button span {
   border: none !important;
   background: none !important;
   margin-top: 6px !important;
+}
+
+.icon {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.icon-button {
+  margin: 6px 4px;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
 }
