@@ -1,7 +1,7 @@
 {
     "name": "symbook",
     "displayName": "Symbook",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Cyclopedia for the Symbaroum Roleplaying Game",
     "repository": "https://github.com/mottokrosh/symbook",
     "main": "src/app.js",
