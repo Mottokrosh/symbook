@@ -151,6 +151,10 @@ button span {
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
 }
 
+button:disabled {
+  opacity: 0.5;
+}
+
 .social-icon {
   background-color: #6f795d;
   background-image: linear-gradient(to bottom, #6f795d, #555c47);
@@ -191,13 +195,18 @@ button span {
 
 .card .card-header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin: 1rem 0;
 }
 
-.card .card-header > :first-child {
+.card .card-header > :nth-child(2) {
   flex: 1;
-  margin-right: 1rem;
+  margin: 0 1rem;
+}
+
+.card .card-header > :last-child {
+  margin-left: 1rem;
 }
 
 .card fieldset {
@@ -278,4 +287,8 @@ button span {
 .icon-button {
   margin: 6px 4px;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
+}
+
+.icon-mirrored {
+  transform: rotate(180deg);
 }

@@ -13,11 +13,16 @@
 
         computed: {
             iconId() {
-                return '#icon-' + this.id;
+                return '#icon-' + ( this.id === 'arrow-left' ? 'arrow-right' : this.id );
             },
 
             classes() {
-                return 'icon icon-' + this.id + ( this.button ? ' icon-button' : '' );
+                return {
+                    'icon': true,
+                    ['icon-' + this.id]: true,
+                    'icon-button': this.button,
+                    'icon-mirrored': this.id === 'arrow-left',
+                };
             },
         },
     };

@@ -165,10 +165,8 @@ button {
         text-shadow: 1px 1px 0px rgba(0,0,0,0.4);
     }
 
-    &.add-card {
-    }
-
-    &.remove-card {
+    &:disabled {
+        opacity: 0.5;
     }
 }
 
@@ -221,12 +219,17 @@ button {
 
     .card-header {
         display: flex;
+        justify-content: space-between;
         align-items: center;
         margin: 1rem 0;
 
-        & > :first-child {
+        & > :nth-child(2) {
             flex: 1;
-            margin-right: 1rem;
+            margin: 0 1rem;
+        }
+
+        & > :last-child {
+            margin-left: 1rem;
         }
     }
 
@@ -309,4 +312,8 @@ button {
 .icon-button {
     margin: 6px 4px;
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
+}
+
+.icon-mirrored {
+    transform: rotate(180deg);
 }

@@ -1,9 +1,9 @@
 <template>
     <div class="card" :id="id">
         <div class="card-header">
-            <div class="search">
-                <v-select :options="options" v-model="selected" placeholder="Start typing..."></v-select>
-            </div>
+            <button @click="previous" :disabled="noPrevious()"><icon id="arrow-left" :button="true"></icon></button>
+            <v-select :options="options" v-model="selected" placeholder="Start typing..."></v-select>
+            <button @click="next" :disabled="noNext()"><icon id="arrow-right" :button="true"></icon></button>
             <button class="remove-card" @click="$emit('dismiss', id)"><icon id="cross-mark" :button="true"></icon></button>
         </div>
 
@@ -79,6 +79,40 @@
                 let chunks = text.split('.');
                 chunks[0] = '<em>' + chunks[0] + '</em>';
                 return chunks.join('.');
+            },
+
+            previous() {
+                let index = this.options.indexOf(this.selected);
+                index--;
+                this.selected = this.options[index];
+            },
+
+            next() {
+                let index = this.options.indexOf(this.selected);
+                index++;
+                this.selected = this.options[index];
+            },
+
+            noPrevious() {
+                if (this.selected) {
+                    let index = this.options.indexOf(this.selected);
+                    index--;
+
+                    return !this.options[index];
+                }
+
+                return true;
+            },
+
+            noNext() {
+                if (this.selected) {
+                    let index = this.options.indexOf(this.selected);
+                    index++;
+
+                    return !this.options[index];
+                }
+
+                return false;
             },
         },
     };
