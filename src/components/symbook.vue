@@ -24,6 +24,7 @@
 
 <script>
     import axios from 'axios';
+    import Headroom from 'headroom.js';
     import SbHeader from './sb-header.vue';
     import Card from './card.vue';
     import SocialIcon from './social-icon.vue';
@@ -79,6 +80,15 @@
                     this.options = options;
                 })
             ;
+        },
+
+        mounted() {
+            // revealing/hiding header
+            var headroom  = new Headroom(
+                document.querySelector('#nav-bar'),
+                { tolerance: 20 }
+            );
+            headroom.init();
         },
     };
 </script>

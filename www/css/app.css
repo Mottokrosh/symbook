@@ -298,3 +298,21 @@ button:disabled {
 .icon-mirrored {
   transform: rotate(180deg);
 }
+
+.headroom {
+  will-change: transform;
+  transition: transform 200ms linear;
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.headroom--pinned {
+  transform: translateY(0%);
+}
+
+.headroom--unpinned {
+  transform: translateY(-100%);
+}

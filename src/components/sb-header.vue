@@ -4,7 +4,7 @@
             <img src="images/symbook.png">
             <small>Symbaroum Cyclopedia</small>
         </div>
-        <nav>
+        <nav id="nav-bar">
             <ul>
                 <li><button @click="$emit('add')" class="add-card"><icon id="iron-cross" :button="true"></icon></button></li>
             </ul>
