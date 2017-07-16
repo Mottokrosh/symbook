@@ -266,13 +266,19 @@ button:disabled {
 .v-select input[type=search], .v-select input[type=search]:focus {
   float: none !important;
   height: 37px !important;
+  width: 100% !important;
 }
 
 .v-select .selected-tag {
-  color: inherit !important;
-  border: none !important;
-  background: none !important;
-  margin-top: 6px !important;
+  display: none !important;
+}
+
+.v-select .dropdown-menu li > a {
+  padding: 3px 7px !important;
+}
+
+.v-select .dropdown-menu li.highlight > a {
+  background: #6f795d !important;
 }
 
 .icon {

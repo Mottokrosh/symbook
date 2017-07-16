@@ -290,13 +290,23 @@ button {
     input[type=search], input[type=search]:focus {
         float: none !important;
         height: 37px !important;
+        width: 100% !important;
     }
 
     .selected-tag {
-        color: inherit !important;
-        border: none !important;
-        background: none !important;
-        margin-top: 6px !important;
+        display: none !important;
+    }
+
+    .dropdown-menu {
+        li {
+            & > a {
+                padding: 3px 7px !important;
+            }
+
+            &.highlight > a {
+                background: $green !important;
+            }
+        }
     }
 }
 

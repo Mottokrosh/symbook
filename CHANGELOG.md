@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fixed navigation bar (in anticipation of upcoming group/set functionality)
 - Scroll new or focused cards to the top of the view to give more space to the selectable options
 - New button icons
+- Navigate through next and previous powers
 
 ### Changed
 - New, more flexible data structure
