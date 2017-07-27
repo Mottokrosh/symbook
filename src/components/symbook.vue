@@ -84,11 +84,11 @@
 
         mounted() {
             // revealing/hiding header
-            var headroom  = new Headroom(
+            /*var headroom  = new Headroom(
                 document.querySelector('#nav-bar'),
                 { tolerance: 20 }
             );
-            headroom.init();
+            headroom.init();*/
         },
     };
 </script>

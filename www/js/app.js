@@ -11172,8 +11172,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     mounted: function mounted() {
         // revealing/hiding header
-        var headroom = new __WEBPACK_IMPORTED_MODULE_1_headroom_js___default.a(document.querySelector('#nav-bar'), { tolerance: 20 });
-        headroom.init();
+        /*var headroom  = new Headroom(
+            document.querySelector('#nav-bar'),
+            { tolerance: 20 }
+        );
+        headroom.init();*/
     }
 });
 
