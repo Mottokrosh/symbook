@@ -4,7 +4,7 @@
             <button @click="previous" :disabled="noPrevious()"><icon id="arrow-left" :button="true"></icon></button>
             <v-select :options="options" v-model="selected" placeholder="Start typing..."></v-select>
             <button @click="next" :disabled="noNext()"><icon id="arrow-right" :button="true"></icon></button>
-            <button class="remove-card" @click="$emit('dismiss', id)"><icon id="cross-mark" :button="true"></icon></button>
+            <button class="remove-card" @click="$emit('dismiss', id)"><icon id="cross" :button="true"></icon></button>
         </div>
 
         <fieldset v-if="selected">

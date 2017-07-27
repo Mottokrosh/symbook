@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+
+## [1.1.0] - 2017-07-27
 ### Added
 - Fixed, auto-hiding navigation bar (in anticipation of upcoming group/set functionality)
 - Scroll new or focused cards to the top of the view to give more space to the selectable options
