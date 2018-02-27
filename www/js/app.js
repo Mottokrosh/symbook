@@ -13249,7 +13249,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "href": "mailto:frank@symbook.io"
     }
-  }, [_vm._v("Frank Reding")]), _vm._v(" "), _c('social-icon', {
+  }, [_vm._v("Frank Reding")]), _vm._v(" ("), _c('a', {
+    attrs: {
+      "href": "https://mottokrosh.com",
+      "target": "_blank"
+    }
+  }, [_vm._v("Blog, More Apps")]), _vm._v(") "), _c('social-icon', {
     attrs: {
       "name": "google",
       "size": "0.7rem",
