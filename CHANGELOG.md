@@ -6,10 +6,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.1] - 2018-02-27
+### Added
+- Added link to Mottokrosh.com blog
+
 
 ## [1.1.0] - 2017-07-27
 ### Added
-- Fixed, auto-hiding navigation bar (in anticipation of upcoming group/set functionality)
+- Fixed navigation bar (in anticipation of upcoming group/set functionality)
 - Scroll new or focused cards to the top of the view to give more space to the selectable options
 - New button icons
 - Navigate through next and previous powers
