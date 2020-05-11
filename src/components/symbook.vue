@@ -69,14 +69,18 @@
 
       getCardIDsFromURL() {
         const urlParams = new URLSearchParams(window.location.search);
-        const cardIDs = urlParams.get('c').split('-');
+        const cardIDs = urlParams.get('c') ? urlParams.get('c').split('-') : [];
         return cardIDs.map(id => Number(id));
       },
 
       setCardIDsIntoURL() {
         const ids = this.cards.filter(c => !!c.id).map(card => card.id).join('-');
-        const urlParams = new URLSearchParams(`c=${ids}`);
-        history.pushState(null, '', `/?${urlParams.toString()}`);
+        if (ids) {
+          const urlParams = new URLSearchParams(`c=${ids}`);
+          history.pushState(null, '', `/?${urlParams.toString()}`);
+          return;
+        }
+        history.pushState(null, '', '/');
       },
 
       cardChange(newCard, index) {
@@ -85,10 +89,8 @@
     },
 
     watch: {
-      cards(newVal) {
-        if (newVal && newVal.length) {
-          this.setCardIDsIntoURL();
-        }
+      cards() {
+        this.setCardIDsIntoURL();
       },
     },
 

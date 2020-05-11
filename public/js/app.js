@@ -11157,7 +11157,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     getCardIDsFromURL: function getCardIDsFromURL() {
       var urlParams = new URLSearchParams(window.location.search);
-      var cardIDs = urlParams.get('c').split('-');
+      var cardIDs = urlParams.get('c') ? urlParams.get('c').split('-') : [];
       return cardIDs.map(function (id) {
         return Number(id);
       });
@@ -11168,8 +11168,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       }).map(function (card) {
         return card.id;
       }).join('-');
-      var urlParams = new URLSearchParams('c=' + ids);
-      history.pushState(null, '', '/?' + urlParams.toString());
+      if (ids) {
+        var urlParams = new URLSearchParams('c=' + ids);
+        history.pushState(null, '', '/?' + urlParams.toString());
+        return;
+      }
+      history.pushState(null, '', '/');
     },
     cardChange: function cardChange(newCard, index) {
       this.cards.splice(index, 1, newCard);
@@ -11177,10 +11181,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   },
 
   watch: {
-    cards: function cards(newVal) {
-      if (newVal && newVal.length) {
-        this.setCardIDsIntoURL();
-      }
+    cards: function cards() {
+      this.setCardIDsIntoURL();
     }
   },
 
