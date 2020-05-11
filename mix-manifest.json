@@ -1,4 +1,4 @@
 {
-    "/www/js/app.js": "/www/js/app.js",
-    "/www/css/app.css": "/www/css/app.css"
+    "/public/js/app.js": "/public/js/app.js",
+    "/public/css/app.css": "/public/css/app.css"
 }

@@ -1,5 +1,5 @@
 const scrollToTop = (el, paddingTop = 16) => {
-  document.body.scrollTop = el.offsetTop - paddingTop;
+  window.scrollTo(0, el.offsetTop - paddingTop);
 };
 
 export { scrollToTop };

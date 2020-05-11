@@ -60,7 +60,8 @@
     export default {
         props: [
             'id',
-            'options'
+            'options',
+            'preSelected',
         ],
 
         data() {
@@ -114,6 +115,20 @@
 
                 return false;
             },
+        },
+
+        watch: {
+            selected(newVal, oldVal) {
+                if (newVal !== oldVal) {
+                    this.$emit('change', newVal);
+                }
+            },
+        },
+
+        created() {
+            if (this.preSelected) {
+                this.selected = this.preSelected;
+            }
         },
     };
 </script>
