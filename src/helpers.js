@@ -1,4 +1,4 @@
-const scrollToTop = (el, paddingTop = 16) => {
+const scrollToTop = (el, paddingTop = 64) => {
   window.scrollTo(0, el.offsetTop - paddingTop);
 };
 

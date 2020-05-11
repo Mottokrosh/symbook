@@ -878,7 +878,7 @@ module.exports = Component.exports
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return scrollToTop; });
 var scrollToTop = function scrollToTop(el) {
-  var paddingTop = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 16;
+  var paddingTop = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 64;
 
   window.scrollTo(0, el.offsetTop - paddingTop);
 };
