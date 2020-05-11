@@ -880,7 +880,7 @@ module.exports = Component.exports
 var scrollToTop = function scrollToTop(el) {
   var paddingTop = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 16;
 
-  document.body.scrollTop = el.offsetTop - paddingTop;
+  window.scrollTo(0, el.offsetTop - paddingTop);
 };
 
 
@@ -11111,6 +11111,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 
@@ -11120,64 +11122,89 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    components: {
-        SbHeader: __WEBPACK_IMPORTED_MODULE_2__sb_header_vue___default.a, Card: __WEBPACK_IMPORTED_MODULE_3__card_vue___default.a, SocialIcon: __WEBPACK_IMPORTED_MODULE_4__social_icon_vue___default.a
-    },
+  components: {
+    SbHeader: __WEBPACK_IMPORTED_MODULE_2__sb_header_vue___default.a, Card: __WEBPACK_IMPORTED_MODULE_3__card_vue___default.a, SocialIcon: __WEBPACK_IMPORTED_MODULE_4__social_icon_vue___default.a
+  },
 
-    data: function data() {
-        return {
-            cardModel: {
-                id: 1,
-                selected: null
-            },
-            lastId: 0,
-            cards: [],
-            options: []
-        };
-    },
+  data: function data() {
+    return {
+      cardModel: {
+        id: null,
+        empty: true
+      },
+      cards: [],
+      options: []
+    };
+  },
 
 
-    methods: {
-        newCard: function newCard() {
-            this.lastId++;
-            var card = Object.assign({}, this.cardModel);
-            card.id = this.lastId;
-            this.cards.push(card);
+  methods: {
+    newCard: function newCard() {
+      var card = Object.assign({}, this.cardModel);
+      this.cards.push(card);
 
-            this.$nextTick(function () {
-                var cardEl = document.getElementById(card.id);
-                Object(__WEBPACK_IMPORTED_MODULE_5__helpers__["a" /* scrollToTop */])(cardEl);
-            });
-        },
-        remove: function remove(id) {
-            this.cards = this.cards.filter(function (card) {
-                return card.id !== id;
-            });
+      this.$nextTick(function () {
+        var emptyCards = document.querySelectorAll('[data-empty="true"]');
+        if (emptyCards) {
+          Object(__WEBPACK_IMPORTED_MODULE_5__helpers__["a" /* scrollToTop */])(emptyCards[emptyCards.length - 1]);
         }
+      });
     },
-
-    created: function created() {
-        var _this = this;
-
-        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('data/symbaroum.json').then(function (response) {
-            var options = [];
-
-            response.data.map(function (item) {
-                item.label = item.type + ': ' + item.name + ' (' + item.book + ')';
-                options.push(item);
-            });
-
-            _this.options = options;
-        });
+    remove: function remove(id) {
+      this.cards = this.cards.filter(function (card) {
+        return card.id !== id;
+      });
     },
-    mounted: function mounted() {
-        // revealing/hiding header
-        /*var headroom  = new Headroom(
-            document.querySelector('#nav-bar'),
-            { tolerance: 20 }
-        );
-        headroom.init();*/
+    getCardIDsFromURL: function getCardIDsFromURL() {
+      var urlParams = new URLSearchParams(window.location.search);
+      var cardIDs = urlParams.get('c').split('-');
+      return cardIDs.map(function (id) {
+        return Number(id);
+      });
+    },
+    setCardIDsIntoURL: function setCardIDsIntoURL() {
+      var ids = this.cards.filter(function (c) {
+        return !!c.id;
+      }).map(function (card) {
+        return card.id;
+      }).join('-');
+      var urlParams = new URLSearchParams('c=' + ids);
+      history.pushState(null, '', '/?' + urlParams.toString());
+    },
+    cardChange: function cardChange(newCard, index) {
+      this.cards.splice(index, 1, newCard);
     }
+  },
+
+  watch: {
+    cards: function cards(newVal) {
+      if (newVal && newVal.length) {
+        this.setCardIDsIntoURL();
+      }
+    }
+  },
+
+  created: function created() {
+    var _this = this;
+
+    __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('data/symbaroum.json').then(function (response) {
+      var options = [];
+
+      response.data.map(function (item) {
+        item.label = item.type + ': ' + item.name + ' (' + item.book + ')';
+        options.push(item);
+      });
+
+      _this.options = options;
+
+      var cardIDs = _this.getCardIDsFromURL();
+      if (cardIDs) {
+        _this.cards = _this.options.filter(function (opt) {
+          return cardIDs.includes(opt.id);
+        });
+      }
+    });
+  }
 });
 
 /***/ }),
@@ -12963,7 +12990,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['id', 'options'],
+    props: ['id', 'options', 'preSelected'],
 
     data: function data() {
         return {
@@ -13012,6 +13039,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }
 
             return false;
+        }
+    },
+
+    watch: {
+        selected: function selected(newVal, oldVal) {
+            if (newVal !== oldVal) {
+                this.$emit('change', newVal);
+            }
+        }
+    },
+
+    created: function created() {
+        if (this.preSelected) {
+            this.selected = this.preSelected;
         }
     }
 });
@@ -13233,34 +13274,31 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }), _vm._v(" "), _c('div', {
     staticClass: "cards"
-  }, _vm._l((_vm.cards), function(card) {
+  }, _vm._l((_vm.cards), function(card, index) {
     return _c('card', {
       key: card.id,
       attrs: {
         "id": card.id,
         "options": _vm.options,
-        "pre-selected": card.selected
+        "pre-selected": card.name ? card : null,
+        "data-empty": card.empty
       },
       on: {
+        "change": function (newCard) { return _vm.cardChange(newCard, index); },
         "dismiss": _vm.remove
       }
     })
   })), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('footer', [_c('p', [_c('strong', [_vm._v("Credits:")]), _vm._v(" Symbook was created by "), _c('a', {
     attrs: {
-      "href": "mailto:frank@symbook.io"
+      "href": "mailto:shout@mottokrosh.com"
     }
-  }, [_vm._v("Frank Reding")]), _vm._v(" ("), _c('a', {
+  }, [_vm._v("Frank \"Mottokrosh\" Reding")]), _vm._v(" ("), _c('a', {
     attrs: {
       "href": "https://mottokrosh.com",
+      "rel": "noopener",
       "target": "_blank"
     }
-  }, [_vm._v("Blog, More Apps")]), _vm._v(") "), _c('social-icon', {
-    attrs: {
-      "name": "google",
-      "size": "0.7rem",
-      "url": "https://plus.google.com/+FrankReding"
-    }
-  }), _vm._v(" "), _c('social-icon', {
+  }, [_vm._v("Games, Blog, Apps")]), _vm._v(") "), _c('social-icon', {
     attrs: {
       "name": "twitter",
       "size": "0.7rem",
@@ -13268,14 +13306,15 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }), _vm._v("."), _c('br'), _vm._v("Art design inspired by the fantastic work of Johan Nohr for the Symbaroum books."), _c('br'), _vm._v("Special thanks to "), _c('a', {
     attrs: {
-      "href": "https://plus.google.com/+SymbaroumTeam",
+      "href": "https://frialigan.se/en/startpage/",
+      "rel": "noopener",
       "target": "_blank"
     }
-  }, [_vm._v("Järnringen")]), _vm._v(" for creating such a great game.")], 1)])], 1)
+  }, [_vm._v("Free League")]), _vm._v(" for creating such a great game.")], 1)])], 1)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "panel"
-  }, [_c('p', [_vm._v("Welcome to Symbook, the quick reference cyclopedia for Symbaroum traits, abilities, and more.")]), _vm._v(" "), _c('p', [_vm._v("All content is the property of Nya Järnringen AB and used with their permission.")]), _vm._v(" "), _c('p', [_vm._v("Press the "), _c('strong', [_vm._v("plus")]), _vm._v(" button in the top right to add your first—and subsequent—cards.")])])
+  }, [_c('p', [_vm._v("Welcome to Symbook, the quick reference cyclopedia for Symbaroum traits, abilities, and more.")]), _vm._v(" "), _c('p', [_vm._v("All content is the property of Free League/Fria Ligan and used with their permission.")]), _vm._v(" "), _c('p', [_vm._v("Press the "), _c('strong', [_vm._v("plus")]), _vm._v(" button in the top right to add your first—and subsequent—cards. Bookmark URL to return to the same set. Use multiple tabs if you like, one per character.")])])
 }]}
 module.exports.render._withStripped = true
 if (false) {

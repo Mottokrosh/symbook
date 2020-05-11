@@ -1,7 +1,7 @@
 {
     "name": "symbook",
     "displayName": "Symbook",
-    "version": "1.1.1",
+    "version": "1.2.0",
     "description": "Cyclopedia for the Symbaroum Roleplaying Game",
     "repository": "https://github.com/mottokrosh/symbook",
     "homepage": "https://symbook.io/about.html",
@@ -16,32 +16,17 @@
         "watch": "NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
         "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
         "production": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "start": "npx http-server www"
+        "start": "npx http-server public"
     },
     "author": "Frank Reding <frank@symbook.io>",
     "license": "MIT",
     "dependencies": {
         "axios": "^0.15.3",
-        "cordova-android": "^6.2.3",
-        "cordova-ios": "^4.4.0",
-        "cordova-plugin-hidden-statusbar": "^1.0.0",
-        "cordova-plugin-statusbar": "^2.2.3",
-        "cordova-plugin-whitelist": "^1.3.2",
         "cross-env": "^3.2.4",
         "headroom.js": "^0.9.4",
         "laravel-mix": "^1.2.0",
         "vue": "^2.3.0",
         "vue-select": "^2.2.0"
-    },
-    "cordova": {
-        "plugins": {
-            "cordova-plugin-whitelist": {},
-            "cordova-plugin-hidden-statusbar": {}
-        },
-        "platforms": [
-            "android",
-            "ios"
-        ]
     },
     "engines": {
         "node": ">=8.1.0",
