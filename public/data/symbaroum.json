@@ -6,9 +6,9 @@
     "book": "CRB",
     "requirement": "",
     "effect": "The character has learned the art of acrobatic maneuvering, having spent time with a theater company, in one of the fencing schools of Yndaros or climbing the trees of Davokar. The nimbleness of the acrobat provides an advantage when trying to withdraw from close combat or when quickly wanting to reach the center of an enemy formation.",
-    "novice": "Active. The character may roll against Quick to avoid Free Attacks from enemies in melee combat, either when trying to slip past an enemy or when attempting to withdraw from melee. Should the Test fail, the player must choose to either remain in its original place or to move anyway and suffer a Free Attack from the opponent.",
+    "novice": "Reaction. The character may roll against Quick to avoid Free Attacks from enemies in melee combat, either when trying to slip past an enemy or when attempting to withdraw from melee. Should the Test fail, the player must choose to either remain in its original place or to move anyway and suffer a Free Attack from the opponent.",
     "adept": "Free. If the character is knocked down he or she may attempt to jump back up again as a Free Action by making a Quick test. If the test fails the character has to spend a Movement Action to get back on its feet, as usual.",
-    "master": "Active. The character can utilize its enemies as shields in battle. In combat with more than one opponent, the character may once per turn use an enemy as a shield and have that enemy suffer a successful hit instead of the character. That opponent cannot defend against the attack, but the master acrobat has to make a successful roll against Quick for the enemy to take the hit."
+    "master": "Reaction. The character can utilize its enemies as shields in battle. In combat with more than one opponent, the character may once per turn use an enemy as a shield and have that enemy suffer a successful hit instead of the character. That opponent cannot defend against the attack, but the master acrobat has to make a successful roll against Quick for the enemy to take the hit."
   },
   {
     "id": 83,
@@ -225,8 +225,8 @@
     "name": "Feint",
     "book": "CRB",
     "requirement": "",
-    "effect": "Persons and creatures that lack the will or strength to wield heavy melee weapons have instead developed techniques for feinting. This ability demands a weapon with either the Short or the Precise Quality. Thanks to the skill of the character, these weapons can be handled in a both discreet and confusing manner. Every attack therefore gains the same advantage as if the opponent was surprised.",
-    "novice": "Passive. The character can choose to attack with Discreet instead of Accurate when the attack is made with a melee weapon which is either Short or Precise.",
+    "effect": "Persons and creatures that lack the will or strength to wield heavy melee weapons have instead developed techniques for feinting. This ability demands a weapon with either the Short or the Precise Quality. Thanks to the skill of the character, these weapons can be handled in a both discreet and confusing manner.",
+    "novice": "Passive. The character can choose to attack with Discreet instead of Accurate when the attack is made with a melee weapon which is either Short or Precise. Also, every such attack gains the same Advantage as if the opponent was surprised.",
     "adept": "Reaction. The character presents a false weakness in its defense and tricks the opponent to attack that weakness. The character can choose to defend itself with Discreet instead of Quick.",
     "master": "Active. With a successful roll against [Discreet←Vigilant] the character can surprise an enemy in the middle of an ongoing fight. A successful test gives the character a Free Attack against that enemy in addition to its ordinary attack. The character may still perform an ordinary attack even if the attempted Feint fails."
   },
@@ -316,7 +316,7 @@
     "effect": "A real warrior carries armor and is trained in how to move and fight while doing so. This is true among Ambrians and barbarians alike, even if the most heavily armored warriors usually are of Ambrian stock. No matter whether the armor is made from leather or steel, the Man-at-arms ability gives the character an increased protection against hostile strikes and blows.",
     "novice": "Passive. The character know how to use its armor for maximum effect, which increases the armor’s Armor tier by one step: light armor protects 1D6, medium armor protects 1D8 and heavy armor protects 1D10.",
     "adept": "Passive. The character is used to wearing armor and can adapt his or hers actions to its limitations. The armor no longer has a negative effect on Quick or abilities based on Quick (including Defense). The Impeding quality of the armor still has a negative effect when using mystical powers.",
-    "master": "Reaction. The character may roll against Quick to counteract effects from Abilities or equipment that make enemy attacks ignore or reduce its Armor value; if the test is successful the Armor protects as usual. Mystical powers that ignore Armor may not be blocked this way; they are not affected by the Man-at-arms ability."
+    "master": "Reaction. The character may roll against Quick to counteract effects from Abilities or Equipment that make enemy attacks ignore or reduce its Armor value. Mystical powers that ignore Armor may not be blocked this way; they are not affected by the Man-at-arms ability."
   },
   {
     "id": 111,
@@ -556,7 +556,7 @@
     "book": "CRB",
     "requirement": "",
     "effect": "There are traditions and groups whose representatives have practiced the art of the thrown weapon for generations. Throwing knives are for instance common among thieves and thugs in the cities, and in the woods many clan warriors are equipped with throwing axes or spears. In fact, most barbarian fighters (especially those within the clan of Zarek) regularly use throwing weapons as part of their melee combat tactics, unleashing a shower of steel just before they charge into the fray.",
-    "novice": "Active. The character has begun to understand the riddle of steel throwing. The damage dealt by throwing weapons is increased to 1D8.",
+    "novice": "Passive. The character has begun to understand the riddle of steel throwing. The damage dealt by throwing weapons is increased to 1D8.",
     "adept": "Active. The character can perform a double throw with one Action. The attacks are rolled separately and are either aimed at the same target, or at two different ones. The character can also use melee weapons as throwing weapons, but can only throw one such weapon per Action. The damage for this kind of attack is the base damage of the melee weapon, including any passive abilities that the thrower might possess.",
     "master": "Active. The character can unleash a devastating triple throw and send three throwing weapons towards his or her enemies, all of them against a single target or distributed among multiple ones."
   },
@@ -699,9 +699,9 @@
     "book": "CRB",
     "requirement": "",
     "effect": "By way of the shadows surrounding creatures, locations and objects the world’s deeper conflicts are observable for a character with the Witchsight ability. To open up one’s mind in order to examine the world of shadows can provide invaluable insight but it also entails great risk: the more open the mind is and the deeper the insights are, the greater is also the risk of becoming tainted by the darkness of the world – so great in fact, that masters of this ability seldom uses it to their full capacity.\r\nAs previously stated, the color of the Shadows can give the character clues regarding the spiritual alliance of the inspected creature (see Shadow & Corruption, page 174). The Game Master manages the nuances and powers of the Shadows and describes what the character sees with its Witchsight.",
-    "novice": "Free. As a Free Action, the character can make a roll against [Vigilant←Discreet] in an attempt to see the dominant Shadow of a creature, location or object. Each such attempt forces the character to suffer 1D4 of temporary corruption.",
-    "adept": "Free. The character has gained the greater insight of an Adept regarding auras and mystical phenomenon. Witchsight now reveals all Shadows of an inspected target but not their respective strengths. The character suffers 1D6 temporary Corruption each time he or she attempts to see the Shadows of a creature, location or object.",
-    "master": "Free. The character has achieved the Master’s superior insights and can now see all Shadows and their respective strengths clearly. The character suffers 1D8 temporary Corruption each time he or she attempts to see the Shadows of a creature, location or object."
+    "novice": "Free. As a Free Action, the character can make a roll against [Vigilant←Discreet] in an attempt to see the dominant Shadow of a creature, location or object. Each such attempt forces the character to suffer 1 point of temporary corruption.",
+    "adept": "Free. The character has gained the greater insight of an Adept regarding auras and mystical phenomenon. Witchsight now reveals all Shadows of an inspected target but not their respective strengths. The character suffers 1D4 temporary Corruption each time he or she attempts to see the Shadows of a creature, location or object.",
+    "master": "Free. The character has achieved the Master’s superior insights and can now see all Shadows and their respective strengths clearly. The character suffers 1D6 temporary Corruption each time he or she attempts to see the Shadows of a creature, location or object."
   },
   {
     "id": 146,
@@ -1320,7 +1320,7 @@
     "name": "Poison Spit",
     "book": "CRB",
     "requirement": "",
-    "effect": "The creature is not just Poisonous; it can also spit venom at its enemies. The poison attack is performed just like an ordinary ranged attack; if successful, the poison seeps into the target’s pores and deals damage. The venomous spit counts as a ranged attack. The poison's effect can be cancelled if someone applies an antidote and succeeds with a Cunning test. Poison Spit requires that the creature has the Poisonous trait at the same level or higher.",
+    "effect": "The creature is not just Poisonous; it can also spit venom at its enemies. The poison attack is performed just like an ordinary ranged attack; if successful, and the victim fails a [Strong←Cunning] test, the poison seeps into the target’s pores and deals damage. The venomous spit counts as a ranged attack. The poison's effect can be cancelled if someone applies an antidote and succeeds with a Cunning test. Poison Spit requires that the creature has the Poisonous trait at the same level or higher.",
     "novice": "Active. The poison is weak and deals 2 points of damage from 2 turns.",
     "adept": "Active. The poison is moderately strong and deals 3 points of damage for 3 turns.",
     "master": "Active. The poison is strong and deals 4 points of damage for 4 turns."
@@ -1706,7 +1706,7 @@
     "book": "CRB",
     "tradition": "Wizardry",
     "effect": "The Mystic can use its mind to move and throw around loose objects, or even enemies.",
-    "novice": "Active. The Mystic can use objects in the surroundings to either hurl around as weapons or to block incoming attacks. The Mystic will have to make a [Resolute←Quick] test to attack this way and deals 1D8 damage if successful. If some object instead is used as a temporary shield, make a [Resolute←Accurate] test to block physical attacks and [Resolute←Resolute] if trying to block a magic projectile. The object is destroyed after one hit, either dealt or blocked.",
+    "novice": "Active/Reaction. The Mystic can use objects in the surroundings to either hurl around as weapons or to block incoming attacks. The Mystic will have to make a [Resolute←Quick] test to attack this way and deals 1D8 damage if successful. If some object instead is used as a temporary shield, make a [Resolute←Accurate] test to block physical attacks and [Resolute←Resolute] if trying to block a magic projectile. The object is destroyed after one hit, either dealt or blocked.",
     "adept": "Active. The Mystic is capable of using the power of his or her mind [Resolute←Strong] to lift, and throw, an enemy. A thrown enemy lands a Movement Action away and suffers 1D8 damage. The enemy lands on its back, unless it makes a successful Quick test.",
     "master": "Active. The Mystic can throw a chain of enemies if succeeding with a [Resolute←Strong] test. The Mystic starts with one target and keep making tests until he or she fails. The thrown enemies land a Movement Action away and suffer 1D8 damage. The enemies land on their back, unless they make a successful roll against Quick."
   },
@@ -1795,8 +1795,8 @@
     "tradition": "Sorcery",
     "effect": "The Mystic’s weapon is enveloped by dark energies, which increases the damage dealt against living creatures. Worse, those slain will rise again, as walking corpses controlled by the sorcerer. Undead created by Revenant Strikes have the same statistics as the dragoul (see page 230). The undead returns to its state of true death at the end of the scene.",
     "novice": "Active. The sorcerer ignites a malicious flame around its melee weapon, which then deals 1D4 additional damage.",
-    "adept": "Active. Creatures slain by the Revenant Strike rises again the following turn, loyal to the sorcerer.",
-    "master": "Free. The sorcerer’s weapon deals 1D8 additional damage when performing a Revenant Strike instead of the 1D4 at Novice level."
+    "adept": "Reaction. Creatures slain by the Revenant Strike rises again the following turn, loyal to the sorcerer.",
+    "master": "Free. As Adept, but the effect is activated as a free action and a hit deals +1D8 damage, instead of +1D4."
   },
   {
     "id": 251,
