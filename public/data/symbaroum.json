@@ -2739,6 +2739,105 @@
     "master": "Reaction. The creature can use its carapace reactively against all attacks. When hit by an attack, the attacker rolls a new success test; if the second test fails, the attack still hits but the creature manages to make use of its carapace, doubling the protection from its natural armor against that particular attack."
   },
   {
+    "id": 292,
+    "type": "Monstrous Trait",
+    "name": "Collective Power",
+    "book": "MC",
+    "requirement": "",
+    "effect": "The collective gains mystical powers when enough members are gathered closely together; the more members, the mightier their collective power, up to a certain limit (see Table 6 on page 166).\r\nThe collective can perform one mystical power per turn, in addition to the actions of its individual members. If differences exist, this action is activated on the highest individual initiative of the collective. The power works as usual, but its collective origin makes it harder for the enemy to break the concentration of the caster – three of the collective's members has to lose concentration during the same turn for it to have an effect on the ongoing power.",
+    "novice": "",
+    "adept": "",
+    "master": ""
+  },
+  {
+    "id": 293,
+    "type": "Monstrous Trait",
+    "name": "Colossal",
+    "book": "MC",
+    "requirement": "",
+    "effect": "There are creatures that grow to such immense proportions that their sheer size gives them the upper hand, albeit at the cost of a notable slowness in movements and reflexes. Surviving a combat encounter with such a monstrosity calls for as much luck as proficiency and, when it comes to the most massive beasts, also weapons with extraordinary qualities.\r\nColossal requires the creature to have level III in the trait Robust.",
+    "novice": "Action: Passive. When the creature attacks, both actions are spent; hence, it cannot move and attack during the same turn. In return, the attacks of the creature hit with a force that normal armor can hardly withstand – the target rolls twice for Armor and the lowest outcome stands.",
+    "adept": "Action: Passive. As I, but the massive body of the creature makes it unable to perform reactive actions (such as Defense tests) while it is moving. On the other hand, the creature's reach and size are such that its enemies have a hard time parrying or avoiding the attacks – the target has two chances to fail when rolling for Defense.",
+    "master": "Action: Passive. As II, with the addition that the enormous bulk of the creature cannot be harmed by ordinary weapons or projectiles. The creature can only be damaged by mystical weapons or powers."
+  },
+  {
+    "id": 0,
+    "type": "Monstrous Trait",
+    "name": "",
+    "book": "MC",
+    "requirement": "",
+    "effect": "",
+    "novice": "",
+    "adept": "",
+    "master": ""
+  },
+  {
+    "id": 0,
+    "type": "Monstrous Trait",
+    "name": "",
+    "book": "MC",
+    "requirement": "",
+    "effect": "",
+    "novice": "",
+    "adept": "",
+    "master": ""
+  },
+  {
+    "id": 0,
+    "type": "Monstrous Trait",
+    "name": "",
+    "book": "MC",
+    "requirement": "",
+    "effect": "",
+    "novice": "",
+    "adept": "",
+    "master": ""
+  },
+  {
+    "id": 0,
+    "type": "Monstrous Trait",
+    "name": "",
+    "book": "MC",
+    "requirement": "",
+    "effect": "",
+    "novice": "",
+    "adept": "",
+    "master": ""
+  },
+  {
+    "id": 0,
+    "type": "Monstrous Trait",
+    "name": "",
+    "book": "MC",
+    "requirement": "",
+    "effect": "",
+    "novice": "",
+    "adept": "",
+    "master": ""
+  },
+  {
+    "id": 0,
+    "type": "Monstrous Trait",
+    "name": "",
+    "book": "MC",
+    "requirement": "",
+    "effect": "",
+    "novice": "",
+    "adept": "",
+    "master": ""
+  },
+  {
+    "id": 0,
+    "type": "Monstrous Trait",
+    "name": "",
+    "book": "MC",
+    "requirement": "",
+    "effect": "",
+    "novice": "",
+    "adept": "",
+    "master": ""
+  },
+  {
     "id": 0,
     "type": "Monstrous Trait",
     "name": "",
