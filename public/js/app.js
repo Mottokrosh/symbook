@@ -11191,13 +11191,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('data/symbaroum.json').then(function (response) {
       var options = [];
+      var optionIDs = [];
 
       response.data.map(function (item) {
         item.label = item.type + ': ' + item.name + ' (' + item.book + ')';
         options.push(item);
+        optionIDs.push(item.id);
       });
 
       _this.options = options;
+      window.Symbook = { optionIDs: optionIDs.sort() };
 
       var cardIDs = _this.getCardIDsFromURL();
       if (cardIDs) {

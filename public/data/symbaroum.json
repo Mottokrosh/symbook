@@ -2693,5 +2693,93 @@
     "novice": "Full turn. The character gets lost in a short trance. With a passed Resolute test, it gains access to the novice level of an optional ability, Mystical Traditions, Ritualist and Mystical Power excluded. The ability can be used for the rest of the scene, before fading from memory",
     "adept": "Active. The character’s closer connection to the collective memory makes the trance even shorter; other than that it works like the novice level.",
     "master": "Active. The character can dig deeper into the collective memory. With a passed Resolute test, it gains access to the adept level of an optional ability, Mystical Traditions, Ritualist and Mystical Power excluded. The ability can be used for the rest of the scene, before fading from memory."
+  },
+  {
+    "id": 288,
+    "type": "Monstrous Trait",
+    "name": "Amphibian",
+    "book": "MC",
+    "requirement": "",
+    "effect": "The creature is built for a life in and out of water, and can extract oxygen from both water and air. The creature has no negative effects from fighting in water and does not suffer damage from doing so (see Combat in Water to the right).",
+    "novice": "",
+    "adept": "",
+    "master": ""
+  },
+  {
+    "id": 289,
+    "type": "Monstrous Trait",
+    "name": "Avenging Successor",
+    "book": "MC",
+    "requirement": "",
+    "effect": "The one who kills a creature with this trait is immediately exposed to its vengeance, in the form of one or more other creatures. The type of avenger depends on the creature with the trait; the level of the trait only defines how many and how dangerous the avenging creatures are, not their exact nature. Normally, the avenging creatures are of the same breed as the being who has the trait, but this is not a requirement as long as the combination makes sense. The only restriction is that only thoroughly corrupt creatures can have other thoroughly corrupted beasts as avengers.\r\nNote that a creature needs to be of at least Challenging resistance to be able to have the trait Avenging Successor.",
+    "novice": "Reaction. At the moment of death, one creature is detached or manifested to avenge the creature with the trait. The avenger’s level of resistance is two steps lower than that of the deceased",
+    "adept": "Reaction. As I, but two creatures are detached or manifested.",
+    "master": "Reaction. As I, but three creatures are detached or manifested."
+  },
+  {
+    "id": 290,
+    "type": "Monstrous Trait",
+    "name": "Bloodlust",
+    "book": "MC",
+    "requirement": "",
+    "effect": "The creature thirsts for warm blood, and with its gaze it can put its victim into a trance before feasting on its life-giving juices.",
+    "novice": "Active. The creature may charm [Resolute←Resolute] and bite its victim in a single Combat Action. The bloodsucker then slurps blood, 2 Toughness per turn, ignoring armor. It takes a [Resolute←Resolute] each turn to maintain the trance. Damaging the bloodsucking creature can also break the trance, [Resolute–Damage].",
+    "adept": "As I, but the bloodsucking creature also heals as much Toughness as it draws from the victim.",
+    "master": "Active. As II, but damage and healing is 3 Toughness per turn. Also, the victim itself cannot break the trance; someone else has to attack and damage the bloodsucker for the control to be lost, [Resolute–Damage]."
+  },
+  {
+    "id": 291,
+    "type": "Monstrous Trait",
+    "name": "Carapace",
+    "book": "MC",
+    "requirement": "",
+    "effect": "Under special circumstances, the natural armor of the creature gives it the option to double its armor value – when and to what extent is decided by the level of the trait.\r\nNote that a creature needs to have at least level I in Armored to have the trait Carapace.",
+    "novice": "Passive. At any time, the creature can hunker down and curl up under its carapace – the armor value of its natural armor is doubled, but it cannot perform any active actions during the turn.",
+    "adept": "Passive. The creature is protected by its carapace when moving, but is exposed as soon as it performs an active action. This gives the creature double the effect of its natural armor if it does nothing other than move during the turn, and against free attacks triggered when it passes enemies, moves into melee range or retreats from melee.",
+    "master": "Reaction. The creature can use its carapace reactively against all attacks. When hit by an attack, the attacker rolls a new success test; if the second test fails, the attack still hits but the creature manages to make use of its carapace, doubling the protection from its natural armor against that particular attack."
+  },
+  {
+    "id": 0,
+    "type": "Monstrous Trait",
+    "name": "",
+    "book": "MC",
+    "requirement": "",
+    "effect": "",
+    "novice": "",
+    "adept": "",
+    "master": ""
+  },
+  {
+    "id": 0,
+    "type": "Monstrous Trait",
+    "name": "",
+    "book": "MC",
+    "requirement": "",
+    "effect": "",
+    "novice": "",
+    "adept": "",
+    "master": ""
+  },
+  {
+    "id": 0,
+    "type": "Monstrous Trait",
+    "name": "",
+    "book": "MC",
+    "requirement": "",
+    "effect": "",
+    "novice": "",
+    "adept": "",
+    "master": ""
+  },
+  {
+    "id": 0,
+    "type": "Monstrous Trait",
+    "name": "",
+    "book": "MC",
+    "requirement": "",
+    "effect": "",
+    "novice": "",
+    "adept": "",
+    "master": ""
   }
 ]

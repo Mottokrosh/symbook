@@ -98,13 +98,16 @@
       axios.get('data/symbaroum.json')
         .then(response => {
           let options = [];
+          const optionIDs = [];
 
           response.data.map((item) => {
             item.label = item.type + ': ' + item.name + ' (' + item.book + ')';
             options.push(item);
+            optionIDs.push(item.id);
           });
 
           this.options = options;
+          window.Symbook = { optionIDs: optionIDs.sort() };
 
           const cardIDs = this.getCardIDsFromURL();
           if (cardIDs) {
