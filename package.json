@@ -21,7 +21,7 @@
     "author": "Frank Reding <frank@symbook.io>",
     "license": "MIT",
     "dependencies": {
-        "axios": "^0.15.3",
+        "axios": "^0.21.1",
         "cross-env": "^3.2.4",
         "headroom.js": "^0.9.4",
         "laravel-mix": "^1.2.0",
