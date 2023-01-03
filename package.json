@@ -24,7 +24,7 @@
         "axios": "^0.15.3",
         "cross-env": "^3.2.4",
         "headroom.js": "^0.9.4",
-        "laravel-mix": "^1.2.0",
+        "laravel-mix": "^6.0.49",
         "vue": "^2.3.0",
         "vue-select": "^2.2.0"
     },
