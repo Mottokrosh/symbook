@@ -1558,10 +1558,10 @@
     "name": "Mystical Resistance",
     "book": "MC",
     "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "effect": "The creature has a natural resistance against the effects of mystical powers. Basically, it is more difficult to harm or affect by mystical means, and on higher levels there is also a risk that the energies directed against it are reflected to hit someone else.",
+    "novice": "Passive. All who try to affect or harm the creature with mystical powers must roll the success test twice and pass both times in order for the power to take effect.",
+    "adept": "Passive. As I, but if the success test fails, the power is redirected towards a randomly selected target within sight of the creature. Aside from the attacking mystic suffering from any temporary corruption, the reflected power works as if the creature knew it and had used it against the randomly selected target.",
+    "master": "Passive. As II, but the resilient creature has such control that it may choose which target the power is reflected towards."
   },
   {
     "id": 273,
@@ -1580,10 +1580,7 @@
     "name": "Night Perception",
     "book": "MC",
     "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "effect": "The creature has been gifted with the ability to perceive its surroundings using sound waves – it emits sound pulses that bounce off nearby objects and return to the creature, which then forms a mental image of what its surroundings look like. Because of this, the creature can perceive beings and objects made invisible by powers or traits, and in other respects act as usual even in complete darkness."
   },
   {
     "id": 311,
@@ -1591,10 +1588,7 @@
     "name": "Observant",
     "book": "MC",
     "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "effect": "The physical or supernatural senses of the creature give it a perfect view in all directions. This means that the creature cannot be flanked, or rather that those flanking it do not gain Advantage against the creature."
   },
   {
     "id": 312,
@@ -1602,10 +1596,10 @@
     "name": "Paralyzing Venom",
     "book": "MC",
     "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "effect": "The creature’s claws, venomous bite or stinger has a paralyzing effect. At best, the victim is dazed by the venom; at worst, it is completely incapacitated and unable to protect itself from incoming attacks. The effect remains active until someone administers an antidote to the victim and passes a Cunning test.",
+    "novice": "Passive. For each attack that deals damage, the victim makes a Strong test. If the test is successful, the victim is dazed and has two chances to fail all success tests and reactive actions for one turn; if the test fails, the victim can only perform reactive actions, with two chances to fail.",
+    "adept": "Passive. As I, but if the victim fails the test, it can only perform reactive actions for the next 1D4 turns, with two chances to fail.",
+    "master": "Passive. The target must pass a [Strong −5] test. If the test is successful, the victim can only perform reactive actions for the next 1D4 turns, with two chances to fail; if the test fails, the victim is completely paralyzed for 1D8 turns."
   },
   {
     "id": 313,
@@ -1613,10 +1607,10 @@
     "name": "Piercing Attack",
     "book": "MC",
     "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "effect": "The attack deals no normal damage. Instead, the damage value determines whether the attack manages to pierce the victim’s Armor. If the armor value is equal to or higher than the damage value, the attack fails; if the armor value is lower, the victim suffers an effect such as poison or corruption, depending on what other traits the creature has.",
+    "novice": "Passive. The attack has a damage value of 4.",
+    "adept": "Passive. The attack has a damage value of 5.",
+    "master": "Passive. The attack has a damage value of 6."
   },
   {
     "id": 274,
@@ -1646,21 +1640,21 @@
     "name": "Prehensile Claws",
     "book": "MC",
     "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "effect": "The claws of the creature deal damage like unarmed attacks, and also give it a chance to grip and hold enemies – usually with the aim of dragging them towards its grinding jaws.",
+    "novice": "Active. The creature may perform two attacks against the same enemy, one with each claw. If both attacks hit, the creature may try to grip the target, which succeeds if the target fails a [Strong←Strong] test. A gripped target can act as usual other than being unable to move. The target is held during the turn it is gripped and then, if the target fails a [Strong←Strong] test, pulled towards the creature during the following turn. If the test is successful the enemy gets free.",
+    "adept": "Active. As I, but only one of the claw attacks needs to hit for the target to be gripped.",
+    "master": "Active. If at least one claw hits, and the target fails a [Strong←Strong] test, the target is immediately pulled towards the creature. If the test is successful, the target is still gripped and a new attempt to pull it towards the creature may be made the following turn; the target cannot get free until the creature dies or chooses to let go."
   },
   {
     "id": 315,
     "type": "Monstrous Trait",
     "name": "Rampage",
     "book": "MC",
-    "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "requirement": "Robust at same level",
+    "effect": "The creature can use its body mass to crush, or at least push away, enemies in its path. The trait does not protect against Free Attacks caused by Long weapons or movements past prepared enemies.  Rampage requires at least the corresponding level of the Robust trait.",
+    "novice": "Movement. Everyone standing in the creature’s path during the movement must pass a [Strong←Strong] test or take 2 damage (armor protects as usual) and be knocked down. The Robust trait adds +2 damage per level (+2, +4, +6), and the same bonus to Strong, both when using and trying to defend against Rampage. As soon as a victim passes its test, the crushing rampage stops.  Enemies with the Acrobatics ability can choose to defend with [Quick←Strong] and thereby dodge, but if so, a successful test will not stop the Rampage.",
+    "adept": "Movement. As I, but deals 3 damage.",
+    "master": "Movement. As I, but deals 4 damage."
   },
   {
     "id": 276,
@@ -1690,10 +1684,10 @@
     "name": "Root Wall",
     "book": "MC",
     "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "effect": "The creature can extend its root system and have it shoot up from the ground to hinder enemy movement. At higher levels, the wall can also deal damage to those trying to pass it, or even grip and hold them.",
+    "novice": "Active. The creature raises its roots like a wall from the ground, wide enough for it to take two movement actions to get around it. The wall could also be used to block a cave or similar opening.  The wall can be destroyed, according to the rules on Damage on Buildings in the Advanced Player’s Guide (page 106). The root wall has Toughness 10, Breakpoint 5 and Fortification value 5. The root wall remains for an entire scene, unless it is destroyed or the creature opts to spend a new active action to move it. If destroyed, a new root wall cannot be raised until the next day.",
+    "adept": "Active. As I, but enemies that come close to the wall must pass a [Quick←Accurate] test or be hit by flaying branches, dealing 3 damage (ignoring Armor). The only way to avoid this is to spend another movement action when rounding the wall, a total of three, and hence bypass the wall at a safe distance.",
+    "master": "Free. As II, but the flaying branches deal 5 damage. If they hit and if the target fails a [Strong←Strong] test, the target is also gripped until it passes a [Strong←Strong] test, or the wall is destroyed or moved. A gripped target is not attacked by flaying branches again until the moment when it succeeds in getting free."
   },
   {
     "id": 278,
@@ -1712,21 +1706,20 @@
     "name": "Sturdy",
     "book": "MC",
     "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "effect": "The monster possesses a remarkable vitality, possibly born out of a strong link to the forces of nature, or maybe stemming from a bottomless source of corruption. The creature’s Toughness is higher than its Strong value would suggest, but its Pain Threshold is unaffected (based on Strong/2, as usual).",
+    "novice": "Passive. The creature’s Toughness is based on its Strong × 1.5 (rounded up).",
+    "adept": "Passive. The creature’s Toughness is based on its Strong × 2.",
+    "master": "Passive. The creature’s Toughness is based on its Strong × 3."
   },
   {
     "id": 318,
     "type": "Monstrous Trait",
     "name": "Summoner",
     "book": "MC",
-    "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "requirement": "", "effect": "The creature can summon reinforcements from the Yonderworld, reinforcements which disappear upon the summoner’s death or at the end of the scene.  The reinforcements obey the orders of the summoner, but have to hear them being spoken or shouted – they are not controlled telepathically.  Only thoroughly corrupt creatures may be summoners; all others would immediately become blight born by the abhorrent tearing in the fabric of the world.",
+    "novice": "Active. Once per scene, the creature can make a successful test against Resolute to summon a daemonic Intruder.",
+    "adept": "Reaction. As I, but additionally, once per turn when the creature is hit by a hostile attack, it may make a test against Resolute – if successful, a daemonic Intruder is immediately summoned to the location.",
+    "master": "Free. Once per turn, the creature can roll a test against Resolute to summon a daemonic Intruder to the location. If successful, this replaces the reactive summoning of the adept level and the active summoning of the novice level. Should the free summoning of the master level fail, the creature can opt to activate the novice level effect, though only once per scene."
   },
   {
     "id": 279,
@@ -1745,10 +1738,10 @@
     "name": "Swift",
     "book": "MC",
     "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "effect": "The creature is lightning fast, and can do extra attacks as part of its combat action. The initial attack may be an attack in melee, at range or with mystical powers, but the extra attacks cannot involve active abilities.",
+    "novice": "Reaction. When the creature hits with a combat action, it may immediately perform a free attack against an enemy within melee range, whether or not the first attack dealt any damage.",
+    "adept": "Reaction. As I, but if the initial attack deals damage, the creature may immediately perform two free attacks against enemies within melee range.",
+    "master": "Reaction. When the creature performs an attack, it may also perform two free attacks against enemies within melee range, whether or not the first attack hits."
   },
   {
     "id": 280,
@@ -1767,10 +1760,10 @@
     "name": "Tunneler",
     "book": "MC",
     "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "effect": "The creature moves just as easily below the ground as on the surface, provided that the terrain is made of earth, sand, mud, gravel or similar material – solid rock forces the creature around, below or to the surface. Skilled tunnelers can use the underground to avoid enemy attacks, and the best tunnelers can create sinkholes under enemies, to be used as a weapon.  Even below ground, the creature has a feel for the direction and distance to known landmarks, but it cannot perceive what hides under the surface until it gets there.",
+    "novice": "Passive. The creature can move at half speed below ground, and hence avoid all free attacks that would otherwise be triggered when passing or closing in on an enemy.",
+    "adept": "Passive. The creature moves below ground at normal speed and with such agility that it can make part of its movement before and the rest after an attack. That way, the creature can appear to make an attack and then disappear, out of range from counter attacks. The only way to avoid the attacks of the tunneler is to sneak, [Discreet←Vigilant], or move up on solid rock, a building or a tree.",
+    "master": "Active. The creature can undermine a small area in order to create a sinkhole under an enemy group’s feet. Up to five individuals standing next to each other can be caught by the trap; those who fail a test against Quick fall into the pit where the tunneler gets a free attack against each and every one of them. To get out of the hole requires a successful Quick test and a movement action; targets with the Acrobatics ability get a second chance to succeed."
   },
   {
     "id": 281,
@@ -1811,10 +1804,10 @@
     "name": "Wrecker",
     "book": "MC",
     "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "effect": "The attacks of the creature are powerful enough to throw enemies to the ground. The mightiest of wreckers are even capable of acting as living battering rams, crushing gates, razing towers and toppling walls with their natural weapons.",
+    "novice": "Reaction. The creature’s attacks can knock enemies that take damage prone. The target avoids the fall if it passes a [Strong←Strong] test, where each level in the Robust trait gives +2 on Strong for both attacker and defender.",
+    "adept": "Reaction. As I, but enemies that take damage are at risk of being thrown. If the target fails its test against [Strong←Strong], he or she is thrown 1D6 meters back and suffers damage as if from a fall from the corresponding height. A thrown enemy lands flat on its back.",
+    "master": "Passive. The brutal attacks of the creature gain the quality Wrecking (see page 118 in the Advanced Player’s guide)."
   },
   {
     "id": 216,
