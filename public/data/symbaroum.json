@@ -1391,21 +1391,21 @@
     "name": "Death Struggle",
     "book": "MC",
     "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "effect": "When the creature dies, its accumulated wrath is unleashed in attacks against those unlucky enough to be within reach. From level II, the Death Struggle attacks count as normal combat actions and can make use of active abilities, powers and traits.",
+    "novice": "Reaction. The creature’s death struggle lets it perform a free attack against an enemy within melee range, as a reaction to the attack that killed it.",
+    "adept": "Reaction. As I, but the attack is performed like a normal combat action.",
+    "master": "Reaction. As II, but the creature may attack up to five enemies that it can reach without moving."
   },
   {
     "id": 297,
     "type": "Monstrous Trait",
-    "name": "Davour",
+    "name": "Devour",
     "book": "MC",
-    "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "requirement": "Colossal I",
+    "effect": "The creature can swallow enemies and have them perish in its belly. Normally, only one victim at a time may be swallowed, but if the creature so wishes, it can use a free action to spew out a victim in order to make room for a new one.  Devour requires that the creature has level I or higher in the trait Colossal. The level in Colossal also determines how many victims may be simultaneously swallowed: three at level II, and a total of six at level III.",
+    "novice": "Active. When the creature deals damage with a bite, the target is retained until the following turn; it may act as usual but not move. Next turn, the creature can attempt to swallow the target.  The target rolls a [Strong←Strong] test, where the trait Robust gives a +2 bonus per level, both for the creature and the target. If successful, the target manages to get free from the hold, but a failure means that the target is devoured and ends up in the creature’s belly – a hazardous environment dealing 2 damage per turn, ignoring Armor.",
+    "adept": "Active. As I, but the bite only needs to hit (not deal damage) for the target to be retained. The attempt to swallow is made during the following turn.",
+    "master": "Reaction. As II, but the attempt to swallow is made as part of the initial attack – if the bite hits, the test to avoid being devoured is rolled immediately, the same turn."
   },
   {
     "id": 298,
@@ -1413,10 +1413,7 @@
     "name": "Diminutive",
     "book": "MC",
     "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "effect": "The creature is so small, slender and pitiful that it arouses sympathy even in enemies. In short, it is difficult to see it as a credible threat, even when it is armed.  The effect of this is that enemies tend to choose other targets first; they must pass a [Resolute←Discreet] test to bring themselves to attack. The only exceptions are if the diminutive creature is the only possible target or if it shows that it actually can fight (that is, if it manages to deal damage to an enemy).  Diminutive is immediately thwarted if the creature makes use of any Ability or Power, or of some other trait."
   },
   {
     "id": 270,
@@ -1435,10 +1432,7 @@
     "name": "Free Spirit",
     "book": "MC",
     "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "effect": "The creature’s spirit is detached from the fate of the world, and it is therefore immune to all forms of corruption. As a side effect, the creature cannot learn any mystical powers or rituals. However, it can use mystical artifacts without suffering from any corruption that might occur."
   },
   {
     "id": 300,
@@ -1446,10 +1440,7 @@
     "name": "Grappling Tongue",
     "book": "MC",
     "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "effect": "The creature has a long tongue which can be used to attack and grapple targets which are within two movement actions away. The attack counts and deals damage as a bite, and if the target has at least one level lower than the creature in the trait Robust, the creature may try to pull the target into melee range. The target rolls a [Strong←Strong] test; if it fails, the target is pulled towards the creature which then can combine Grappling Tongue with other traits, such as Devour and Crushing Embrace."
   },
   {
     "id": 271,
@@ -1468,54 +1459,65 @@
     "name": "Harmful Aura",
     "book": "MC",
     "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "effect": "The creature exudes harmful energies that each turn deal damage to everyone within melee range.  Also, the creature leaves clear marks in its wake, in the form of a burnt, frozen or otherwise warped trail through the environment. Hence, all attempts to track the creature automatically succeed.  The aura can consist of fire, cold, acid or lightning. Together with the trait Alternative Damage the aura affects the chosen Attribute instead of Toughness, but only if the creature has Alternative Damage to at least the same level as Harmful Aura.  The aura can also be corrupting or poisonous instead, if the creature has the traits Corrupting Attack or Poisonous to the same level or higher.",
+    "novice": "Passive. All who are within melee range of the creature suffer 2 points of damage per turn, ignoring Armor.",
+    "adept": "Passive. As I, but the damage is 3 per turn.",
+    "master": "Passive. As I, but the damage is 4 per turn."
   },
   {
     "id": 302,
     "type": "Monstrous Trait",
-    "name": "Infectious",
+    "name": "Haunting",
     "book": "MC",
-    "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "requirement": "Spirit Form I",
+    "effect": "The creature can invade the body of other beings, as if using the ritual Possess (see page 145 in the Core Rulebook), but without it taking as long. At higher levels, the possession is even reactive, aimed at the enemy who slays the creature.  Haunting requires at least level I in the trait Spirit Form.",
+    "novice": "Reaction. The creature can possess a target it touches, for instance after an attack which deals damage. The target has to roll a [Resolute←Resolute] test; if it fails the target becomes a slave to the creature's will and can be made to perform any action, except taking its own life. After one day, the target rolls a second test; if that too fails, the possession lasts for a whole week, after which a new test is made.  Should this fail, the target is possessed for a month.  And when that time has passed, a final test is made, with failure meaning that the possession becomes permanent. However, the possession may at any time be aborted by successful use of the ritual Exorcism.",
+    "adept": "Reaction. When the creature or the host it possesses reaches 0 in Toughness, the spirit lashes out and tries to possess the enemy who struck the killing blow. The attempt is made like on level I and if the attack affected an already possessed host, its body falls to the ground, unconscious and balancing on the brink of death for the rest of the scene.",
+    "master": "Reaction. The creature can possess as on level I or II, but the duration is automatically permanent – until an Excorsism is performed or the spirit opts to leave the host for some reason."
   },
   {
     "id": 303,
     "type": "Monstrous Trait",
-    "name": "Infestation",
+    "name": "Infectious",
     "book": "MC",
     "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "effect": "The creature carries a contagious disease and those harmed by its natural weapons are at risk of being infected. The higher the level of the trait, the worse the disease.",
+    "novice": "Reaction. All enemies suffering damage from the creature's natural weapons must pass a Strong test or be infected by a Weak disease.",
+    "adept": "Reaction. As I, but the disease is Moderate.",
+    "master": "Reaction. As I, but the disease is Strong."
   },
   {
     "id": 304,
     "type": "Monstrous Trait",
-    "name": "Invisibility",
+    "name": "Infestation",
     "book": "MC",
     "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "effect": "Some parasitical creatures have the capacity to penetrate the body of a victim, or with claws or stinger plant larvae inside an unwilling host. The impact of the parasite depends on the particular creature, while this trait decides how difficult it is to avoid being, or staying, infested.",
+    "novice": "Reaction. In order to infest the victim, the creature must deal damage with an attack. After this, it needs a whole turn to penetrate the body of the host, during which the victim or an ally can use a combat action to remove the parasite. Removal inflicts 1D8 damage on the host, or 1D4 with a successful Cunning test. To remove a parasite after it has penetrated the body requires a passed Cunning test with the Medicus ability; each attempt deals 1D10 damage, ignoring Armor.",
+    "adept": "Reaction. The parasite invades the host directly after an attack that deals damage. Removing it requires a passed Cunning test with the Medicus ability; each attempt deals 1D12 damage, ignoring Armor.",
+    "master": "Reaction. As II, but each attempt to remove the parasite deals 1D20 damage to the victim, ignoring Armor."
   },
   {
     "id": 305,
     "type": "Monstrous Trait",
+    "name": "Invisibility",
+    "book": "MC",
+    "requirement": "",
+    "effect": "The creature can make itself invisible. Enemies can still use other senses besides sight to locate it. The creature makes sounds and leaves tracks, and it can be made partially visible by creatively using dust, sand, flour or similar means. Some elixirs, such as Ghost Candles (see page 153 in the Core Rulebook), counteract this trait, just as the mystical power True Form can make the creature observable.",
+    "novice": "Active. The creature can become invisible and hence impossible to hit with direct attacks. In order to attack with area effects, like alchemical grenades, the attacker must pass a test against [Vigilant←Discreet]; the same applies when trying to hit the creature with improvised weapons aimed at exposing it – sand, dust, flour or similar, making the creature partially visible for the rest of the scene. Attacking a partially visible creature first requires a [Vigilant←Discreet] test; if the test succeeds the attack can be made as usual.",
+    "adept": "Active. As I, but if the creature is made partially visible, this effect only lasts for one turn, after which the creature may act to become invisible again.",
+    "master": "Free. The creature is invisible by default; it does not have to spend an active action to become invisible. Also, this means that it only becomes partially visible for one turn, if revealed as on level I; after this turn, it becomes invisible again without having to spend any actions."
+  },
+  {
+    "id": 306,
+    "type": "Monstrous Trait",
     "name": "Life Sense",
     "book": "MC",
     "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "effect": "The creature has a supernatural sense which lets it perceive living beings (all but undead spirits). This makes the creature difficult to surprise, and at higher levels it can also be used actively to surprise others.",
+    "novice": "Passive. The creature picks up on tiny vibrations in the ground and air, and can perceive creatures from behind robust walls and closed doors, or through meter thick layers of soil.  Anyone trying to avoid being detected must pass a test against [Discreet←Vigilant].",
+    "adept": "Passive. As I, but the perception is so precise that the creature can attack those it detects through the barrier. If the wall, door, layer of soil or similar is thick, the creature has to have a monstrous trait which lets it pass through the barrier, such as Spirit Form, Wrecker or Tunneler.",
+    "master": "Passive. At this level, the creature with the Life Sense can even use mystical powers against detected enemies in the vicinity, as if they were in its line of sight."
   },
   {
     "id": 272,
@@ -1529,29 +1531,29 @@
     "master": "Special. The spirit has fully mastered its Manifestation and can act physically with any Actions it chooses, while remaining immaterial in regards to everything else. It can attack physically, yet defends itself like a spirit. The spirit cannot be harmed in any way, besides what is stated in the description of its level of Spirit Form. If it so chooses, the spirit can walk around unhindered in physical form, for a longer journey on a boat, for example. If the spirit is forced, or chooses, to return to its spectral form while crossing water, it is thrown back to solid ground."
   },
   {
-    "id": 306,
+    "id": 307,
     "type": "Monstrous Trait",
     "name": "Many-headed",
     "book": "MC",
     "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "effect": "The creature has multiple heads or limbs governed by separate brains/minds, and can use them independently of each other. Damage is suffered separately by each part, as if they were separate creatures, so they have to be taken out one by one.  Only once all are eliminated does the creature die.  A drawback is that the traits Armored and Robust are weakened at the higher levels of Many-headed: such a massive and simultaneously limber body cannot fully utilize all its protection and strength in all directions at once.",
+    "novice": "Passive. The creature has two limbs or heads and may act with them separately; the creature has two combat actions per turn.",
+    "adept": "Passive. The creature has four limbs or heads and may act with them separately; the creature has four combat actions per turn. The traits Armored and Robust count as one level lower for the creature.",
+    "master": "Passive. The creature has eight limbs or heads and may act with them separately; the creature has eight combat actions per turn. The traits Armored and Robust count as two levels lower for the creature."
   },
   {
-    "id": 307,
+    "id": 308,
     "type": "Monstrous Trait",
     "name": "Metamorphosis",
     "book": "MC",
     "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "effect": "The creature has no fixed shape, adapting its form to its surroundings and the challenges it faces. The effect lasts until the creature opts to switch traits or it is targeted by the mystical power True Form – if successful, this removes the traits provided by the Metamorphosis, until a new active action is spent on getting them back.  Through the process of adapting itself, the creature can take on a form giving it characteristics that correspond to one or more of the following traits: Acidic Attack, Amphibian, Armored, Carapace, Deadly Breath, Diminutive, Grappling Tongue, Natural Weapon, Poisonous, Poison Spit, Prehensile Claws, Robust, Tunneler, Web, Wings.",
+    "novice": "Active. The creature can adopt one of the listed traits, corresponding to level I.",
+    "adept": "Active. The creature can adopt two of the listed traits corresponding to level I, or one corresponding to level II.",
+    "master": "Active. The creature can adopt two of the listed traits corresponding to level II, or one corresponding to level III"
   },
   {
-    "id": 308,
+    "id": 309,
     "type": "Monstrous Trait",
     "name": "Mystical Resistance",
     "book": "MC",
@@ -1573,7 +1575,7 @@
     "master": "Passive. The creature’s natural weapon deals 5 points of damage. The natural weapon now has the quality Long, allowing the creature to perform a Free Attack at the start of a combat against enemies with shorter weapons."
   },
   {
-    "id": 309,
+    "id": 310,
     "type": "Monstrous Trait",
     "name": "Night Perception",
     "book": "MC",
@@ -1584,7 +1586,7 @@
     "master": ""
   },
   {
-    "id": 310,
+    "id": 311,
     "type": "Monstrous Trait",
     "name": "Observant",
     "book": "MC",
@@ -1595,7 +1597,7 @@
     "master": ""
   },
   {
-    "id": 311,
+    "id": 312,
     "type": "Monstrous Trait",
     "name": "Paralyzing Venom",
     "book": "MC",
@@ -1606,7 +1608,7 @@
     "master": ""
   },
   {
-    "id": 312,
+    "id": 313,
     "type": "Monstrous Trait",
     "name": "Piercing Attack",
     "book": "MC",
@@ -1639,7 +1641,7 @@
     "master": "Active. The poison is strong and deals 4 points of damage for 4 turns."
   },
   {
-    "id": 313,
+    "id": 314,
     "type": "Monstrous Trait",
     "name": "Prehensile Claws",
     "book": "MC",
@@ -1650,7 +1652,7 @@
     "master": ""
   },
   {
-    "id": 314,
+    "id": 315,
     "type": "Monstrous Trait",
     "name": "Rampage",
     "book": "MC",
@@ -1683,7 +1685,7 @@
     "master": "Passive. The creature ignores 4 points of damage from each hit, in addition to any Armor it may wear. Once per turn, the creature deals an additional +4 points of damage with one of its melee attacks. The creature's Defense is calculated from the basis of [Quick−4]."
   },
   {
-    "id": 315,
+    "id": 316,
     "type": "Monstrous Trait",
     "name": "Root Wall",
     "book": "MC",
@@ -1705,7 +1707,7 @@
     "master": "Passive. Only mystical powers and magical weapons can harm the spirit, and then only with half damage."
   },
   {
-    "id": 316,
+    "id": 317,
     "type": "Monstrous Trait",
     "name": "Sturdy",
     "book": "MC",
@@ -1716,7 +1718,7 @@
     "master": ""
   },
   {
-    "id": 317,
+    "id": 318,
     "type": "Monstrous Trait",
     "name": "Summoner",
     "book": "MC",
@@ -1738,7 +1740,7 @@
     "master": "Special. The collective mind of the swarm controls it, so that it only su ers a quarter of any damage taken from attacks. The swarm’s cohesion is com- plete, and the swarm does not have to  ee unless the overall intellect chooses to do so. The swarm may make two attempts to resist mental attacks (where the swarm uses its Resolute to defend itself)."
   },
   {
-    "id": 318,
+    "id": 319,
     "type": "Monstrous Trait",
     "name": "Swift",
     "book": "MC",
@@ -1760,7 +1762,7 @@
     "master": "Free. As II, but the victims do not defend themselves against attacks, fleeing if possible, cowering in place if not. The victims may make a test each turn in order to shrug off the paralyzing fear."
   },
   {
-    "id": 319,
+    "id": 320,
     "type": "Monstrous Trait",
     "name": "Tunneler",
     "book": "MC",
@@ -1804,7 +1806,7 @@
     "master": "Passive. The creature can make sweeping attacks; it can use a part of its movement before an attack, and the rest afterwards. This way, it does not become bogged down in melee combat, while still being able to perform melee attacks itself."
   },
   {
-    "id": 320,
+    "id": 321,
     "type": "Monstrous Trait",
     "name": "Wrecker",
     "book": "MC",
