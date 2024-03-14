@@ -1306,32 +1306,29 @@
     "name": "Collective Power",
     "book": "MC",
     "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "effect": "The collective gains mystical powers when enough members are gathered closely together; the more members, the mightier their collective power, up to a certain limit (see Table 6 on page 166).  The collective can perform one mystical power per turn, in addition to the actions of its individual members. If differences exist, this action is activated on the highest individual initiative of the collective.  The power works as usual, but its collective origin makes it harder for the enemy to break the concentration of the caster – three of the collective's members have to lose concentration during the same turn for it to have an effect on the ongoing power."
   },
   {
     "id": 290,
     "type": "Monstrous Trait",
     "name": "Colossal",
     "book": "MC",
-    "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "requirement": "Robust III",
+    "effect": "There are creatures that grow to such immense proportions that their sheer size gives them the upper hand, albeit at the cost of a notable slowness in movements and reflexes. Surviving a combat encounter with such a monstrosity calls for as much luck as proficiency and, when it comes to the most massive beasts, also weapons with extraordinary qualities.  Colossal requires the creature to have level III in the trait Robust.",
+    "novice": "Passive. When the creature attacks, both actions are spent; hence, it cannot move and attack during the same turn. In return, the attacks of the creature hit with a force that normal armor can hardly withstand – the target rolls twice for Armor and the lowest outcome stands.",
+    "adept": "Passive. As I, but the massive body of the creature makes it unable to perform reactive actions (such as Defense tests) while it is moving. On the other hand, the creature's reach and size are such that its enemies have a hard time parrying or avoiding the attacks – the target has two chances to fail when rolling for Defense.",
+    "master": "Passive. As II, with the addition that the enormous bulk of the creature cannot be harmed by ordinary weapons or projectiles. The creature can only be damaged by mystical weapons or powers."
   },
   {
     "id": 291,
     "type": "Monstrous Trait",
     "name": "Companions",
     "book": "MC",
-    "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "requirement": "at least Challenging resistance",
+    "effect": "The creature is never alone, never encountered without its companions in tow. The trait does not decide who the companions are, only how many and how strong they are. The companions may be the creature’s offspring, loyal servants or whatever seems suitable.  Note that a creature needs to be of at least Challenging resistance to be able to have the trait Companions.",
+    "novice": "Passive. The creature has one companion, with a resistance level two steps lower than the creature.",
+    "adept": "Passive. As I, but the creature has two companions.",
+    "master": "Passive. As I, but the creature has three companions."
   },
   {
     "id": 269,
@@ -1349,11 +1346,11 @@
     "type": "Monstrous Trait",
     "name": "Corruption Hoarder",
     "book": "MC",
-    "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "requirement": "thoroughly coorrupt",
+    "effect": "The creature is able to accumulate corruption and use it for a series of special actions. The corruption hoarder may at most accumulate Resolute/2 (rounded up) points of corruption for use in this way. Collected corruption dissipates at a rate of one point per day; a corruption hoarder depleted of accumulated corruption is driven by a deep hunger for more.  Only thoroughly corrupt creatures can have the trait Corruption Hoarder.",
+    "novice": "Active. The creature can steal corruption from a tainte victim, by eating its flesh or drinking its blood. The victim has to be compliant – unconscious, bound, drugged or otherwise unable to put up a fight. The victim suffers 4 points of damage each turn (ignoring Armor) while the corruption hoarder accumulates 2 points of permanent corruption that consequently are removed from the victim. As a reactive action, the creature may spend one point of accumulated corruption per turn, on one of the following: – Give an enemy a second chance to fail a roll to avoid being affected by one of the corruption hoarder's abilities, powers or traits – Give an enemy a second chance to fail a Defense roll against one of the corruption hoarder's attacks – Give an enemy a second chance to fail with an attack against the corruption hoarder – Force an enemy to make a second effect roll and accept the lower outcome",
+    "adept": "Passive. As I, but the natural weapons of the creature drain corruption from the target. As soon as the creature deals damage, the victim also loses 2 points of permanent corruption. As reactive actions, the creature may spend up to two points of accumulated corruption per turn, on the effects listed at level I.",
+    "master": "Passive. As II, but the creature may as reactive actions spend any amount of accumulated corruption per turn, on the effects listed at level I."
   },
   {
     "id": 293,
@@ -1361,10 +1358,10 @@
     "name": "Corruption Sensitive",
     "book": "MC",
     "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "effect": "The creature is blessed with a sensory organ through which it can detect nearby outbreaks of corruption.  This ability most likely emerged as a warning system, but many witch hunters would probably give their left eye for the advantage such a sense would confer in the hunt for heretics and cultists.",
+    "novice": "Reaction. With a successful Vigilant test the creature can detect nearby outbreaks of corruption (roughly five hundred meters in all directions, if more exact distances are called for).  Minor outbreaks (1 point of temporary corruption) cannot be detected; at 2 points, Vigilant is modified with –5; at 3 points with ±0; at 4 points or more with +5. If the test succeeds, the creature senses the outbreak and the general direction in which it occurred.",
+    "adept": "Reaction. As I, but the creature can pinpoint exactly where the outbreak occurred, thanks to residual energies.",
+    "master": "Reaction. As II, but the creature can also track the source of the outbreak for one day, through the ethereal tracks it leaves behind."
   },
   {
     "id": 294,
@@ -1372,10 +1369,10 @@
     "name": "Crushing Embrace",
     "book": "MC",
     "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "effect": "The creature’s natural weapons allow it to grip, hold on to and crush its enemies.",
+    "novice": "Reaction. When the creature deals damage with its natural weapon, it may try to take hold of the enemy. To avoid being caught, the target must successfully roll a [Quick←Accurate] test. If the target fails it must succeed with a [Strong←Strong] test to get loose, or suffer 2 damage each turn as the grip tightens (ignoring Armor). A gripped target may not act, but the creature also loses one combat action per turn and gripped victim.",
+    "adept": "Reaction. As I, but the damage is 3 per turn.",
+    "master": "Reaction. As I, but the damage is 4 per turn."
   },
   {
     "id": 295,
@@ -1383,10 +1380,10 @@
     "name": "Deadly Breath",
     "book": "MC",
     "requirement": "",
-    "effect": "",
-    "novice": "",
-    "adept": "",
-    "master": ""
+    "effect": "The creature has the ability to spew forth a harmful cascade, so powerful that it can obliterate enemies or at least damage them severely. The breath can consist of fire, cold, acid or lightning.  Together with the trait Alternative Damage the cascade affects the chosen Attribute instead of Toughness, but only if the creature has Alternative Damage to at least the same level as Deadly Breath.  The cascade can also be corrupting or poisonous instead, if the creature has the traits Corrupting Attack or Poisonous to the same level or higher.",
+    "novice": "Active. The creature blows a cascade towards one target. If the target succeeds with a [Quick←Accurate] test, the damage is 3; if the test fails, the damage is 6.",
+    "adept": "Active. The creature exhales a continuous cascade. Should the first target succeed with a [Quick←Accurate] test, the damage is 3; if the test fails, the damage is 6. If the target fails, the creature may redirect the cascade towards another target, and so on until a target succeeds with the [Quick←Accurate] test.",
+    "master": "Active. The creature spews forth a veritable storm. As II, but even if one target succeeds with the [Quick←Accurate] test, the chain continues and is not broken until a second target succeeds."
   },
   {
     "id": 296,
