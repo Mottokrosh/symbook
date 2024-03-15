@@ -34,15 +34,15 @@
                     <strong>Traits:</strong> {{ selected.traits }}
                 </p>
                 <div v-if="selected.novice">
-                    <div class="line" v-if="selected.novice">
+                    <div class="line" v-if="selected.novice && showLevel(1)">
                         <strong>Novice:</strong>
                         <p v-html="emphasizeFirstWord(selected.novice)"></p>
                     </div>
-                    <div class="line" v-if="selected.adept">
+                    <div class="line" v-if="selected.adept && showLevel(2)">
                         <strong>Adept:</strong>
                         <p v-html="emphasizeFirstWord(selected.adept)"></p>
                     </div>
-                    <div class="line" v-if="selected.master">
+                    <div class="line" v-if="selected.master && showLevel(3)">
                         <strong>Master:</strong>
                         <p v-html="emphasizeFirstWord(selected.master)"></p>
                     </div>
@@ -67,6 +67,7 @@
         data() {
             return {
                 selected: null,
+                level: null,
             };
         },
 
@@ -115,6 +116,14 @@
 
                 return false;
             },
+
+            normalizeLevel(x) {
+              return Math.max(['N','A','M'].indexOf(x), ['I','II','III'].indexOf(x), ['1','2','3'].indexOf(x)) + 1;
+            },
+
+            showLevel(i) {
+              return !this.selected.level || this.normalizeLevel(this.selected.level) >= i;
+            }
         },
 
         watch: {

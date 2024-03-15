@@ -32,6 +32,11 @@
   import SocialIcon from './social-icon.vue';
   import { scrollToTop } from '../helpers';
 
+  function idAtLevel(item) {
+    let [_, id, __, level] = /^(\d+)(\.([^-]+))?$/.exec(item);
+    return { id: Number(id), level: level };
+  }
+
   export default {
     components: {
       SbHeader, Card, SocialIcon,
@@ -70,11 +75,12 @@
       getCardIDsFromURL() {
         const urlParams = new URLSearchParams(window.location.search);
         const cardIDs = urlParams.get('c') ? urlParams.get('c').split('-') : [];
-        return cardIDs.map(id => Number(id));
+        return cardIDs.map(idAtLevel);
       },
 
       setCardIDsIntoURL() {
-        const ids = this.cards.filter(c => !!c.id).map(card => card.id).join('-');
+        const ids = this.cards.filter(c => !!c.id)
+          .map(card => card.id + (card.level ? `.${card.level}` : '')).join('-');
         if (ids) {
           const urlParams = new URLSearchParams(`c=${ids}`);
           history.pushState(null, '', `/?${urlParams.toString()}`);
@@ -86,6 +92,7 @@
       cardChange(newCard, index) {
         this.cards.splice(index, 1, newCard);
       },
+
     },
 
     watch: {
@@ -106,9 +113,16 @@
 
           this.options = options;
 
-          const cardIDs = this.getCardIDsFromURL();
-          if (cardIDs) {
-            this.cards = this.options.filter(opt => cardIDs.includes(opt.id));
+          const idsAtLevel = this.getCardIDsFromURL();
+          if (idsAtLevel) {
+            this.cards = this.options.flatMap(opt => {
+              const id = idsAtLevel.find(id => id.id == opt.id);
+              if (id) {
+                opt.level = id.level;
+                return [opt];
+              }
+              return [];
+            })
           }
         })
       ;
