@@ -12,24 +12,31 @@
     "main": "src/app.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "watch": "NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "production": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "hot": "mix watch --hot",
+        "production": "mix --production",
         "start": "npx http-server public"
     },
     "author": "Frank Reding <frank@symbook.io>",
     "license": "MIT",
     "dependencies": {
-        "axios": "^0.15.3",
+        "axios": "^1.6.8",
         "cross-env": "^3.2.4",
         "headroom.js": "^0.9.4",
-        "laravel-mix": "^1.2.0",
-        "vue": "^2.3.0",
+        "vue": "^2.6.12",
         "vue-select": "^2.2.0"
     },
     "engines": {
         "node": ">=8.1.0",
-        "npm": "^5.2.0"
+        "npm": ">=5.2.0"
+    },
+    "devDependencies": {
+        "laravel-mix": "^6.0.49",
+        "sass": "^1.72.0",
+        "sass-loader": "^12.6.0",
+        "vue-loader": "^15.11.1",
+        "vue-template-compiler": "^2.7.16"
     }
 }
