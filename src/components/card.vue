@@ -2,7 +2,7 @@
     <div class="card" :id="id">
         <div class="card-header">
             <button @click="previous" :disabled="noPrevious()"><icon id="arrow-left" :button="true"></icon></button>
-            <v-select :options="options" v-model="selected" placeholder="Start typing..."></v-select>
+            <v-select ref="inputSelected" :options="options" v-model="selected" placeholder="Start typing..."></v-select>
             <button @click="next" :disabled="noNext()"><icon id="arrow-right" :button="true"></icon></button>
             <v-select class="power-level" :options="powerLevels()" v-model="powerLevel"></v-select>
             <button class="remove-card" @click="$emit('dismiss', id)"><icon id="cross" :button="true"></icon></button>
@@ -170,6 +170,12 @@
           showMaster() {
             return this.selected.master && this.showLevel(3);
           },
+        },
+
+        mounted() {
+            if (!this.selected) {
+                this.$refs.inputSelected.$refs.search.focus();
+            }
         },
     };
 </script>
