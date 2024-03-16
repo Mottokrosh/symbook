@@ -5,6 +5,7 @@
       <card
         v-for="(card, index) in cards"
         :id="card.id"
+        :index="index"
         :options="options"
         :pre-selected="card.name ? card : null"
         :key="card.id"
@@ -80,7 +81,7 @@
 
       setCardIDsIntoURL() {
         const ids = this.cards.filter(c => !!c.id)
-          .map(card => card.id + (card.level ? `.${card.level}` : '')).join('-');
+          .map(card => card.id + (card.powerLevel ? `.${card.powerLevel}` : '')).join('-');
         if (ids) {
           const urlParams = new URLSearchParams(`c=${ids}`);
           history.pushState(null, '', `/?${urlParams.toString()}`);
@@ -92,7 +93,6 @@
       cardChange(newCard, index) {
         this.cards.splice(index, 1, newCard);
       },
-
     },
 
     watch: {
@@ -118,7 +118,7 @@
             this.cards = this.options.flatMap(opt => {
               const id = idsAtLevel.find(id => id.id == opt.id);
               if (id) {
-                opt.level = id.level;
+                opt.powerLevel = id.level;
                 return [opt];
               }
               return [];

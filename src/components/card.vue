@@ -4,6 +4,7 @@
             <button @click="previous" :disabled="noPrevious()"><icon id="arrow-left" :button="true"></icon></button>
             <v-select :options="options" v-model="selected" placeholder="Start typing..."></v-select>
             <button @click="next" :disabled="noNext()"><icon id="arrow-right" :button="true"></icon></button>
+            <v-select class="power-level" :options="powerLevels()" v-model="powerLevel"></v-select>
             <button class="remove-card" @click="$emit('dismiss', id)"><icon id="cross" :button="true"></icon></button>
         </div>
 
@@ -34,15 +35,15 @@
                     <strong>Traits:</strong> {{ selected.traits }}
                 </p>
                 <div v-if="selected.novice">
-                    <div class="line" v-if="selected.novice && showLevel(1)">
+                    <div class="line" v-if="showNovice">
                         <strong>Novice:</strong>
                         <p v-html="emphasizeFirstWord(selected.novice)"></p>
                     </div>
-                    <div class="line" v-if="selected.adept && showLevel(2)">
+                    <div class="line" v-if="showAdept">
                         <strong>Adept:</strong>
                         <p v-html="emphasizeFirstWord(selected.adept)"></p>
                     </div>
-                    <div class="line" v-if="selected.master && showLevel(3)">
+                    <div class="line" v-if="showMaster">
                         <strong>Master:</strong>
                         <p v-html="emphasizeFirstWord(selected.master)"></p>
                     </div>
@@ -60,6 +61,7 @@
     export default {
         props: [
             'id',
+            'index',
             'options',
             'preSelected',
         ],
@@ -67,7 +69,7 @@
         data() {
             return {
                 selected: null,
-                level: null,
+                powerLevel: null,
             };
         },
 
@@ -122,7 +124,18 @@
             },
 
             showLevel(i) {
-              return !this.selected.level || this.normalizeLevel(this.selected.level) >= i;
+              return !this.powerLevel || this.normalizeLevel(this.powerLevel) >= i;
+            },
+
+            isMonstrousTrait() {
+              return this.selected && this.selected.type == 'Monstrous Trait';
+            },
+
+            powerLevels() {
+              if (this.selected) {
+                return this.isMonstrousTrait() ? ["I","II","III"] : ["N","A","M"];
+              }
+              return [];
             }
         },
 
@@ -132,12 +145,31 @@
                     this.$emit('change', newVal);
                 }
             },
+            powerLevel(newVal, oldVal) {
+                if (newVal !== oldVal) {
+                    this.$parent.cards[this.index].powerLevel = newVal;
+                    this.$parent.setCardIDsIntoURL();
+                }
+            },
         },
 
         created() {
             if (this.preSelected) {
                 this.selected = this.preSelected;
+                this.powerLevel = this.preSelected.powerLevel;
             }
+        },
+
+        computed: {
+          showNovice() {
+            return this.selected.novice && this.showLevel(1);
+          },
+          showAdept() {
+            return this.selected.adept && this.showLevel(2);
+          },
+          showMaster() {
+            return this.selected.master && this.showLevel(3);
+          },
         },
     };
 </script>
