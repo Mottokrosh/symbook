@@ -4,7 +4,7 @@
             <button @click="previous" :disabled="noPrevious()"><icon id="arrow-left" :button="true"></icon></button>
             <v-select ref="inputSelected" :options="options" v-model="selected" placeholder="Start typing..."></v-select>
             <button @click="next" :disabled="noNext()"><icon id="arrow-right" :button="true"></icon></button>
-            <v-select v-if="selected.novice" class="power-level" :options="powerLevels()" v-model="powerLevel"></v-select>
+            <v-select v-if="this.selected && this.selected.novice" class="power-level" :options="powerLevels()" v-model="powerLevel"></v-select>
             <button class="remove-card" @click="$emit('dismiss', id)"><icon id="cross" :button="true"></icon></button>
         </div>
 
@@ -132,7 +132,6 @@
             },
 
             powerLevels() {
-              console.log(this.selected)
               if (this.selected && this.selected.novice) {
                 return this.isMonstrousTrait() ? ["I","II","III"] : ["N","A","M"];
               }
