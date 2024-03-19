@@ -38,6 +38,19 @@
     return { id: Number(id), level: level };
   }
 
+  function powerAtLevel(item) {
+    let [_, name, __, level] = /^([^(]+)(\(([^)]+)\))?$/.exec(item);
+    return { name: normalizeName(name), level: level };
+  }
+
+  function normalizeName(name) {
+    return name.toLowerCase().replaceAll(/\s|-/g, '').replaceAll(/é/g, 'e');
+  }
+
+  function isMonstrousTraitLevel(x) {
+    return ["I","II","III"].includes(x);
+  }
+
   export default {
     components: {
       SbHeader, Card, SocialIcon,
@@ -90,6 +103,33 @@
         history.pushState(null, '', '/');
       },
 
+      isNamesURL() {
+        return new URLSearchParams(window.location.search).get('n');
+      },
+
+      getPowersAtLevelFromURL() {
+        const urlParams = new URLSearchParams(window.location.search)
+        return urlParams.get('n').split(/;|,/).map(powerAtLevel)
+      },
+
+      setPowersAtLevelIntoURL() {
+        const names = this.cards.filter(c => !!c.id)
+          .map(card => card.name + (card.powerLevel ? `(${card.powerLevel})` : '')).join(',');
+        if (names) {
+          history.pushState(null, '', `/?n=${names}`);
+          return;
+        }
+        history.pushState(null, '', '/');
+      },
+
+      persistCardsToURL() {
+        if (this.isNamesURL()) {
+          this.setPowersAtLevelIntoURL();
+        } else {
+          this.setCardIDsIntoURL();
+        }
+      },
+
       cardChange(newCard, index) {
         this.cards.splice(index, 1, newCard);
       },
@@ -97,7 +137,7 @@
 
     watch: {
       cards() {
-        this.setCardIDsIntoURL();
+        this.persistCardsToURL();
       },
     },
 
@@ -113,16 +153,28 @@
 
           this.options = options;
 
-          const idsAtLevel = this.getCardIDsFromURL();
-          if (idsAtLevel) {
-            this.cards = this.options.flatMap(opt => {
-              const id = idsAtLevel.find(id => id.id == opt.id);
-              if (id) {
-                opt.powerLevel = id.level;
-                return [opt];
-              }
-              return [];
-            })
+          if (this.isNamesURL()) {
+            const powersAtLevel = this.getPowersAtLevelFromURL();
+            if (powersAtLevel) {
+              this.cards = powersAtLevel.map(power => {
+                const card = this.options.find(opt => normalizeName(opt.name) == power.name
+                  && (!isMonstrousTraitLevel() || opt.type == 'Monstrous Trait'));
+                card.powerLevel = power.level;
+                return card;
+              });
+            }
+          } else {
+            const idsAtLevel = this.getCardIDsFromURL();
+            if (idsAtLevel) {
+              this.cards = this.options.flatMap(opt => {
+                const id = idsAtLevel.find(id => id.id == opt.id);
+                if (id) {
+                  opt.powerLevel = id.level;
+                  return [opt];
+                }
+                return [];
+              })
+            }
           }
         })
       ;
