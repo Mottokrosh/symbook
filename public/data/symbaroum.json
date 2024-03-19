@@ -60,7 +60,7 @@
     "name": "Artifact Crafting",
     "book": "APG",
     "requirement": "Artifact Crafter",
-    "effect": "The glory days of artifact crafting seem to have passed and the powerful secrets of the old rune smiths are lost. However, even in the shadow of the growing corruption, the creative arts still linger on, if in a more modest way. The character is trained in the art of artifact crafting and can create artifacts of the lower order. Higher artifacts can nowadays only be found while excavating Symbaroum’s ruins, but artifact crafers belong to a tradition that still holds its head high, in spite of shadows and darkness.\r\nThe character is also knowledgeable about legendary artifacts and can discern how artifacts work. Artifact crafting corresponds to the ability Loremaster when analyzing artifacts, but it does not affect the use of them.\r\nThe artifacts are described in detail in the Equipment chapter, page 123-127",
+    "effect": "The glory days of artifact crafting seem to have passed and the powerful secrets of the old rune smiths are lost. However, even in the shadow of the growing corruption, the creative arts still linger on, if in a more modest way. The character is trained in the art of artifact crafting and can create artifacts of the lower order. Higher artifacts can nowadays only be found while excavating Symbaroum’s ruins, but artifact crafters belong to a tradition that still holds its head high, in spite of shadows and darkness.\r\nThe character is also knowledgeable about legendary artifacts and can discern how artifacts work. Artifact crafting corresponds to the ability Loremaster when analyzing artifacts, but it does not affect the use of them.\r\nThe artifacts are described in detail in the Equipment chapter, page 123-127",
     "novice": "Once per adventure. With a passed Cunning test, the character can craft one novice level artifact.",
     "adept": "Once per adventure. As an acknowledged artifact crafter, a passed Cunning test lets the character craft one adept level artifact.",
     "master": "Once per adventure. As a famous artifact crafter, a passed Cunning test lets the character craft one master level artifact."
@@ -270,7 +270,7 @@
     "book": "CRB",
     "requirement": "",
     "effect": "The character is trained to use its strength for maximum effect on a target in melee combat. Knights, members of the barbarian Wrathguard and other heavily armed warriors rely on their strength in combat and leave precision and finesse for others to worry about.",
-    "novice": "Passive. The character can fully utilize its strength and therefore uses Strong instead of Accurate then making a melee attack.",
+    "novice": "Passive. The character can fully utilize its strength and therefore uses Strong instead of Accurate when making a melee attack.",
     "adept": "Passive. The character’s melee attacks now deal +1D4 additional damage.",
     "master": "Active. The character knows how to truly put its back into an attack. The character can perform a devastating melee attack once per turn that deals +1D8, instead of +1D4, in additional damage."
   },
@@ -390,7 +390,7 @@
     "name": "Polearm Mastery",
     "book": "CRB",
     "requirement": "",
-    "effect": "The character is initiated in the secrets of longshafed weapons. The spear is a simple weapon and anyone can quickly learn how to make good use of its length. For this reason, the militia armies of the plains and forests are often armed with spears.\r\nThe character’s advanced skill with long weapons really shows that a simple shaft of hardened wood can be a fearsome weapon in the hands of a trained warrior.",
+    "effect": "The character is initiated in the secrets of long-shafted weapons. The spear is a simple weapon and anyone can quickly learn how to make good use of its length. For this reason, the militia armies of the plains and forests are often armed with spears.\r\nThe character’s advanced skill with long weapons really shows that a simple shaft of hardened wood can be a fearsome weapon in the hands of a trained warrior.",
     "novice": "Passive. The damage dealt by Long weapons is increased one step, to 1D10 for spears and halberds and to 1D8 for staves.",
     "adept": "Reaction. The character has truly mastered the long thrust. The character receives a Free Attack against all enemies who come into range of melee combat – whether it is the enemy who engages the character or vice versa is irrelevant. The only exception is when the enemy also wields a long weapon; in such a situation the character receives no Free Attack.",
     "master": "Reaction. As a Master of long weapons, the character has the skill to keep his or her enemies at bay. The character can use the Free Attack with a polearm to keep an enemy from coming close enough to attack. For as long as the character succeeds in hitting the enemy, the enemy remains unable to attack the character with melee weapons – whether or not the damage penetrates the enemy’s armor."
@@ -467,7 +467,7 @@
     "name": "Rune Tattoo",
     "book": "APG",
     "requirement": "",
-    "effect": "The rune crafers of Clan Vajvod in eastern Davokar often tattoo themselves and their allies with powerful runes. These runes seem almost alive and glow red-hot when activated in combat. The character carries such tattoos, either self-made (requires the ritual Carve Rune Tattoo) or granted to the character as a gift or a reward, likely for a service of great importance for the symbolist\r\nwho made it.\r\nRune Tattoo requires that someone uses the ritual Carve Rune Tattoo on the character. If the character has the ability from the start, the tattoo is already in place.",
+    "effect": "The rune crafters of Clan Vajvod in eastern Davokar often tattoo themselves and their allies with powerful runes. These runes seem almost alive and glow red-hot when activated in combat. The character carries such tattoos, either self-made (requires the ritual Carve Rune Tattoo) or granted to the character as a gift or a reward, likely for a service of great importance for the symbolist\r\nwho made it.\r\nRune Tattoo requires that someone uses the ritual Carve Rune Tattoo on the character. If the character has the ability from the start, the tattoo is already in place.",
     "novice": "Reaction. The rune tattoo provides a +1D4 bonus to armor against attacks, but only if the character chooses to activate it. Activating the effect costs one temporary corruption for each attack that hits and the character decides whether or not to use it before he or she rolls for other kinds of armor.\r\nIn addition, the rune protects from weather and wind like a full set of clothes",
     "adept": "Reaction. The rune tattoo is attracted to injuries on the character’s body and glows around the wounds. The character regenerates one point of Toughness per turn; each point healed costs one point in temporary corruption. The tattooed warrior may abort the regeneration process when he or she wishes.",
     "master": "Reaction. The rune tattoo adds power to the warrior’s attacks. When an enemy is hit and the character so wishes, the glowing tattoo flows over the weapon dealing +1D4 damage, at the cost of as many points in temporary corruption for the character."
@@ -577,7 +577,7 @@
     "name": "Strong Gift",
     "book": "APG",
     "requirement": "Mystic",
-    "effect": "There are many myths describing the origin of mystical powers, and all established traditions are quick to state that theirs is the oldest, or at least nearly as old as the mystical practice itself. Whatever the truth may be, many believe that it was self-taught mystics with an especially perfected or strong gif who founded the first traditions.\r\nThe Strong Gift – innate or acquired through trials and practice – can still be found with some mystics. For one thing, the gif provides a singular resistance against the corruption of the world. It also endows the mystic with the ability to use improvised mystical powers, at a high cost in corruption.",
+    "effect": "There are many myths describing the origin of mystical powers, and all established traditions are quick to state that theirs is the oldest, or at least nearly as old as the mystical practice itself. Whatever the truth may be, many believe that it was self-taught mystics with an especially perfected or strong gift who founded the first traditions.\r\nThe Strong Gift – innate or acquired through trials and practice – can still be found with some mystics. For one thing, the gift provides a singular resistance against the corruption of the world. It also endows the mystic with the ability to use improvised mystical powers, at a high cost in corruption.",
     "novice": "Special. The Strong Gift allows the character to choose a signature power. This power is selected from among the ones already known to the mystic, and that power then only costs one (1) temporary corruption to use. If the character has no powers or just prefers to have a tainting ability as its signature instead, this is also allowed – a gift linked to the ability Ritualist (including all individual rituals) or to Witchsight means that these never cost more than one temporary corruption to use. Also, traits such as Wisdom of the Ages may be chosen.\r\nThe Strong Gift has no effect on the cost in permanent corruption for learning a power outside a mystical tradition; it only affects the amount of temporary corruption gained when using it.",
     "adept": "Passive. A character with the adept level in Strong Gift uses his or her whole Resolute value as the corruption threshold, instead of only half. Such an individual does not become blight born until its total corruption reaches a value of Resolute ×2",
     "master": "Special. The gift of the Master lets the character cast any mystical power, albeit only at the novice level. There is a second chance to fail all success tests and using the power causes 1D8 temporary corruption. All mystical powers are available, no matter what tradition they belong to."
@@ -667,7 +667,7 @@
     "requirement": "",
     "effect": "Barbarians, Ambrians and goblins all have fighting techniques involving the use of more than one weapon. The character has learned how to fight with two weapons, an advanced but effective technique that gives the warrior an offensive advantage. Twin Attack is especially effective against lightly armored targets.",
     "novice": "Active. The character can safely wield two weapons, one in each hand. The Novice can fight with a single-handed weapon in its primary hand and a Short weapon in the other. The character can make two attacks on the same target, dealing 1D8 and 1D6 damage respectively. The enemy must defend itself separately against the attacks. The Novice also receives a +1 bonus to its Defense as a Passive ability, but only when wielding a weapon in each hand.",
-    "adept": "Active. The Adept can use two singlehanded weapons, each attack dealing 1D8 in damage.",
+    "adept": "Active. The Adept can use two single-handed weapons, each attack dealing 1D8 in damage.",
     "master": "Active. With the skill of a Master, the damage dealt by the main-hand weapon is 1D10 while the weapon in the other hand deals 1D8."
   },
   {
@@ -1101,7 +1101,7 @@
     "type": "Burden",
     "name": "Addiction",
     "book": "APG",
-    "effect": "The character has developed an addiction and must have a dose of his or her drug each day, or suffer from withdrawal symptoms. The drug (wine, dream snuff, daf root or similar) costs one shilling per dose. An alchemist can create the drug for himself or a friend for half that price. Withdrawal symptoms give a –1 modification to all tests and grow worse day-by-day, up to –5. Each day without the drug, the character must also pass a [Resolute –the abstinence modification] test. If it fails, he or she will abandon all other projects and start hunting for the daily dose"
+    "effect": "The character has developed an addiction and must have a dose of his or her drug each day, or suffer from withdrawal symptoms. The drug (wine, dream snuff, daft root or similar) costs one shilling per dose. An alchemist can create the drug for himself or a friend for half that price. Withdrawal symptoms give a –1 modification to all tests and grow worse day-by-day, up to –5. Each day without the drug, the character must also pass a [Resolute –the abstinence modification] test. If it fails, he or she will abandon all other projects and start hunting for the daily dose"
   },
   {
     "id": 66,
@@ -1243,7 +1243,7 @@
     "name": "Alternative Damage",
     "book": "CRB",
     "requirement": "",
-    "effect": "The creature’s attack harms a specific Attribute instead of Toughness, usually Strong or Resolute. If not specifed in the monster description, the Game Master decides which one. This kind of damage affects all rolls made using that Attribute. Alternative Damage heals, and can be healed, just like ordinary damage. If the Attribute reaches 0, the victim’s soul or life force is devoured by the attacker and the victim dies. Alternative Damage requires the monstrous trait Spirit Form.",
+    "effect": "The creature’s attack harms a specific Attribute instead of Toughness, usually Strong or Resolute. If not specified in the monster description, the Game Master decides which one. This kind of damage affects all rolls made using that Attribute. Alternative Damage heals, and can be healed, just like ordinary damage. If the Attribute reaches 0, the victim’s soul or life force is devoured by the attacker and the victim dies. Alternative Damage requires the monstrous trait Spirit Form.",
     "novice": "Passive. The creature’s natural weapon deals 3 alternative damage, ignoring Armor.",
     "adept": "Passive. The creature’s natural weapon deals 3 alternative damage, ignoring Armor.",
     "master": "Passive. The creature’s natural weapon deals 5 alternative damage, ignoring Armor."
@@ -1273,7 +1273,7 @@
     "name": "Avenging Successor",
     "book": "MC",
     "requirement": "",
-    "effect": "The one who kills a creature with this trait is imme- diately exposed to its vengeance, in the form of one or more other creatures. The type of avenger depends on the creature with the trait; the level of the trait only defines how many and how dangerous the avenging creatures are, not their exact nature. Normally, the avenging creatures are of the same breed as the being who has the trait, but this is not a requirement as long as the combination makes sense. The only restriction is that only thoroughly corrupt creatures can have other thoroughly cor- rupted beasts as avengers. Note that a creature needs to be of at least Challenging resistance to be able to have the trait Avenging Successor.",
+    "effect": "The one who kills a creature with this trait is immediately exposed to its vengeance, in the form of one or more other creatures. The type of avenger depends on the creature with the trait; the level of the trait only defines how many and how dangerous the avenging creatures are, not their exact nature. Normally, the avenging creatures are of the same breed as the being who has the trait, but this is not a requirement as long as the combination makes sense. The only restriction is that only thoroughly corrupt creatures can have other thoroughly corrupted beasts as avengers. Note that a creature needs to be of at least Challenging resistance to be able to have the trait Avenging Successor.",
     "novice": "Reaction. At the moment of death, one creature is detached or manifested to avenge the creature with the trait. The avenger’s level of resistance is two steps lower than that of the deceased.",
     "adept": "Reaction. As I, but two creatures are detached or manifested.",
     "master": "Reaction. As I, but three creatures are detached or manifested."
@@ -1297,7 +1297,7 @@
     "requirement": "Armored",
     "effect": "Under special circumstances, the natural armor of the creature gives it the option to double its armor value – when and to what extent is decided by the level of the trait. Note that a creature needs to have at least level I in Armored to have the trait Carapace.",
     "novice": "Passive. At any time, the creature can hunker down and curl up under its carapace – the armor value of its natural armor is doubled, but it cannot perform any active actions during the turn.",
-    "adept": "Passive. The creature is protected by its carapace when moving, but is exposed as soon as it performs an active action. This gives the creature double the effect of its natural armor if it does nothing other than move during the turn, and aga- inst free attacks triggered when it passes enemies, moves into melee range or retreats from melee.",
+    "adept": "Passive. The creature is protected by its carapace when moving, but is exposed as soon as it performs an active action. This gives the creature double the effect of its natural armor if it does nothing other than move during the turn, and against free attacks triggered when it passes enemies, moves into melee range or retreats from melee.",
     "master": "Reaction. The creature can use its carapace reactively against all attacks. When hit by an attack, the attacker rolls a new success test; if the second test fails, the attack still hits but the creature manages to make use of its carapace, doubling the protection from its natural armor against that particular attack."
   },
   {
@@ -1346,9 +1346,9 @@
     "type": "Monstrous Trait",
     "name": "Corruption Hoarder",
     "book": "MC",
-    "requirement": "thoroughly coorrupt",
+    "requirement": "thoroughly corrupt",
     "effect": "The creature is able to accumulate corruption and use it for a series of special actions. The corruption hoarder may at most accumulate Resolute/2 (rounded up) points of corruption for use in this way. Collected corruption dissipates at a rate of one point per day; a corruption hoarder depleted of accumulated corruption is driven by a deep hunger for more.  Only thoroughly corrupt creatures can have the trait Corruption Hoarder.",
-    "novice": "Active. The creature can steal corruption from a tainte victim, by eating its flesh or drinking its blood. The victim has to be compliant – unconscious, bound, drugged or otherwise unable to put up a fight. The victim suffers 4 points of damage each turn (ignoring Armor) while the corruption hoarder accumulates 2 points of permanent corruption that consequently are removed from the victim. As a reactive action, the creature may spend one point of accumulated corruption per turn, on one of the following: – Give an enemy a second chance to fail a roll to avoid being affected by one of the corruption hoarder's abilities, powers or traits – Give an enemy a second chance to fail a Defense roll against one of the corruption hoarder's attacks – Give an enemy a second chance to fail with an attack against the corruption hoarder – Force an enemy to make a second effect roll and accept the lower outcome",
+    "novice": "Active. The creature can steal corruption from a tainted victim, by eating its flesh or drinking its blood. The victim has to be compliant – unconscious, bound, drugged or otherwise unable to put up a fight. The victim suffers 4 points of damage each turn (ignoring Armor) while the corruption hoarder accumulates 2 points of permanent corruption that consequently are removed from the victim. As a reactive action, the creature may spend one point of accumulated corruption per turn, on one of the following: – Give an enemy a second chance to fail a roll to avoid being affected by one of the corruption hoarder's abilities, powers or traits – Give an enemy a second chance to fail a Defense roll against one of the corruption hoarder's attacks – Give an enemy a second chance to fail with an attack against the corruption hoarder – Force an enemy to make a second effect roll and accept the lower outcome",
     "adept": "Passive. As I, but the natural weapons of the creature drain corruption from the target. As soon as the creature deals damage, the victim also loses 2 points of permanent corruption. As reactive actions, the creature may spend up to two points of accumulated corruption per turn, on the effects listed at level I.",
     "master": "Passive. As II, but the creature may as reactive actions spend any amount of accumulated corruption per turn, on the effects listed at level I."
   },
@@ -1473,7 +1473,7 @@
     "effect": "The creature can invade the body of other beings, as if using the ritual Possess (see page 145 in the Core Rulebook), but without it taking as long. At higher levels, the possession is even reactive, aimed at the enemy who slays the creature.  Haunting requires at least level I in the trait Spirit Form.",
     "novice": "Reaction. The creature can possess a target it touches, for instance after an attack which deals damage. The target has to roll a [Resolute←Resolute] test; if it fails the target becomes a slave to the creature's will and can be made to perform any action, except taking its own life. After one day, the target rolls a second test; if that too fails, the possession lasts for a whole week, after which a new test is made.  Should this fail, the target is possessed for a month.  And when that time has passed, a final test is made, with failure meaning that the possession becomes permanent. However, the possession may at any time be aborted by successful use of the ritual Exorcism.",
     "adept": "Reaction. When the creature or the host it possesses reaches 0 in Toughness, the spirit lashes out and tries to possess the enemy who struck the killing blow. The attempt is made like on level I and if the attack affected an already possessed host, its body falls to the ground, unconscious and balancing on the brink of death for the rest of the scene.",
-    "master": "Reaction. The creature can possess as on level I or II, but the duration is automatically permanent – until an Excorsism is performed or the spirit opts to leave the host for some reason."
+    "master": "Reaction. The creature can possess as on level I or II, but the duration is automatically permanent – until an Exorcism is performed or the spirit opts to leave the host for some reason."
   },
   {
     "id": 303,
@@ -1618,7 +1618,7 @@
     "name": "Poisonous",
     "book": "CRB",
     "requirement": "",
-    "effect": "The creature’s unarmed attack or Natural Weapon is poisonous and each hit that wounds an enemy will also poison it. The poison's effect can be cancelled if someone applies an antidote to the wound and succeeds with a Cunning test.",
+    "effect": "The creature’s unarmed attack or Natural Weapon is poisonous and each hit that wounds an enemy will also poison it. The poison's effect can be canceled if someone applies an antidote to the wound and succeeds with a Cunning test.",
     "novice": "Passive. The poison is weak and deals 2 points of damage for 2 turns.",
     "adept": "Passive. The poison is moderately strong and deals 3 points of damage for 3 turns.",
     "master": "Passive. The poison is strong and deals 4 points of damage for 4 turns."
@@ -1629,7 +1629,7 @@
     "name": "Poison Spit",
     "book": "CRB",
     "requirement": "",
-    "effect": "The creature is not just Poisonous; it can also spit venom at its enemies. The poison attack is performed just like an ordinary ranged attack; if successful, and the victim fails a [Strong←Cunning] test, the poison seeps into the target’s pores and deals damage. The venomous spit counts as a ranged attack. The poison's effect can be cancelled if someone applies an antidote and succeeds with a Cunning test. Poison Spit requires that the creature has the Poisonous trait at the same level or higher.",
+    "effect": "The creature is not just Poisonous; it can also spit venom at its enemies. The poison attack is performed just like an ordinary ranged attack; if successful, and the victim fails a [Strong←Cunning] test, the poison seeps into the target’s pores and deals damage. The venomous spit counts as a ranged attack. The poison's effect can be canceled if someone applies an antidote and succeeds with a Cunning test. Poison Spit requires that the creature has the Poisonous trait at the same level or higher.",
     "novice": "Active. The poison is weak and deals 2 points of damage from 2 turns.",
     "adept": "Active. The poison is moderately strong and deals 3 points of damage for 3 turns.",
     "master": "Active. The poison is strong and deals 4 points of damage for 4 turns."
@@ -1729,8 +1729,8 @@
     "requirement": "",
     "effect": "The creature is a collective, its mind spread among a swarm of bodies. The creature cannot be destroyed unless the entire swarm is obliterated.",
     "novice": "Special. The swarm suffers half damage from all attacks. If the swarm is damaged, and is brought down to below half its Toughness, the survival instinct of the separate parts of the swarm takes over and its instincts cause the rest of the swarm to flee. A mental attack (where the swarm uses its Resolute to defend itself) affects the entire swarm.",
-    "adept": "Special. The swarm suffers half damage from all attacks. If the swarm suffers damage from a single attack that exceeds its Pain Threshold, the survival instinct of the separate parts of the swarm takes over and its instincts cause the rest of the swarm to  ee. Also, the swarm may make two attempts to resist mental attacks (where the swarm uses its Resolute to defend itself).",
-    "master": "Special. The collective mind of the swarm controls it, so that it only su ers a quarter of any damage taken from attacks. The swarm’s cohesion is com- plete, and the swarm does not have to  ee unless the overall intellect chooses to do so. The swarm may make two attempts to resist mental attacks (where the swarm uses its Resolute to defend itself)."
+    "adept": "Special. The swarm suffers half damage from all attacks. If the swarm suffers damage from a single attack that exceeds its Pain Threshold, the survival instinct of the separate parts of the swarm takes over and its instincts cause the rest of the swarm to  flee. Also, the swarm may make two attempts to resist mental attacks (where the swarm uses its Resolute to defend itself).",
+    "master": "Special. The collective mind of the swarm controls it, so that it only suffers a quarter of any damage taken from attacks. The swarm’s cohesion is complete, and the swarm does not have to  flee unless the overall intellect chooses to do so. The swarm may make two attempts to resist mental attacks (where the swarm uses its Resolute to defend itself)."
   },
   {
     "id": 319,
@@ -2002,7 +2002,7 @@
     "name": "Heroic Hymn",
     "book": "APG",
     "tradition": "Troll Singing",
-    "effect": "There is power in the heroic hymns of old. The mystic can sing while fighting, thereby flling his or her allies with courage and vigor.\r\nThe song is interrupted if the mystic uses another mystical power or if concentration is lost by taking damage [Resolute –Damage].",
+    "effect": "There is power in the heroic hymns of old. The mystic can sing while fighting, thereby filling his or her allies with courage and vigor.\r\nThe song is interrupted if the mystic uses another mystical power or if concentration is lost by taking damage [Resolute –Damage].",
     "novice": "Free. The character gives himself and all allies a +1 bonus to either Cunning, Resolute or Persuasive (the ally chooses what attribute will be affected) for as long as the singing continues.",
     "adept": "Free. The character gives himself and all allies a +1 bonus to Cunning, Resolute and Persuasive for as long as the singing continues.",
     "master": "Free. The character and all allies gain a +1 bonus to Cunning, Resolute and Persuasive for as long as the singing continues. Also, the temporary corruption of the character and all allies is reduced by 1D4 when the song begins; this corruption reducing effect may only be used once per scene."
@@ -2245,7 +2245,7 @@
     "book": "CRB",
     "tradition": "Witchcraft",
     "effect": "The Mystic can ask the wind to lift and carry arrows towards its enemies. The barbarian witch Yagaba, a friend of Lasifor Nightpitch, sometimes gives a taste of this power, and is rarely seen without a handful of black-feathered arrows floating by her side.",
-    "novice": "Active. The Mystic enchants a handful of arrows (up to five) with a successful Resolute test. The arrows then float next to the Mystic for the rest of the scene and can be fired, once per turn, as a Free Action (one arrow can be fred the same turn that the power is activated). The arrows hit their target automatically. Any quality or special ability that the arrow might have is added to the effect. The arrow normally deals 1D6 damage.",
+    "novice": "Active. The Mystic enchants a handful of arrows (up to five) with a successful Resolute test. The arrows then float next to the Mystic for the rest of the scene and can be fired, once per turn, as a Free Action (one arrow can be fired the same turn that the power is activated). The arrows hit their target automatically. Any quality or special ability that the arrow might have is added to the effect. The arrow normally deals 1D6 damage.",
     "adept": "Active. The arrows are enchanted as above, but in the hands of the Adept Mystic they now deal 1D8 damage. As a Combat Action, the Mystic can send two arrows against either the same target or two different targets. If the Mystic performs this Action, then he or she cannot fire another arrow as a Free Action.",
     "master": "Active. The Mystic can use a Combat Action to fire three arrows against one or separate targets. If the Mystic performs this Action, then he or she cannot fire another arrow as a Free Action."
   },
@@ -2255,7 +2255,7 @@
     "name": "Teleport",
     "book": "APG",
     "tradition": "Demonologist only",
-    "effect": "The sorcerers who have gone furthest in questioning the laws of nature can tear holes in the world and step outside, only to tear another rif in the fabric of the Yonderworld and reenter the world of the living in a new location. As always when the shell of reality is perforated, there is a risk that an abomination slips through and attacks a random creature – except those protected by the power Unholy Aura or whose souls are thoroughly corrupt.\r\nThe abomination that comes has an equal chance (1d6) of being (1–2) a Vindictive Daemon, 3–4) a Knowledgeable Daemon, or (5–6) a Guardian Daemon (for stats, see the ritual Summon Daemon on page 94).",
+    "effect": "The sorcerers who have gone furthest in questioning the laws of nature can tear holes in the world and step outside, only to tear another rift in the fabric of the Yonderworld and reenter the world of the living in a new location. As always when the shell of reality is perforated, there is a risk that an abomination slips through and attacks a random creature – except those protected by the power Unholy Aura or whose souls are thoroughly corrupt.\r\nThe abomination that comes has an equal chance (1d6) of being (1–2) a Vindictive Daemon, 3–4) a Knowledgeable Daemon, or (5–6) a Guardian Daemon (for stats, see the ritual Summon Daemon on page 94).",
     "novice": "Active. With a passed Resolute test, the character can exit the world and return within a range of two movement actions. The mystic suffers 1D4 damage from the journey through the Yonderworld, ignoring Armor. The teleportation does not trigger a Free Attack, even if withdrawing from melee. The mystic must see the return location when the mystical power is activated.\r\nIf the test fails an enraged daemon enters through the rift instead.",
     "adept": "Active. Same as at the novice level, except the mystic suffers no damage during his or her trip to the Yonderworld.\r\nIf the test fails, the mystic must pass a Resolute test to stop an enraged abomination from entering through the rift in the world. The mystic can choose not to stop the entry and willingly let the daemon get through.",
     "master": "Active. Same as at the Adept level, with the addition that the mystic may take someone along on the journey. This someone must stand next to the mystic when the power is activated (melee range) and if the creature is reluctant, the mystic must pass a [Resolute←Resolute] test to force it to follow. The fellow traveler suffers 1D4 damage, ignoring Armor, and also 1D4 temporary corruption from the traumatic experience.\r\nIf the test fails, the mystic must pass a Resolute test to stop an enraged abomination from entering through the rift in the world. The mystic can choose not to stop the entry and willingly let the daemon get through."
@@ -2277,7 +2277,7 @@
     "name": "Tormenting Spirits",
     "book": "APG",
     "tradition": "Spiritualist & Necromancer only",
-    "effect": "The world is old and many spirits linger from days past; nature spirits in dirt and water, or dead heroes who are yet to pass over to the other side. Some mystics can wake spirits to life and make them attack their enemies. The enemies are beset with these fery spirits who tear at their clothes, equipment, hair and flesh. At best, the target cannot act; at worst , the target is driven mad or even dies from the attacks.",
+    "effect": "The world is old and many spirits linger from days past; nature spirits in dirt and water, or dead heroes who are yet to pass over to the other side. Some mystics can wake spirits to life and make them attack their enemies. The enemies are beset with these fiery spirits who tear at their clothes, equipment, hair and flesh. At best, the target cannot act; at worst , the target is driven mad or even dies from the attacks.",
     "novice": "Active. The mystic calls spirits to his or her aid, and these transparent shapes attack an enemy. The target automatically fails all tests for concentration while using mystical powers; all other tests have a second chance to fail. The mystic must pass a Resolute test each turn in order for the spirits to continue their attacks.",
     "adept": "Active. The mystic may demand more substantial help from the spirits. They attack ferociously and deal damage to Resolute, adding to the effect described at the novice level. The damage dealt is 1D4 per turn, ignoring armor. If Resolute is reduced to zero the target dies, presuming they are not allowed to roll death tests (like characters). The latter instead becomes temporarily insane – catatonic, crying or otherwise unable to act – while rolling their death tests. The Resolute damage heals like other damages. The mystic must pass a Resolute test each turn in order for the spirits to continue their attack. Also, if the mystic takes damage, concentration will be broken if failing a [Resolute –Damage] test.",
     "master": "Active. Like adept, but the spirit attacks deal 1D6 damage to Resolute."
