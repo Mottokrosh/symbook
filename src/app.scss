@@ -290,11 +290,22 @@ button {
     input[type=search], input[type=search]:focus {
         float: none !important;
         height: 37px !important;
-        width: 100% !important;
+        width: 90% !important;
     }
 
     .selected-tag {
         display: none !important;
+    }
+
+    &.power-level {
+        margin-left: 1rem !important;
+        width:10% !important;
+
+        .selected-tag {
+            border: none;
+            background-color: $yellow;
+            display: inherit !important;
+        }
     }
 
     .dropdown-menu {
