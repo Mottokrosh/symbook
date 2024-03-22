@@ -148,7 +148,7 @@
             powerLevel(newVal, oldVal) {
                 if (newVal !== oldVal) {
                     this.$parent.cards[this.index].powerLevel = newVal;
-                    this.$parent.setCardIDsIntoURL();
+                    this.$parent.persistCardsToURL();
                 }
             },
         },
