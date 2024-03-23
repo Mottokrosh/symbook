@@ -138,9 +138,9 @@
     "book": "CRB",
     "requirement": "",
     "effect": "High-born Ambrians, rich merchant lords and other potentates surround themselves with bodyguards. Even among the barbarians there are housecarls who serve to protect the life of their chieftain. The character is trained to place him- or herself in the way of painful strikes and lethal blows aimed at the protected person.\r\n",
-    "novice": "Reaction. With a successful Resolute, the character may take blows directed against an ally. The character may not defend itself against these attacks, they hit automatically.",
-    "adept": "Reaction. The character’s capacity as a guardian allows it to defend itself against all attacks aimed at the person he or she is protecting.",
-    "master": "Reaction. The character is a veritable guardian saint. Not only may the character defend itself against the attacks, it also gets a Free Attack as a Reaction towards any who makes a melee attack against the person under its protection."
+    "novice": "Reaction. With a successful Resolute test, the character may take blows directed against an ally. The character may not defend itself against these attacks, they hit automatically.",
+    "adept": "Reaction. As Novice, but the character’s capacity as a guardian allows it to defend itself against all attacks aimed at the person he or she is protecting.",
+    "master": "Reaction. As Adept, but the character is a veritable guardian saint. Not only may the character defend itself against the attacks, it also gets a Free Attack as a Reaction towards any who makes a melee attack against the person under its protection."
   },
   {
     "id": 95,
@@ -380,8 +380,8 @@
     "book": "CRB",
     "requirement": "",
     "effect": "Davokar hides many alchemically potent and poisonous plants, and the character is familiar with the effective use of poisoned weapons in combat. Poisons can be purchased from less scrupulous peddlers, but to actually produce poisons require some understanding of alchemy (the Alchemy ability).\r\nThe Poisoner ability can be used to identify different poisons or the effect of a poison on a wounded or dead person.",
-    "novice": "Free. With a successful die roll against Cunning, the character can apply one dose of poison or any other alchemical elixir to a weapon. That one dose of poison is enough for one hit with the weapon before more of the poison must then be applied. The victim is poisoned until the character fails a [Cunning←Strong] test, but is always poisoned for at least one turn. The damage suffered per turn and the duration limit of the poison depends on its strength (see page 153).",
-    "adept": "Free. The character understands how to make a dose of poison last an entire battle. After applying a dose, all attacks counts as poisonous for the duration of the combat scene.",
+    "novice": "Free. As a free action, the character can apply one dose of poison or any other alchemical elixir to a weapon. That one dose of poison is enough for one hit with the weapon before more of the poison must be applied.  A [Cunning←Strong] test is needed for the poison to take effect; if successful the victim starts to take damage. The damage suffered per turn and the duration of the poison depends on its strength (see page 153).",
+    "adept": "␇Free. As novice, but the character understands how to make a dose of poison last an entire battle. After applying a dose, all attacks counts as poisonous for the duration of the combat scene.",
     "master": "Free. The character has mastered the art of poisoning and knows how to get the most out of a poison. If the character succeeds with a Cunning test, any poison applied to a weapon counts as one level higher than usual. Weak poison counts as Moderate, Moderate counts as Strong. Strong poison doesn't deal any additional damage but gives the character a second chance to succeed with the [Cunning←Strong] test instead."
   },
   {
@@ -480,7 +480,7 @@
     "requirement": "",
     "effect": "The character is trained in how to make good use of his or her shield, but also in how to actively fight using the shield as a weapon. Behind the protection of the shield, the character can generate a great momentum to fuel its attacks, as well as strike with the shield itself. This is an effective combination which probably explains why it is so common among both barbarian and Ambrian warriors.\r\nThe buckler, the light shield usually utilized by archers, is too light to be used with the Shield Fighter ability. The warrior has to carry a sturdy shield made of either wood or steel to generate the required amount of force.",
     "novice": "Passive. The damage dealt by weapons held in the character’s sword arm is increased by one step; to 1D10 if the character fights with a single-handed weapon or to 1D8 if using a Short weapon. The Novice Shield Fighter wields its shield as an instrument of protection with greater efficiency and therefore receives a +2 Defense bonus instead of the usual +1 when using a shield.",
-    "adept": "Reaction. The character has learned how to combine weapon and shield so well that every successful attack may be followed up by a shield bash against the same target. The damage of the shield bash is 1D4, and should the character make a successful die roll against [Strong←Strong] the target is also knocked to the ground.",
+    "adept": "Reaction. The character has learned how to combine weapon and shield so well that every successful attack may be followed up by a shield bash against the same target (separate attack roll). If it hits, the damage of the shield bash is 1D4, and should the character make a successful die roll against [Strong←Strong] the target is also knocked to the ground.",
     "master": "Reaction. The damage of the shield bash is increased from 1D4 to 1D8 and the target is still knocked to the ground if the character succeeds with a [Strong←Strong] test."
   },
   {
