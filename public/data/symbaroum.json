@@ -209,6 +209,94 @@
     "master": "Special. As Novice, but the ability increases the Attribute value by +3 in total."
   },
   {
+    "id": 322,
+    "type": "Ability",
+    "name": "Exceptionally Accurate",
+    "book": "CRB",
+    "requirement": "",
+    "effect": "The character’s Accurate can be improved by practicing a little bit each day. This ability enhances the character’s basic survival capability.",
+    "novice": "Special. The character has cultured his or her Accurate through hard work, which increases Accurate by +1.",
+    "adept": "Special. As Novice, but the ability increases Accurate by +2 in total.",
+    "master": "Special. As Novice, but the ability increases Accurateby +3 in total."
+  },
+  {
+    "id": 323,
+    "type": "Ability",
+    "name": "Exceptionally Cunning",
+    "book": "CRB",
+    "requirement": "",
+    "effect": "The character’s Cunning can be improved by practicing a little bit each day. This ability enhances the character’s basic survival capability.",
+    "novice": "Special. The character has cultured his or her Cunning through hard work, which increases Cunning by +1.",
+    "adept": "Special. As Novice, but the ability increases Cunning by +2 in total.",
+    "master": "Special. As Novice, but the ability increases Cunning +3 in total."
+  },
+  {
+    "id": 324,
+    "type": "Ability",
+    "name": "Exceptionally Discreet",
+    "book": "CRB",
+    "requirement": "",
+    "effect": "The character’s Discreet can be improved by practicing a little bit each day. This ability enhances the character’s basic survival capability.",
+    "novice": "Special. The character has cultured his or her Discreet through hard work, which increases Discreet by +1.",
+    "adept": "Special. As Novice, but the ability increases Discreet by +2 in total.",
+    "master": "Special. As Novice, but the ability increases Discreet +3 in total."
+  },
+  {
+    "id": 325,
+    "type": "Ability",
+    "name": "Exceptionally Persuasive",
+    "book": "CRB",
+    "requirement": "",
+    "effect": "The character’s Persuasive can be improved by practicing a little bit each day. This ability enhances the character’s basic survival capability.",
+    "novice": "Special. The character has cultured his or her Persuasive through hard work, which increases Persuasive by +1.",
+    "adept": "Special. As Novice, but the ability increases Persuasive by +2 in total.",
+    "master": "Special. As Novice, but the ability increases Persuasive +3 in total."
+  },
+  {
+    "id": 326,
+    "type": "Ability",
+    "name": "Exceptionally Quick",
+    "book": "CRB",
+    "requirement": "",
+    "effect": "The character’s Quick can be improved by practicing a little bit each day. This ability enhances the character’s basic survival capability.",
+    "novice": "Special. The character has cultured his or her Quick through hard work, which increases Quick by +1.",
+    "adept": "Special. As Novice, but the ability increases Quick by +2 in total.",
+    "master": "Special. As Novice, but the ability increases Quick +3 in total."
+  },
+  {
+    "id": 327,
+    "type": "Ability",
+    "name": "Exceptionally Resolute",
+    "book": "CRB",
+    "requirement": "",
+    "effect": "The character’s Resolute can be improved by practicing a little bit each day. This ability enhances the character’s basic survival capability.",
+    "novice": "Special. The character has cultured his or her Resolute through hard work, which increases Resolute by +1.",
+    "adept": "Special. As Novice, but the ability increases Resolute by +2 in total.",
+    "master": "Special. As Novice, but the ability increases Resolute +3 in total."
+  },
+  {
+    "id": 328,
+    "type": "Ability",
+    "name": "Exceptionally Strong",
+    "book": "CRB",
+    "requirement": "",
+    "effect": "The character’s Strong can be improved by practicing a little bit each day. This ability enhances the character’s basic survival capability.",
+    "novice": "Special. The character has cultured his or her Strong through hard work, which increases Strong by +1.",
+    "adept": "Special. As Novice, but the ability increases Strong by +2 in total.",
+    "master": "Special. As Novice, but the ability increases Strongby +3 in total."
+  },
+  {
+    "id": 329,
+    "type": "Ability",
+    "name": "Exceptionally Vigilant",
+    "book": "CRB",
+    "requirement": "",
+    "effect": "The character’s Vigilant can be improved by practicing a little bit each day. This ability enhances the character’s basic survival capability.",
+    "novice": "Special. The character has cultured his or her Vigilant through hard work, which increases Vigilant by +1.",
+    "adept": "Special. As Novice, but the ability increases Vigilant by +2 in total.",
+    "master": "Special. As Novice, but the ability increases Vigilantby +3 in total."
+  },
+  {
     "id": 101,
     "type": "Ability",
     "name": "Feat of Strength",
