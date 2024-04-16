@@ -44,7 +44,7 @@
   }
 
   function normalizeName(name) {
-    return name.toLowerCase().replaceAll(/\s|-/g, '').replaceAll(/é/g, 'e');
+    return name.toLowerCase().replaceAll(/\s|-|'|’/g, '').replaceAll(/é/g, 'e');
   }
 
   function isMonstrousTraitLevel(x) {
