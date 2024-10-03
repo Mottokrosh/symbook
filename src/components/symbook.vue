@@ -38,9 +38,9 @@
     return { id: Number(id), level: level };
   }
 
-  function powerAtLevel(item) {
-    let [_, name, __, level] = /^([^(]+)(\(([^)]+)\))?$/.exec(item);
-    return { name: normalizeName(name), level: level };
+  function powerAtLevel(match) {
+    let [_, name, __, remark1, ___, remark2] = match;
+    return { name: normalizeName(name), remark1: remark1, remark2: remark2 };
   }
 
   function normalizeName(name) {
@@ -109,12 +109,18 @@
 
       getPowersAtLevelFromURL() {
         const urlParams = new URLSearchParams(window.location.search)
-        return urlParams.get('n').split(/;|,/).map(powerAtLevel)
+        return [... urlParams.get('n').matchAll(/([^(,]+)\s*(\((\w+)(,\s*([^)]+))?\))?/g)]
+          .map(powerAtLevel)
       },
 
       setPowersAtLevelIntoURL() {
         const names = this.cards.filter(c => !!c.id)
-          .map(card => card.name + (card.powerLevel ? `(${card.powerLevel})` : '')).join(',');
+          .map(card => card.name +
+            (card.powerLevel ?
+              (card.remark ? `(${card.powerLevel}, ${card.remark})` : `(${card.powerLevel})`) :
+              (card.remark ? `(${card.remark})` : '')
+            )
+          ).join(',');
         if (names) {
           history.pushState(null, '', `/?n=${names}`);
           return;
@@ -158,8 +164,16 @@
             if (powersAtLevel) {
               this.cards = powersAtLevel.map(power => {
                 const card = this.options.find(opt => normalizeName(opt.name) == power.name
-                  && (!isMonstrousTraitLevel() || opt.type == 'Monstrous Trait'));
-                card.powerLevel = power.level;
+                  && (!isMonstrousTraitLevel(power.remark1) || opt.type == 'Monstrous Trait'));
+                if (card.novice) {
+                  card.powerLevel = power.remark1;
+                  card.remark = power.remark2;
+                } else {
+                  card.remark = power.remark1;
+                  if (power.remark2) {
+                    card.remark += `, ${power.remark2}`
+                  }
+                }
                 return card;
               });
             }
