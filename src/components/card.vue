@@ -10,7 +10,10 @@
 
         <fieldset v-if="selected">
             <legend>
-                <h2>{{ selected.name }} <small>{{ selected.book }}</small></h2>
+               <h2>{{ selected.name }}
+                 <span v-if="selected.remark">({{ selected.remark }})</span>
+                 <small>{{ selected.book }}</small>
+               </h2>
             </legend>
             <div>
                 <p v-if="selected.requirement">
@@ -70,6 +73,7 @@
             return {
                 selected: null,
                 powerLevel: null,
+                remark: null,
             };
         },
 
